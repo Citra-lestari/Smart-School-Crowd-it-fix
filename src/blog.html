@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/output.css" rel="stylesheet">
+
+    <!-- link iconify -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <!-- Font Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Link AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 h-28 bg-white">
+        <div class="sticky top-0 z-20 h-full mx-auto max-w-[90%] md:max-w-[85%] 2xl:max-w-350 mb-30 bg-white">
+            <div class="relative flex items-center justify-between h-full ">
+                <nav class="relative z-10 flex items-center justify-between w-full h-full md:z-0 " id="navbar">
+                    <div>
+                        <a href="index.html"><img src="image/logo.png" alt="logo" class="w-18"></a>
+                    </div>
+                    <div class="items-center hidden md:flex">
+                        <ul class="flex items-center justify-around lg:gap-12 md:gap-6">
+                            <li><a href="index.html" class="nav-all">Beranda</a></li>
+                            <li><a href="program-keahlian.html" class="nav-all">Program</a></li>
+                            <li><a href="#" class="nav-all-hover">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="hidden md:block">
+                        <a href="login.html" class="button-primary">Login</a>
+                    </div>
+                    <button class="md:hidden" id="menu-toggle">
+                        <iconify-icon icon="mynaui:menu" class="text-[32px] text-black hover:text-black hover:transition-all hover:duration-500"></iconify-icon>
+                    </button>
+                </nav>
+                
+                <nav class="fixed z-10 hidden w-full py-8 bg-white md:hidden padding top-28" id="mobile-menu">
+                    <div class="flex flex-col items-center gap-4">
+                        <ul class="flex flex-col gap-4 text-center">
+                            <li><a href="index.html" class="nav-all">Beranda</a></li>
+                            <li><a href="program-keahlian.html" class="nav-all">Program</a></li>
+                            <li><a href="#" class="nav-all">Blog</a></li>
+                        </ul>
+                        <a href="login.html" class="button-primary">Login</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog -->
+    <section class="" data-aos="fade-up">
+        <div class="title-desc">
+            <h1 class="title">Kabar Terbaru dari SKENSA</h1>
+            <p class="desc">Temukan berbagai cerita, pencapaian, dan kegiatan inspiratif yang mencerminkan semangat belajar, berkarya, dan berprestasi di SKENSA.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <!-- blog 1 -->
+            <div class="group">
+                <img src="image/lks.jpg" alt="" class="blog-img">
+                <div class="blog-date">
+                    <h1 class="date">23 March 2025</h1>
+                    <h2 class="blog-name">Lingkungan Skensa</h2>
+                </div>
+                <div class="mt-2.5">
+                    <h1 class="blog-title">Siswa SKENSA Raih Prestasi dalam Lomba Kompetensi Siswa (LKS)</h1>
+                    <p class="blog-desc">Siswa SMK Negeri 1 Denpasar kembali menunjukkan kompetensinya dalam ajang Lomba Kompetensi Siswa (LKS) melalui berbagai bidang keahlian dan berhasil mengharumkan nama sekolah.</p>
+                </div>
+            </div>
+            <!-- blog 2 -->
+            <div class="group">
+                <img src="image/pelepasan.jpg" alt="" class="blog-img">
+                <div class="blog-date">
+                    <h1 class="date">31 March 2025</h1>
+                    <h2 class="text-xs">Aula Skensa</h2>
+                </div>
+                <div class="mt-2.5">
+                    <h1 class="blog-title">Pelepasan Siswa Kelas XII Tahun Ajaran 2025/2026</h1>
+                    <p class="blog-desc">Momen penuh haru dan kebanggaan mewarnai acara pelepasan siswa kelas XII sebagai penutup perjalanan pendidikan dan awal langkah menuju masa depan yang lebih cerah.</p>
+                </div>
+            </div>
+            <!-- blog 3 -->
+            <div class="group">
+                <img src="image/edufair.jpg" alt="" class="blog-img">
+                <div class="blog-date">
+                    <h1 class="date">08 Mey 2025</h1>
+                    <h2 class="text-xs">Aula Skensa</h2>
+                </div>
+                <div class="mt-2.5">
+                    <h1 class="blog-title">Edufair SKENSA: Membuka Wawasan Pendidikan dan Karier</h1>
+                    <p class="blog-desc">Melalui kegiatan Edufair, siswa mendapatkan informasi mengenai berbagai perguruan tinggi, program studi, beasiswa, dan peluang karier untuk mempersiapkan masa depan mereka.</p>
+                </div>
+            </div>
+            <!-- blog 4 -->
+            <div class="group">
+                <img src="image/gelar karya.jpg" alt="" class="blog-img">
+                <div class="blog-date">
+                    <h1 class="date">19 Mey 2025</h1>
+                    <h2 class="text-xs">Aula Skensa</h2>
+                </div>
+                <div class="mt-2.5">
+                    <h1 class="blog-title">Gelar Karya Siswa: Menampilkan Kreativitas dan Inovasi</h1>
+                    <p class="blog-desc">Berbagai karya terbaik hasil pembelajaran siswa dipamerkan dalam acara Gelar Karya sebagai bentuk apresiasi terhadap kreativitas, inovasi, dan keterampilan yang telah dikembangkan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer data-aos="fade-up">
+        <div class="footer-wrapper" >
+            <div class="footer-content-1">
+                <h3 class="footer-logo">SMK Negeri 1 Denpasar</h3>
+                <p class="footer-desc">Siap bantu kendaraan Anda tetap prima kapan pun dibutuhkan. Booking mudah, servis cepat, hasil memuaskan!</p>
+            </div>
+            <div class="footer-content-2">
+                <div class="footer-nav">
+                    <h3 class="footer-title">Navigasi</h3>
+                    <a href="#home" class="footer-nav-link">Beranda</a>
+                    <a href="#" class="footer-nav-link">Program</a>
+                    <a href="#" class="footer-nav-link">Blog</a>
+                </div>
+                <div class="footer-contact">
+                    <h3 class="footer-title">Contact</h3>
+                    <a href="tel:081236396662" class="contact-item">
+                        <iconify-icon icon="ic:baseline-phone" class="footer-icon"></iconify-icon>
+                        <p>081236396662</p>
+                    </a>
+                    <a href="mailto:info@smkn1denpasar.sch.id" class="contact-item">
+                        <iconify-icon icon="ic:baseline-email" class="footer-icon"></iconify-icon>
+                        <p>info@smkn1denpasar.sch.id</p>
+                    </a>
+                    <a href="https://maps.google.com/?q=Jalan+HOS.+Cokroaminoto+No.+84" target="_blank" class="contact-item">
+                        <iconify-icon icon="mdi:location" class="footer-icon"></iconify-icon>
+                        <p>Jalan HOS. Cokroaminoto No. 84</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-icon-contact">
+                <iconify-icon icon="mdi:instagram" class="footer-bottom-icon"></iconify-icon>
+                <iconify-icon icon="mdi:whatsapp" class="footer-bottom-icon"></iconify-icon>
+                <iconify-icon icon="mdi:facebook" class="footer-bottom-icon"></iconify-icon>
+                <iconify-icon icon="mdi:twitter" class="footer-bottom-icon"></iconify-icon>
+            </div>
+            <p>&copy; 2024-2026 SMK Negeri 1 Denpasar.</p>
+        </div>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

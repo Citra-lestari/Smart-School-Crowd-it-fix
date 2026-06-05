@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/output.css" rel="stylesheet">
+
+    <!-- link iconify -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <!-- Font Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Link AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 h-28 bg-white">
+        <div class="sticky top-0 z-20 h-full mx-auto max-w-[90%] md:max-w-[85%] 2xl:max-w-350 mb-30 bg-white">
+            <div class="relative flex items-center justify-between h-full ">
+                <nav class="relative z-10 flex items-center justify-between w-full h-full md:z-0 " id="navbar">
+                    <div>
+                        <a href="index.html"><img src="image/logo.png" alt="logo" class="w-18"></a>
+                    </div>
+                    <div class="items-center hidden md:flex">
+                        <ul class="flex items-center justify-around lg:gap-12 md:gap-6">
+                            <li><a href="index-login.html" class="nav-all">Beranda</a></li>
+                            <li><a href="program-keahlian-login.html" class="nav-all-hover">Program</a></li>
+                            <li><a href="blog-login.html" class="nav-all">Blog</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="hidden md:block">
+                        <a href="profile.html" class="flex items-center gap-2 group">
+                            <img src="image/profile.jpg" alt="Profile" class="w-10 h-10 rounded-full object-cover border-2 border-primary group-hover:border-secondary transition-colors duration-300">
+                            <span class="font-poppins font-medium text-black group-hover:text-primary transition-colors duration-300">Profil Saya</span>
+                        </a>
+                    </div>
+
+                    <button class="md:hidden" id="menu-toggle">
+                        <iconify-icon icon="mynaui:menu" class="text-[32px] text-black hover:text-black hover:transition-all hover:duration-500"></iconify-icon>
+                    </button>
+                </nav>
+                
+                <nav class="fixed z-10 hidden w-full py-8 bg-white md:hidden padding top-28" id="mobile-menu">
+                    <div class="flex flex-col items-center gap-6">
+                        <ul class="flex flex-col gap-4 text-center">
+                            <li><a href="index-login.html" class="nav-all">Beranda</a></li>
+                            <li><a href="program-keahlian-login.html" class="nav-all">Program</a></li>
+                            <li><a href="blog-login.html" class="nav-all">Blog</a></li>
+                        </ul>
+                        <div class="w-4/5 h-px bg-grey-border"></div>
+                        
+                        <a href="profile.html" class="flex items-center gap-3 bg-white-bg py-2 px-6 rounded-full border border-grey-border">
+                            <img src="image/avatar-default.png" alt="Profile" class="w-9 h-9 rounded-full object-cover border border-primary">
+                            <span class="font-poppins font-medium text-black text-sm">Profil Saya</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <section data-aos="fade-up">
+        <div class="main-wrapper">
+            <div class="main-content group">
+                <img src="image/rpl.png" alt="" class="program-img">
+                <a class="program-title" href="program-detail-login.html">Rekayasa Perangkat Lunak (RPL)</a>
+                <p class="program-desc">Mempelajari pengembangan website, aplikasi, dan perangkat lunak melalui pemrograman, desain sistem, serta teknologi digital modern.</p>
+                <div class="next-arrow">
+                    <a href="program-keahlian-login.html" class="next-desc">Selengkapnya</a>
+                        <iconify-icon icon="mdi:arrow-right" class="next-icon"></iconify-icon>
+                </div>
+            </div>
+
+            <div class="main-content group">
+                <img src="image/tkj.png" alt="" class="program-img">
+                <a class="program-title" href="#">Teknik Komputer dan Jaringan (TKJ) </a>
+                <p class="program-desc">Mengembangkan keterampilan dalam instalasi, konfigurasi, dan pengelolaan jaringan komputer serta infrastruktur teknologi informasi.</p>
+                <div class="next-arrow">
+                    <a href="program-keahlian-2.html" class="next-desc">Selengkapnya</a>
+                        <iconify-icon icon="mdi:arrow-right" class="next-icon"></iconify-icon>
+                </div>
+            </div>
+
+            <div class="main-content group">
+                <img src="image/dkv.png" alt="" class="program-img">
+                <a class="program-title" href="#">Desain Komunikasi Visual (DKV) </a>
+                <p class="program-desc">Mengasah kreativitas melalui desain grafis, branding, ilustrasi, fotografi, dan media visual untuk kebutuhan industri kreatif.</p>
+                <div class="next-arrow">
+                    <a href="program-keahlian-2.html" class="next-desc">Selengkapnya</a>
+                        <iconify-icon icon="mdi:arrow-right" class="next-icon"></iconify-icon>
+                </div>
+            </div>
+
+            <div class="main-content group">
+                <img src="image/prf.png" alt="" class="program-img">
+                <a class="program-title" href="#">Produksi Film (PRF) </a>
+                <p class="program-desc">Mempelajari proses produksi film dan konten digital mulai dari perencanaan, pengambilan gambar, hingga proses penyuntingan.</p>
+                <div class="next-arrow">
+                    <a href="program-keahlian-2.html" class="next-desc">Selengkapnya</a>
+                        <iconify-icon icon="mdi:arrow-right" class="next-icon"></iconify-icon>
+                </div>
+            </div>
+
+            <div class="main-content group hidden md:block">
+                <img src="image/tkr.png" alt="" class="program-img">
+                <a class="program-title" href="#">Teknik Kendaraan Ringan (TKR) </a>
+                <p class="program-desc">Membekali siswa dengan keterampilan perawatan, diagnosis, dan perbaikan kendaraan roda empat sesuai standar industri otomotif.</p>
+                <div class="next-arrow">
+                    <a href="program-keahlian-2.html" class="next-desc">Selengkapnya</a>
+                        <iconify-icon icon="mdi:arrow-right" class="next-icon"></iconify-icon>
+                </div>
+            </div>
+
+            <div class="main-content group hidden md:block">
+                <img src="image/tsm.png" alt="" class="program-img">
+                <a class="program-title" href="#">Teknik Sepeda Motor (TSM) </a>
+                <p class="program-desc">Mempelajari sistem kerja, perawatan, dan perbaikan sepeda motor dengan pendekatan praktik yang sesuai kebutuhan industri.</p>
+                <div class="next-arrow">
+                    <a href="program-keahlian-2.html" class="next-desc">Selengkapnya</a>
+                        <iconify-icon icon="mdi:arrow-right" class="next-icon"></iconify-icon>
+                </div>
+            </div>
+
+            <div class="main-content group hidden md:block">
+                <img src="image/titl.png" alt="" class="program-img">
+                <a class="program-title" href="#"> Teknik Instalasi Tenaga Listrik (TITL) </a>
+                <p class="program-desc">Mengembangkan kompetensi dalam instalasi, pengoperasian, dan pemeliharaan sistem kelistrikan untuk berbagai kebutuhan.</p>
+                <div class="next-arrow">
+                    <a href="program-keahlian-2.html" class="next-desc">Selengkapnya</a>
+                        <iconify-icon icon="mdi:arrow-right" class="next-icon"></iconify-icon>
+                </div>
+            </div>
+
+            <div class="main-content group hidden md:block">
+                <img src="image/tav.png" alt="" class="program-img">
+                <a class="program-title" href="#">Teknik Audio Video (TAV) </a>
+                <p class="program-desc">Mempelajari perangkat elektronika, sistem audio, video, dan teknologi multimedia yang digunakan dalam berbagai sektor industri.</p>
+                <div class="next-arrow">
+                    <a href="program-keahlian-2.html" class="next-desc">Selengkapnya</a>
+                        <iconify-icon icon="mdi:arrow-right" class="next-icon"></iconify-icon>
+                </div>
+            </div>
+
+            <div class="main-content group hidden md:block">
+                <img src="image/tpm.png" alt="" class="program-img">
+                <a class="program-title" href="#">Teknik Pemesinan (TPM) </a>
+                <p class="program-desc">Mengasah keterampilan manufaktur melalui pengoperasian mesin, proses produksi, dan pembuatan komponen teknik presisi.</p>
+                <div class="next-arrow">
+                    <a href="program-keahlian-2.html" class="next-desc">Selengkapnya</a>
+                        <iconify-icon icon="mdi:arrow-right" class="next-icon"></iconify-icon>
+                </div>
+            </div>
+
+            <div class="main-content group hidden md:block">
+                <img src="image/dpib.png" alt="" class="program-img">
+                <a class="program-title" href="#">Desain Pemodelan dan Informasi Bangunan (DPIB) </a>
+                <p class="program-desc">Mempelajari perencanaan, desain, serta pemodelan bangunan menggunakan teknologi gambar teknik dan perangkat lunak konstruksi.</p>
+                <div class="next-arrow">
+                    <a href="program-keahlian-2.html" class="next-desc">Selengkapnya</a>
+                        <iconify-icon icon="mdi:arrow-right" class="next-icon"></iconify-icon>
+                </div>
+            </div>
+
+            <div class="main-content group hidden md:block">
+                <img src="image/tkp.png" alt="" class="program-img">
+                <a class="program-title" href="#">Teknik Konstruksi dan Perumahan (TKP) </a>
+                <p class="program-desc">Membekali siswa dengan pengetahuan konstruksi bangunan, pelaksanaan proyek, dan pengelolaan pekerjaan konstruksi secara profesional.</p>
+                <div class="next-arrow">
+                    <a href="program-keahlian-2.html" class="next-desc">Selengkapnya</a>
+                        <iconify-icon icon="mdi:arrow-right" class="next-icon"></iconify-icon>
+                </div>
+            </div>
+
+            <div class="main-content group hidden md:block">
+                <img src="image/tptup.png" alt="" class="program-img">
+                <a class="program-title" href="#">Teknik Pendingin, Tata Udara, dan Pemanasan (TPTUP) </a>
+                <p class="program-desc">Mempelajari instalasi, perawatan, dan perbaikan sistem pendingin serta tata udara yang banyak digunakan di dunia industri.</p>
+                <div class="next-arrow">
+                    <a href="program-keahlian-2.html" class="next-desc">Selengkapnya</a>
+                        <iconify-icon icon="mdi:arrow-right" class="next-icon"></iconify-icon>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center mt-10 md:hidden">
+            <a href="#" class="button-primary">Lihat Semua Program</a>
+        </div>
+    </section>
+
+
+        <!-- FOOTER -->
+    <footer data-aos="fade-up">
+        <div class="footer-wrapper" >
+            <div class="footer-content-1">
+                <h3 class="footer-logo">SMK Negeri 1 Denpasar</h3>
+                <p class="footer-desc">Siap bantu kendaraan Anda tetap prima kapan pun dibutuhkan. Booking mudah, servis cepat, hasil memuaskan!</p>
+            </div>
+            <div class="footer-content-2">
+                <div class="footer-nav">
+                    <h3 class="footer-title">Navigasi</h3>
+                    <a href="#home" class="footer-nav-link">Beranda</a>
+                    <a href="#" class="footer-nav-link">Program</a>
+                    <a href="#" class="footer-nav-link">Blog</a>
+                </div>
+                <div class="footer-contact">
+                    <h3 class="footer-title">Contact</h3>
+                    <a href="tel:081236396662" class="contact-item">
+                        <iconify-icon icon="ic:baseline-phone" class="footer-icon"></iconify-icon>
+                        <p>081236396662</p>
+                    </a>
+                    <a href="mailto:info@smkn1denpasar.sch.id" class="contact-item">
+                        <iconify-icon icon="ic:baseline-email" class="footer-icon"></iconify-icon>
+                        <p>info@smkn1denpasar.sch.id</p>
+                    </a>
+                    <a href="https://maps.google.com/?q=Jalan+HOS.+Cokroaminoto+No.+84" target="_blank" class="contact-item">
+                        <iconify-icon icon="mdi:location" class="footer-icon"></iconify-icon>
+                        <p>Jalan HOS. Cokroaminoto No. 84</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-icon-contact">
+                <iconify-icon icon="mdi:instagram" class="footer-bottom-icon"></iconify-icon>
+                <iconify-icon icon="mdi:whatsapp" class="footer-bottom-icon"></iconify-icon>
+                <iconify-icon icon="mdi:facebook" class="footer-bottom-icon"></iconify-icon>
+                <iconify-icon icon="mdi:twitter" class="footer-bottom-icon"></iconify-icon>
+            </div>
+            <p>&copy; 2024-2026 SMK Negeri 1 Denpasar.</p>
+        </div>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

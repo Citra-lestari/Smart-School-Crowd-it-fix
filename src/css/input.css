@@ -1,0 +1,441 @@
+@import "tailwindcss"; 
+
+@theme {
+    --color-primary: #3BA8D1;
+    --color-secondary: #00629E;
+    --color-black: #222222;
+    --color-white: #FCFCFC;
+    --color-white-bg: #F2F4F6;
+    --color-grey-border: #E2E8F0;
+    --color-orange: #FF9553;
+
+    --font-poppins: 'Poppins', sans-serif;
+}
+
+body{
+    @apply font-poppins bg-white text-black;
+}
+section{
+    @apply mx-auto max-w-[90%] md:max-w-[85%] 2xl:max-w-350 mb-30 md:mb-20 lg:mb-32.5;
+}
+
+/* navbar */
+.nav-all{
+    @apply text-black lg:text-base md:text-sm text-[18px] hover:transition-all hover:text-primary hover:duration-500;
+}
+
+.nav-all-hover{
+    @apply text-primary lg:text-base md:text-sm text-[18px] hover:transition-all hover:text-primary hover:duration-500;
+}
+
+/* css untuk button */
+.btn-both{
+    @apply flex pt-6.5 gap-2 mb-8.75 md:mb-0
+}
+
+.button-primary{
+    @apply px-6.75 md:px-6.75 py-2 rounded-[5px] border border-primary bg-primary text-white transition hover:bg-primary/95 group-hover:bg-transparent group-hover:text-primary text-[14px] md:text-base;
+}
+
+.button-secondary{
+    @apply items-center inline-flex gap-2.5 px-6.75 md:px-6.75 py-2 rounded-[5px] border border-primary bg-transparent text-primary transition hover:bg-primary hover:text-white text-[14px] md:text-base w-fit;
+}
+
+/* title-desc section */
+.title-desc{
+    @apply w-full md:w-137.5 lg:w-178.75 mx-auto text-start md:text-center items-center justify-center mb-8.75;
+}
+
+.title{
+    @apply font-semibold text-[25px] md:text-[32px] 2xl:text-[40px] mb-1.5;
+}
+
+.desc{
+    @apply text-base md:text-lg text-black/80 line-clamp-2;
+}
+
+/* HERO SECTION */
+.hero-section{
+    @apply flex flex-col md:flex-row items-center gap-2.5 md:gap-20 lg:gap-32 mt-15 md:mt-20 lg:mt-30;
+}
+
+.hero-title{
+    @apply font-semibold text-3xl 2xl:text-5xl mb-2 leading-10 2xl:leading-15;
+}
+
+.hero-desc{
+    @apply text-base 2xl:text-lg text-black/80
+}
+
+.hero-img{
+    @apply hidden lg:block md:w-[50%] lg:w-[40%];
+}
+
+/* VISI MISI */
+.visi-container{
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5;
+}
+
+.visi-content-1{
+    @apply col-span-1 px-5 py-7 bg-white-bg rounded-lg row-span-2;
+}
+
+.visi-title{
+    @apply text-orange font-semibold text-base mb-2 mt-36;
+}
+
+.visi-desc{
+    @apply font-medium text-xl;
+}
+
+.visi-content-2{
+    @apply grid grid-rows-2 gap-5;
+}
+
+.visi-content-3{
+    @apply row-span-2 col-span-2 grid grid-cols-1 gap-5;
+}
+
+.visi-subcontent{
+    @apply row-span-1 col-span-1 px-5 py-6 bg-white-bg rounded-lg;
+}
+
+.visi-title-2{
+    @apply mt-3 mb-2 font-medium text-base;
+}
+
+.visi-desc-2{
+    @apply text-sm text-black/80
+}
+
+
+
+
+/* FASILITAS */
+.fasilitas-container{
+    @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 ;
+}
+
+.fasilitas-img, .program-img{
+    @apply w-full h-30 md:h-55 object-cover rounded-lg mb-2;
+}
+
+.fasilitas-title{
+    @apply font-semibold text-base 2xl:text-lg mb-1 group-hover:text-primary group-hover:underline transition-colors;
+}
+
+.fasilitas-desc, .program-desc{
+    @apply text-sm 2xl:text-base text-black/80 line-clamp-3;
+}
+
+/* EKSTRAKULIKULER */
+
+/* CTA */
+.cta{
+    @apply relative overflow-hidden px-5 md:px-8 lg:px-65 py-10 md:py-20 bg-secondary rounded-lg text-white;
+}
+
+.cta-content{
+    @apply flex flex-col items-center text-center relative z-10;
+}
+
+.cta-title{
+    @apply font-semibold text-2xl md:text-3xl lg:text-4xl text-start md:text-center mb-2;
+}
+
+.cta-desc{
+    @apply text-sm md:text-base text-white/80 text-start md:text-center mb-7;
+}
+
+.btn-both2{
+    @apply flex pt-6.5 gap-2;
+}
+
+.button-primary-2{
+    @apply px-6.75 md:px-6.75 py-2 rounded-[5px] border border-white bg-white text-secondary transition hover:bg-white/95 group-hover:bg-transparent group-hover:text-white text-[14px] md:text-base;
+}
+
+.button-secondary-2{
+    @apply items-center inline-flex gap-2.5 px-6.75 md:px-6.75 py-2 rounded-[5px] border border-white bg-transparent text-white transition hover:bg-white hover:text-secondary text-[14px] md:text-base w-fit;
+}
+
+.pattern-left{
+    @apply absolute top-6 left-34  w-45 hidden lg:block;
+}
+
+.pattern-right{
+    @apply absolute bottom-14 right-30 w-45 hidden lg:block;
+}
+
+/* GALLERY */
+.gallery-container{
+    @apply gap-2 md:gap-4 grid grid-cols-1 md:grid-cols-12;
+}
+.img-gallery{
+    @apply w-full object-cover h-full md:aspect-auto;
+}
+.gallery-container1{
+    @apply grid grid-cols-2 grid-rows-2 md:grid-cols-1 md:col-span-3 md:grid-rows-3 gap-2 md:gap-4 ;
+}
+.gallery-container2{
+    @apply grid md:col-span-6 grid-rows-2 gap-2 md:gap-4;
+}
+
+
+/* FOOTER */
+footer{
+    @apply bg-black text-white;
+}
+
+.footer-wrapper{
+    @apply border-b border-white mx-auto max-w-[90%] md:max-w-[85%] 2xl:max-w-350 py-10 flex justify-between flex-col md:flex-row gap-10;
+}
+
+.footer-content-1{
+    @apply w-full md:w-80
+}
+
+.footer-logo{
+    @apply font-bold text-2xl mb-1;
+}
+
+.footer-desc{
+    @apply text-base text-white/80 mt-11;
+}
+
+.footer-content-2{
+    @apply  flex flex-col md:flex-row gap-10 md:gap-20;
+}
+
+.footer-nav{
+    @apply gap-1 flex flex-col;
+}
+
+.footer-nav a, .contact-item{
+    @apply text-base text-white/80 hover:text-primary transition-colors gap-1;
+}
+
+.footer-title{
+    @apply font-semibold
+}
+
+.contact-item{
+    @apply flex items-center gap-2 text-base;
+}
+
+.footer-bottom{
+    @apply mx-auto max-w-[90%] md:max-w-[85%] 2xl:max-w-350 py-10 flex justify-between flex-col md:flex-row gap-10
+}
+
+.footer-icon-contact{
+    @apply flex gap-1;
+}
+
+.footer-bottom-icon{
+    @apply text-4xl p-1 rounded-xs;
+}
+
+
+
+
+
+/* PROGRAM KEAHLIAN */
+.main-wrapper{
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 ;
+}
+
+.program-title{
+    @apply  font-semibold text-base 2xl:text-lg mb-1 group-hover:text-primary line-clamp-1;
+}
+
+.next-arrow{
+    @apply flex items-center mt-2;
+}
+
+.next-desc{
+    @apply text-sm text-black group-hover:text-primary group-hover:underline line-clamp-3;
+}
+
+.next-icon{
+    @apply text-2xl text-black group-hover:text-primary;
+}
+
+/* PROGRAM KEAHLIAN DETAIL */
+/* about */
+.about{
+    @apply flex flex-col lg:flex-row gap-5;
+}
+
+.about-content-1{
+    @apply px-8 pt-8 pb-20 border border-grey-border rounded-lg w-full md:w-173 2xl:w-240;
+}
+
+.about-icon-title{
+    @apply flex items-center gap-2 mb-6;
+}
+
+.about-icon{
+    @apply text-5xl text-primary;
+}
+
+.about-title{
+    @apply font-semibold text-xl md:text-3xl;   
+}
+
+.about-desc{
+    @apply text-base text-black/80 mb-5;
+}
+
+.about-desc-2{
+    @apply text-base text-black/80;
+}
+
+.about-content-2{
+    @apply flex flex-col gap-5
+}
+
+.about-subcontent1{
+    @apply px-10.5 py-6 bg-secondary rounded-lg text-white
+}
+
+.about-subcontent-title{
+    @apply font-semibold text-lg mb-2;
+}
+
+.about-subcontent-icon{
+    @apply text-[25px]
+}
+
+.about-subcontent-2{
+    @apply border border-grey-border rounded-lg px-6 py-7;
+}
+
+.about-subcontent-2-title{
+    @apply font-semibold text-lg;
+}
+
+.icon-subcontent{
+    @apply text-primary text-4xl;
+}
+
+.subcontent-title{
+    @apply font-medium text-base mb-1;
+}
+
+.subcontent-desc{
+    @apply text-sm text-black/80;
+}
+
+
+.pelajaran-title{
+    @apply font-semibold text-xl md:text-2xl;
+}
+
+.pelajaran-container{
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10;
+}
+
+.pelajaran-content{
+    @apply grid grid-cols-1 p-6 bg-white-bg border border-grey-border rounded-lg;
+}
+.pelajaran-icon{
+    @apply p-2 bg-primary/20 rounded-xs flex items-center w-fit;
+}
+
+.pelajaran-content-icon{
+    @apply text-4xl text-primary;
+}
+
+.pelajaran-content-title{
+    @apply font-semibold text-lg mt-6 mb-2;
+}
+
+.pelajaran-content-desc{
+    @apply text-sm text-black/80 line-clamp-4;
+}
+
+
+/* BLOG */
+.blog-img{
+    @apply w-full object-cover h-64;
+}
+.blog-date{
+    @apply border-b border-b-black/45 justify-between flex flex-col md:flex-row items-start md:items-center mt-4 pb-2.5;
+}
+
+.date{
+    @apply text-black/55 text-[0.625rem] md:text-xs justify-between;
+}
+
+.blog-title{
+    @apply text-black group-hover:text-primary text-base line-clamp-2;
+}
+
+.blog-desc{
+    @apply text-black/55 text-xs mt-1 line-clamp-3 2xl:line-clamp-2;
+}
+
+.blog-button{
+    @apply text-black group-hover:text-primary items-center inline-flex mt-4;
+}
+
+.arrow-button-blog{
+    @apply text-[20px] ml-2;
+}
+
+.blog-name{
+    @apply text-xs;
+}
+
+/* LOGIN */
+.body-login{
+    @apply bg-white-bg min-h-screen flex items-center justify-center p-4;
+}
+
+.main-login{
+    @apply bg-white w-full max-w-135 rounded-4xl p-8 md:p-12 shadow-sm;
+}
+
+.login-content-1{
+    @apply flex flex-col items-center mb-8 text-center;
+}
+
+.login-title{
+    @apply text-2xl font-bold text-black tracking-wide;
+}
+
+.nis-title, .nisn-title{
+    @apply text-sm font-semibold text-black;
+}
+
+.nis{
+    @apply w-full px-4 py-3 rounded-xl border border-grey-border bg-white text-black placeholder:text-gray-400 focus:outline-none focus:border-primary transition-colors duration-300;
+}
+
+.nisn{
+    @apply w-full px-4 py-3 pr-12 rounded-xl border border-grey-border bg-white text-black placeholder:text-gray-400 focus:outline-none focus:border-primary transition-colors duration-300;
+}
+
+.eye-button{
+    @apply absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-black flex items-center;
+}
+
+.login-content-2{
+    @apply flex items-center justify-between text-sm;
+}
+
+.remember-me{
+    @apply flex items-center gap-2 text-gray-500 cursor-pointer select-none;
+}
+
+.check-box{
+    @apply w-4 h-4 rounded border-grey-border text-primary focus:ring-primary;
+}
+
+.forgot{
+    @apply text-orange font-medium hover:underline;
+}
+
+.sumbit{
+    @apply block w-full bg-primary hover:bg-secondary text-white font-semibold py-3.5 px-6 rounded-xl transition-all duration-300 mt-2 text-center;
+}
