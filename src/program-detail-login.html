@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/output.css" rel="stylesheet">
+
+    <!-- link iconify -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <!-- Font Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Link AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 h-28 bg-white">
+        <div class="sticky top-0 z-20 h-full mx-auto max-w-[90%] md:max-w-[85%] 2xl:max-w-350 mb-30 bg-white">
+            <div class="relative flex items-center justify-between h-full ">
+                <nav class="relative z-10 flex items-center justify-between w-full h-full md:z-0 " id="navbar">
+                    <div>
+                        <a href="index.html"><img src="image/logo.png" alt="logo" class="w-18"></a>
+                    </div>
+                    <div class="items-center hidden md:flex">
+                        <ul class="flex items-center justify-around lg:gap-12 md:gap-6">
+                            <li><a href="index-login.html" class="nav-all">Beranda</a></li>
+                            <li><a href="program-keahlian-login.html" class="nav-all-hover">Program</a></li>
+                            <li><a href="blog-login.html" class="nav-all">Blog</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="hidden md:block">
+                        <a href="profile.html" class="flex items-center gap-2 group">
+                            <img src="image/profile.jpg" alt="Profile" class="w-10 h-10 rounded-full object-cover border-2 border-primary group-hover:border-secondary transition-colors duration-300">
+                            <span class="font-poppins font-medium text-black group-hover:text-primary transition-colors duration-300">Profil Saya</span>
+                        </a>
+                    </div>
+
+                    <button class="md:hidden" id="menu-toggle">
+                        <iconify-icon icon="mynaui:menu" class="text-[32px] text-black hover:text-black hover:transition-all hover:duration-500"></iconify-icon>
+                    </button>
+                </nav>
+                
+                <nav class="fixed z-10 hidden w-full py-8 bg-white md:hidden padding top-28" id="mobile-menu">
+                    <div class="flex flex-col items-center gap-6">
+                        <ul class="flex flex-col gap-4 text-center">
+                            <li><a href="index-login.html" class="nav-all">Beranda</a></li>
+                            <li><a href="program-keahlian-login.html" class="nav-all">Program</a></li>
+                            <li><a href="blog-login.html" class="nav-all">Blog</a></li>
+                        </ul>
+                        <div class="w-4/5 h-px bg-grey-border"></div>
+                        
+                        <a href="profile.html" class="flex items-center gap-3 bg-white-bg py-2 px-6 rounded-full border border-grey-border">
+                            <img src="image/avatar-default.png" alt="Profile" class="w-9 h-9 rounded-full object-cover border border-primary">
+                            <span class="font-poppins font-medium text-black text-sm">Profil Saya</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" data-aos="fade-up">
+        <img src="image/rpl bg.jpg" alt="" class="hero-img">
+        <div>
+            <h1 class="hero-title">Rekayasa Perangkat Lunak (RPL)</h1>
+            <p class="hero-desc">Mempelajari pengembangan website, aplikasi, dan perangkat lunak melalui pemrograman, desain sistem, pengelolaan basis data, serta penerapan teknologi digital modern. Siswa akan dibekali keterampilan untuk merancang, membangun, dan mengembangkan solusi digital yang sesuai dengan kebutuhan industri dan perkembangan teknologi.</p>
+            <div class="inline-block btn-both">
+                <a href="" class="button-primary">Lihat Fasilitas</a>
+                <a href="" class="button-secondary"
+                onmouseover="this.previousElementSibling.classList.add('!bg-transparent','!text-primary')"
+                onmouseout="this.previousElementSibling.classList.remove('!bg-transparent','!text-primary')">
+                Program Keahlian</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" data-aos="fade-up">
+        <div class="about-content-1">
+            <div class="about-icon-title">
+                <iconify-icon icon="material-symbols:folder-code" class="about-icon"></iconify-icon>
+                <h2 class="about-title">Tentang Program Keahlian</h2>
+            </div>
+            <p class="about-desc">Rekayasa Perangkat Lunak (RPL) merupakan program keahlian yang berfokus pada pengembangan perangkat lunak, website, aplikasi, dan sistem informasi. Siswa akan mempelajari berbagai kompetensi di bidang teknologi informasi, mulai dari dasar pemrograman, pengelolaan basis data, perancangan sistem, hingga pengembangan antarmuka pengguna yang modern dan responsif.</p>
+            <p class="about-desc-2">Melalui pembelajaran berbasis praktik, dan kolaborasi, siswa dibekali kemampuan untuk menciptakan solusi digital yang inovatif sesuai kebutuhan industri. Program ini dirancang untuk mempersiapkan lulusan yang kompeten, kreatif, dan siap melanjutkan pendidikan maupun berkarier di bidang pengembangan perangkat lunak dan teknologi digital.</p>
+        </div>
+
+        <div class="about-content-2">
+            <div class="about-subcontent1">
+                <h3 class="about-subcontent-title">Prospek Karir</h3>
+                <div class="flex flex-col md:flex-row gap-1 md:gap-3">
+                    <div class="gap-2">
+                        <div class="flex gap-1">
+                            <iconify-icon icon="material-symbols:check-rounded" class="about-subcontent-icon"></iconify-icon>
+                            <p class="about-subcontent-desc">Software Enggineer</p>
+                        </div>
+
+                        <div class="flex gap-1">
+                            <iconify-icon icon="material-symbols:check-rounded" class="about-subcontent-icon"></iconify-icon>
+                            <p class="about-subcontent-desc">UIUX Designer</p>
+                        </div>
+
+                        <div class="flex gap-1">
+                            <iconify-icon icon="material-symbols:check-rounded" class="about-subcontent-icon"></iconify-icon>
+                            <p class="about-subcontent-desc">Game Developer</p>
+                        </div>
+                    </div>
+
+                    <div class="gap-2">
+                        <div class="flex gap-1">
+                            <iconify-icon icon="material-symbols:check-rounded" class="about-subcontent-icon"></iconify-icon>
+                            <p class="about-subcontent-desc">QA Specialist / Tester</p>
+                        </div>
+
+                        <div class="flex gap-1">
+                            <iconify-icon icon="material-symbols:check-rounded" class="about-subcontent-icon"></iconify-icon>
+                            <p class="about-subcontent-desc">Data Scientist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-subcontent-2">
+                <h3 class="about-subcontent-2-title">Fasilitas Pendukung</h3>
+                <div class="flex flex-col gap-5 mt-3">
+                    <div class="flex gap-2">
+                        <iconify-icon icon="tdesign:laptop-filled" class="icon-subcontent"></iconify-icon>
+                        <div>
+                            <h4 class="subcontent-title">Lab Komputer</h4>
+                            <p class="subcontent-desc">Dilengkapi komputer yang digunakan untuk praktik pemrograman</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2">
+                        <iconify-icon icon="material-symbols:wifi-rounded" class="icon-subcontent"></iconify-icon>
+                        <div>
+                            <h4 class="subcontent-title">Lab Jaringan</h4>
+                            <p class="subcontent-desc">Akses interner untuk mendukung riset dalam proses pembelajaran siswa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- PELAJARAN -->
+    <section data-aos="fade-up">
+        <h3 class="pelajaran-title">Kompetensi Yang Dipelajari</h3>
+        <div class="pelajaran-container">
+            <div class="pelajaran-content">
+                <span class="pelajaran-icon"><iconify-icon icon="material-symbols:code-rounded" class="pelajaran-content-icon"></iconify-icon></span>
+                <h3 class="pelajaran-content-title">Pemrograman Dasar</h3>
+                <p class="pelajaran-content-desc">Mempelajari logika pemrograman dan berbagai bahasa pemrograman modern. Kompetensi ini menjadi fondasi dalam membangun solusi digital yang terstruktur dan efektif.</p>
+            </div>
+
+            <div class="pelajaran-content">
+                <div class="pelajaran-icon"><iconify-icon icon="material-symbols:palette" class="pelajaran-content-icon"></iconify-icon></div>
+                <h3 class="pelajaran-content-title">UI/UX Design</h3>
+                <p class="pelajaran-content-desc">Merancang antarmuka dan pengalaman pengguna yang efektif serta menarik. Siswa akan belajar menciptakan desain yang tidak hanya estetis, tetapi juga mudah digunakan.</p>
+            </div>
+
+            <div class="pelajaran-content">
+                <div class="pelajaran-icon"><iconify-icon icon="ri:smartphone-fill" class="pelajaran-content-icon"></iconify-icon></div>
+                <h3 class="pelajaran-content-title">Mobile Development</h3>
+                <p class="pelajaran-content-desc">Mengembangkan aplikasi mobile yang responsif dan mudah digunakan. Pembelajaran mencakup perancangan, pengembangan, serta optimalisasi aplikasi untuk berbagai perangkat.</p>
+            </div>
+
+            <div class="pelajaran-content">
+                <div class="pelajaran-icon"><iconify-icon icon="at-icons:bot" class="pelajaran-content-icon"></iconify-icon></div>
+                <h3 class="pelajaran-content-title">Software Engineering</h3>
+                <p class="pelajaran-content-desc">Menerapkan proses analisis, perancangan, pengembangan, dan pengujian perangkat lunak. Pembelajaran berfokus pada penerapan metode kerja yang terstruktur sesuai standar industri.</p>
+            </div>
+
+            <div class="pelajaran-content">
+                <div class="pelajaran-icon"><iconify-icon icon="material-symbols-light:database" class="pelajaran-content-icon"></iconify-icon></div>
+                <h3 class="pelajaran-content-title">Database Management</h3>
+                <p class="pelajaran-content-desc">Merancang, mengelola, dan mengoptimalkan basis data untuk berbagai kebutuhan aplikasi. Siswa akan memahami cara menyimpan, mengolah, dan mengamankan data.</p>
+            </div>
+
+            <div class="pelajaran-content">
+                <div class="pelajaran-icon"><iconify-icon icon="uil:globe" class="pelajaran-content-icon"></iconify-icon></div>
+                <h3 class="pelajaran-content-title">Web Development</h3>
+                <p class="pelajaran-content-desc">Membangun website modern, siswa akan mempelajari proses pengembangan web mulai dari perancangan antarmuka hingga implementasi sistem yang fungsional.</p>
+            </div>
+        </div>
+    </section>
+
+        <!-- FOOTER -->
+    <footer data-aos="fade-up">
+        <div class="footer-wrapper" >
+            <div class="footer-content-1">
+                <h3 class="footer-logo">SMK Negeri 1 Denpasar</h3>
+                <p class="footer-desc">Siap bantu kendaraan Anda tetap prima kapan pun dibutuhkan. Booking mudah, servis cepat, hasil memuaskan!</p>
+            </div>
+            <div class="footer-content-2">
+                <div class="footer-nav">
+                    <h3 class="footer-title">Navigasi</h3>
+                    <a href="#home" class="footer-nav-link">Beranda</a>
+                    <a href="#" class="footer-nav-link">Program</a>
+                    <a href="#" class="footer-nav-link">Blog</a>
+                </div>
+                <div class="footer-contact">
+                    <h3 class="footer-title">Contact</h3>
+                    <a href="tel:081236396662" class="contact-item">
+                        <iconify-icon icon="ic:baseline-phone" class="footer-icon"></iconify-icon>
+                        <p>081236396662</p>
+                    </a>
+                    <a href="mailto:info@smkn1denpasar.sch.id" class="contact-item">
+                        <iconify-icon icon="ic:baseline-email" class="footer-icon"></iconify-icon>
+                        <p>info@smkn1denpasar.sch.id</p>
+                    </a>
+                    <a href="https://maps.google.com/?q=Jalan+HOS.+Cokroaminoto+No.+84" target="_blank" class="contact-item">
+                        <iconify-icon icon="mdi:location" class="footer-icon"></iconify-icon>
+                        <p>Jalan HOS. Cokroaminoto No. 84</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-icon-contact">
+                <iconify-icon icon="mdi:instagram" class="footer-bottom-icon"></iconify-icon>
+                <iconify-icon icon="mdi:whatsapp" class="footer-bottom-icon"></iconify-icon>
+                <iconify-icon icon="mdi:facebook" class="footer-bottom-icon"></iconify-icon>
+                <iconify-icon icon="mdi:twitter" class="footer-bottom-icon"></iconify-icon>
+            </div>
+            <p>&copy; 2024-2026 SMK Negeri 1 Denpasar.</p>
+        </div>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

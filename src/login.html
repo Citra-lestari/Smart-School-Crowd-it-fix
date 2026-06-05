@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/output.css" rel="stylesheet">
+
+    <!-- link iconify -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <!-- Font Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="body-login">
+    <main class="main-login" data-aos="fade-up">
+        <div class="login-content-1">
+            <a href="index.html" class="mb-4">
+                <img src="image/logo.png" alt="logo" class="w-20 mx-auto">
+            </a>
+            <h2 class="login-title">Sign In</h2>
+        </div>
+
+        <form action="#" method="POST" class="space-y-6">
+            <div class="flex flex-col gap-2">
+                <label for="nis" class="nis-title">NIS</label>
+                <input type="text" 
+                    id="nis" 
+                    name="nis" 
+                    placeholder="Enter your NIS" 
+                    required
+                    class="nis"
+                >
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="nisn" class="nisn-title">NISN</label>
+                <div class="relative w-full">
+                    <input 
+                        type="password" 
+                        id="nisn" 
+                        name="nisn" 
+                        placeholder="Enter your NISN" 
+                        required
+                        class="nisn"
+                    >
+                    <button 
+                        type="button" 
+                        id="toggle-password"
+                        class="eye-button"
+                    >
+                        <iconify-icon id="eye-icon" icon="fluent:eye-off-24-regular" class="text-xl"></iconify-icon>
+                    </button>
+                </div>
+            </div>
+
+            <div class="login-content-2">
+                <label class="remember-me">
+                    <input 
+                        type="checkbox" 
+                        name="remember" 
+                        class="check-box"
+                    >
+                    <span>Remember me</span>
+                </label>
+                <a href="#" class="forgot">Forgot Password?</a>
+            </div>
+
+            <a href="index-login.html" 
+                type="submit" 
+                class="sumbit"
+            >
+                Sign In
+            </a>
+
+        </form>
+    </main>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Script untuk toggle sembunyikan/tampilkan password (NISN)
+        const togglePassword = document.querySelector('#toggle-password');
+        const passwordInput = document.querySelector('#nisn');
+        const eyeIcon = document.querySelector('#eye-icon');
+
+        togglePassword.addEventListener('click', function () {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            
+            // Ganti icon berdasarkan state
+            if (type === 'text') {
+                eyeIcon.setAttribute('icon', 'fluent:eye-24-regular');
+            } else {
+                eyeIcon.setAttribute('icon', 'fluent:eye-off-24-regular');
+            }
+        });
+    </script>
+</body>
+</html>
