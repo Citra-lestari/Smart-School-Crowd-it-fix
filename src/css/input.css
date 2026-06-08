@@ -25,7 +25,7 @@ section{
 }
 
 .nav-all-hover{
-    @apply text-primary lg:text-base md:text-sm text-[18px] hover:transition-all hover:text-primary hover:duration-500;
+    @apply text-primary lg:text-base md:text-sm text-[18px];
 }
 
 /* css untuk button */
@@ -47,7 +47,7 @@ section{
 }
 
 .title{
-    @apply font-semibold text-[25px] md:text-[32px] 2xl:text-[40px] mb-1.5;
+    @apply font-semibold text-[25px] md:text-[32px] 2xl:text-[40px] mb-1.5 text-black;
 }
 
 .desc{
@@ -60,7 +60,7 @@ section{
 }
 
 .hero-title{
-    @apply font-semibold text-3xl 2xl:text-5xl mb-2 leading-10 2xl:leading-15;
+    @apply font-semibold text-3xl 2xl:text-5xl mb-2 leading-10 2xl:leading-15 text-black;
 }
 
 .hero-desc{
@@ -77,7 +77,7 @@ section{
 }
 
 .visi-content-1{
-    @apply col-span-1 px-5 py-7 bg-white-bg rounded-lg row-span-2;
+    @apply col-span-1 px-5 py-7 bg-white-bg rounded-lg row-span-2 border-0;
 }
 
 .visi-title{
@@ -85,11 +85,11 @@ section{
 }
 
 .visi-desc{
-    @apply font-medium text-xl;
+    @apply font-medium text-xl text-black;
 }
 
 .visi-content-2{
-    @apply grid grid-rows-2 gap-5;
+    @apply grid grid-rows-2 gap-5 ;
 }
 
 .visi-content-3{
@@ -97,11 +97,11 @@ section{
 }
 
 .visi-subcontent{
-    @apply row-span-1 col-span-1 px-5 py-6 bg-white-bg rounded-lg;
+    @apply row-span-1 col-span-1 px-5 py-6 bg-white-bg rounded-lg border-0;
 }
 
 .visi-title-2{
-    @apply mt-3 mb-2 font-medium text-base;
+    @apply mt-3 mb-2 font-medium text-base text-black;
 }
 
 .visi-desc-2{
@@ -124,9 +124,10 @@ section{
     @apply font-semibold text-base 2xl:text-lg mb-1 group-hover:text-primary group-hover:underline transition-colors;
 }
 
-.fasilitas-desc, .program-desc{
+.fasilitas-desc{
     @apply text-sm 2xl:text-base text-black/80 line-clamp-3;
 }
+
 
 /* EKSTRAKULIKULER */
 
@@ -245,7 +246,11 @@ footer{
 }
 
 .program-title{
-    @apply  font-semibold text-base 2xl:text-lg mb-1 group-hover:text-primary line-clamp-1;
+    @apply font-semibold text-base 2xl:text-lg mb-1 text-black group-hover:text-primary line-clamp-1;
+}
+
+.program-desc{
+    @apply text-sm 2xl:text-base text-black/80 line-clamp-3;
 }
 
 .next-arrow{
@@ -255,7 +260,6 @@ footer{
 .next-desc{
     @apply text-sm text-black group-hover:text-primary group-hover:underline line-clamp-3;
 }
-
 .next-icon{
     @apply text-2xl text-black group-hover:text-primary;
 }
@@ -279,7 +283,7 @@ footer{
 }
 
 .about-title{
-    @apply font-semibold text-xl md:text-3xl;   
+    @apply font-semibold text-xl md:text-3xl text-black;
 }
 
 .about-desc{
@@ -289,6 +293,7 @@ footer{
 .about-desc-2{
     @apply text-base text-black/80;
 }
+
 
 .about-content-2{
     @apply flex flex-col gap-5
@@ -319,7 +324,7 @@ footer{
 }
 
 .subcontent-title{
-    @apply font-medium text-base mb-1;
+    @apply font-medium text-base mb-1 text-black;
 }
 
 .subcontent-desc{
@@ -328,11 +333,11 @@ footer{
 
 
 .pelajaran-title{
-    @apply font-semibold text-xl md:text-2xl;
+    @apply font-semibold text-xl md:text-2xl text-black;
 }
 
 .pelajaran-container{
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10;
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 ;
 }
 
 .pelajaran-content{
@@ -346,8 +351,9 @@ footer{
     @apply text-4xl text-primary;
 }
 
+
 .pelajaran-content-title{
-    @apply font-semibold text-lg mt-6 mb-2;
+    @apply font-semibold text-lg mt-6 mb-2 text-black;
 }
 
 .pelajaran-content-desc{
@@ -438,4 +444,197 @@ footer{
 
 .sumbit{
     @apply block w-full bg-primary hover:bg-secondary text-white font-semibold py-3.5 px-6 rounded-xl transition-all duration-300 mt-2 text-center;
+}
+
+
+/* =========================================
+   DARK MODE
+   ========================================= */
+
+html.dark body{
+    background:#111827;
+    color:#f3f4f6;
+}
+
+/* Header */
+html.dark header{
+    background:#111827;
+}
+
+/* Mobile Menu */
+html.dark #mobile-menu{
+    background:#111827;
+    border-color:#374151;
+}
+
+/* Title */
+html.dark .title,
+html.dark .hero-title,
+html.dark .footer-logo,
+html.dark .footer-title,
+html.dark .visi-title,
+html.dark .visi-title-2{
+    color:white;
+}
+
+/* Description */
+html.dark .desc,
+html.dark .hero-desc,
+html.dark .footer-desc,
+html.dark .visi-desc,
+html.dark .visi-desc-2,
+html.dark .fasilitas-desc{
+    color:#d1d5db;
+}
+
+/* Card */
+html.dark .visi-content-1,
+html.dark .visi-subcontent{
+    background:#1f2937;
+    border:1px solid #374151;
+}
+
+/* Footer */
+html.dark footer{
+    background:#111827;
+    border-top:1px solid #374151;
+}
+
+/* Chatbot */
+html.dark #skensai-window{
+    background:#1f2937;
+    border-color:#374151;
+}
+
+html.dark #skensai-messages{
+    background:#111827;
+}
+
+html.dark #skensai-input{
+    background:#374151;
+    color:white;
+}
+
+/* CTA */
+html.dark .cta{
+    background:#1f2937;
+}
+
+/* Navigation */
+html.dark .nav-all,
+html.dark .nav-all-hover,
+html.dark .footer-nav-link,
+html.dark .contact-item{
+    color:#e5e7eb;
+}
+
+/* Gallery */
+html.dark .img-gallery{
+    filter:brightness(.9);
+}
+
+/* Image */
+html.dark .hero-img,
+html.dark .fasilitas-img{
+    filter:brightness(.9);
+}
+
+/* ABOUT */
+html.dark .about-title{
+    color:white;
+}
+
+html.dark .about-desc,
+html.dark .about-desc-2{
+    color:#d1d5db;
+}
+
+/* SUBCONTENT */
+html.dark .subcontent-title{
+    color:white;
+}
+
+html.dark .subcontent-desc{
+    color:#d1d5db;
+}
+
+
+/* PELAJARAN */
+html.dark .pelajaran-title{
+    color:white;
+}
+
+html.dark .pelajaran-content-title{
+    color:white;
+}
+
+html.dark .pelajaran-content-desc{
+    color:#d1d5db;
+}
+
+html.dark .pelajaran-content{
+    background:#1f2937;
+    border-color:#374151;
+}
+
+
+/* PROGRAM KEAHLIAN */
+html.dark .program-title{
+    color:white;
+}
+
+html.dark .program-desc{
+    color:white;
+    opacity:50%;
+}
+
+html.dark .next-desc{
+    color:white;
+}
+
+html.dark .next-icon{
+    color:white;
+}
+
+/* Hover tetap primary */
+html.dark .group:hover .program-title{
+    color:var(--color-primary);
+}
+
+html.dark .group:hover .next-desc{
+    color:var(--color-primary);
+}
+
+html.dark .group:hover .next-icon{
+    color:var(--color-primary);
+}
+
+/* BLOG */
+html.dark .blog-title{
+    color:white;
+}
+
+html.dark .blog-desc{
+    color:#d1d5db;
+}
+
+html.dark .date{
+    color:#9ca3af;
+}
+
+html.dark .blog-name{
+    color:#d1d5db;
+}
+
+/* Hover tetap primary */
+html.dark .group:hover .blog-title{
+    color:var(--color-primary);
+}
+
+html.dark .group:hover .blog-button{
+    color:var(--color-primary);
+}
+
+html.dark .group:hover .arrow-button-blog{
+    color:var(--color-primary);
 }

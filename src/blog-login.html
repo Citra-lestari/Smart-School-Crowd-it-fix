@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/output.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- link iconify -->
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
@@ -19,105 +20,100 @@
 </head>
 <body>
     <!-- HEADER -->
-    <header class="sticky top-0 z-50 h-28 bg-white">
-        <div class="sticky top-0 z-20 h-full mx-auto max-w-[90%] md:max-w-[85%] 2xl:max-w-350 mb-30 bg-white">
-            <div class="relative flex items-center justify-between h-full ">
-                <nav class="relative z-10 flex items-center justify-between w-full h-full md:z-0 " id="navbar">
-                    <div>
-                        <a href="index.html"><img src="image/logo.png" alt="logo" class="w-18"></a>
-                    </div>
-                    <div class="items-center hidden md:flex">
-                        <ul class="flex items-center justify-around lg:gap-12 md:gap-6">
-                            <li><a href="index-login.html" class="nav-all">Beranda</a></li>
-                            <li><a href="program-keahlian-login.html" class="nav-all">Program</a></li>
-                            <li><a href="blog-login.html" class="nav-all-hover">Blog</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="hidden md:block">
-                        <a href="profile.html" class="flex items-center gap-2 group">
-                            <img src="image/profile.jpg" alt="Profile" class="w-10 h-10 rounded-full object-cover border-2 border-primary group-hover:border-secondary transition-colors duration-300">
-                            <span class="font-poppins font-medium text-black group-hover:text-primary transition-colors duration-300">Profil Saya</span>
-                        </a>
-                    </div>
+<header class="sticky top-0 z-50 h-28 bg-white dark:bg-gray-900 transition-colors duration-300">
+    <div class="sticky top-0 z-20 h-full mx-auto max-w-[90%] md:max-w-[85%] 2xl:max-w-350 mb-30 bg-white dark:bg-gray-900 transition-colors duration-300">
+        <div class="relative flex items-center justify-between h-full">
+            <nav class="relative z-10 flex items-center justify-between w-full h-full md:z-0" id="navbar">
+                <div>
+                    <a href="index-login.html">
+                        <img src="image/logo.png" alt="logo" class="w-18">
+                    </a>
+                </div>
 
-                    <button class="md:hidden" id="menu-toggle">
-                        <iconify-icon icon="mynaui:menu" class="text-[32px] text-black hover:text-black hover:transition-all hover:duration-500"></iconify-icon>
-                    </button>
-                </nav>
+                <div class="items-center hidden md:flex">
+                    <ul class="flex items-center justify-around lg:gap-12 md:gap-6">
+                        <li><a href="index-login.html" class="nav-all-hover dark:text-gray-200" data-lang-id="Beranda" data-lang-en="Home">Beranda</a></li>
+                        <li><a href="program-keahlian-login.html" class="nav-all dark:text-gray-200" data-lang-id="Program" data-lang-en="Program">Program</a></li>
+                        <li><a href="blog-login.html" class="nav-all dark:text-gray-200" data-lang-id="Blog" data-lang-en="Blog">Blog</a></li>
+                    </ul>
+                </div>
                 
-                <nav class="fixed z-10 hidden w-full py-8 bg-white md:hidden padding top-28" id="mobile-menu">
-                    <div class="flex flex-col items-center gap-6">
-                        <ul class="flex flex-col gap-4 text-center">
-                            <li><a href="index.html" class="nav-all">Beranda</a></li>
-                            <li><a href="program-keahlian.html" class="nav-all">Program</a></li>
-                            <li><a href="blog.html" class="nav-all">Blog</a></li>
-                        </ul>
-                        <div class="w-4/5 h-px bg-grey-border"></div>
-                        
-                        <a href="profile.html" class="flex items-center gap-3 bg-white-bg py-2 px-6 rounded-full border border-grey-border">
-                            <img src="image/avatar-default.png" alt="Profile" class="w-9 h-9 rounded-full object-cover border border-primary">
-                            <span class="font-poppins font-medium text-black text-sm">Profil Saya</span>
-                        </a>
-                    </div>
-                </nav>
-            </div>
+                <div class="hidden md:flex items-center gap-6">
+                    <button id="lang-btn" class="cursor-pointer focus:outline-none">
+                        <div class="text-xs font-medium text-gray-500 dark:text-gray-400" data-lang-id="ID" data-lang-en="EN">ID</div>
+                    </button>
+                    
+                    <button id="theme-toggle" class="cursor-pointer focus:outline-none flex items-center justify-center p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+                        <i id="theme-icon" class="fa-solid fa-sun text-black dark:text-yellow-400 text-lg transition-colors duration-300"></i>
+                    </button>
+
+                    <a href="profile.html" class="flex items-center gap-2 group">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=256&auto=format&fit=crop" alt="Profile" class="w-10 h-10 rounded-full object-cover border-2 border-primary group-hover:border-secondary transition-colors duration-300">
+                        <span class="font-poppins font-medium text-black dark:text-white group-hover:text-primary transition-colors duration-300" data-lang-id="Profil Saya" data-lang-en="My Profile">Profil Saya</span>
+                    </a>
+                </div>
+
+                <button class="md:hidden p-2" id="menu-toggle">
+                    <i class="fa-solid fa-bars text-[32px] text-black dark:text-white transition-colors duration-300"></i>
+                </button>
+            </nav>
         </div>
-    </header>
+    </div>
+</header>
 
     <!-- Blog -->
     <section class="" data-aos="fade-up">
         <div class="title-desc">
-            <h1 class="title">Kabar Terbaru dari SKENSA</h1>
-            <p class="desc">Temukan berbagai cerita, pencapaian, dan kegiatan inspiratif yang mencerminkan semangat belajar, berkarya, dan berprestasi di SKENSA.</p>
+            <h1 class="title dark:text-white"data-lang-id="Kabar Terbaru dari SKENSA"data-lang-en="Latest News from SKENSA">Kabar Terbaru dari SKENSA</h1>
+            <p class="desc dark:text-gray-300"data-lang-id="Temukan berbagai cerita, pencapaian, dan kegiatan inspiratif yang mencerminkan semangat belajar, berkarya, dan berprestasi di SKENSA."data-lang-en="Discover inspiring stories, achievements, and activities that reflect the spirit of learning, creativity, and excellence at SKENSA.">Temukan berbagai cerita, pencapaian, dan kegiatan inspiratif yang mencerminkan semangat belajar, berkarya, dan berprestasi di SKENSA.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <!-- blog 1 -->
             <div class="group">
                 <img src="image/lks.jpg" alt="" class="blog-img">
                 <div class="blog-date">
-                    <h1 class="date">23 March 2025</h1>
-                    <h2 class="blog-name">Lingkungan Skensa</h2>
+                    <h1 class="date dark:text-gray-400">23 March 2025</h1>
+                    <h2 class="blog-name dark:text-gray-300"data-lang-id="Lingkungan Skensa"data-lang-en="Skensa Environment">Lingkungan Skensa</h2>
                 </div>
                 <div class="mt-2.5">
-                    <h1 class="blog-title">Siswa SKENSA Raih Prestasi dalam Lomba Kompetensi Siswa (LKS)</h1>
-                    <p class="blog-desc">Siswa SMK Negeri 1 Denpasar kembali menunjukkan kompetensinya dalam ajang Lomba Kompetensi Siswa (LKS) melalui berbagai bidang keahlian dan berhasil mengharumkan nama sekolah.</p>
+                    <h1 class="blog-title dark:text-white"data-lang-id="Siswa SKENSA Raih Prestasi dalam Lomba Kompetensi Siswa (LKS)"data-lang-en="SKENSA Students Achieve Success in the Student Skills Competition (LKS)">Siswa SKENSA Raih Prestasi dalam Lomba Kompetensi Siswa (LKS)</h1>
+                    <p class="blog-desc dark:text-gray-300"data-lang-id="Siswa SMK Negeri 1 Denpasar kembali menunjukkan kompetensinya dalam ajang Lomba Kompetensi Siswa (LKS) melalui berbagai bidang keahlian dan berhasil mengharumkan nama sekolah."data-lang-en="Students of SMK Negeri 1 Denpasar once again demonstrated their competence in the Student Skills Competition (LKS) across various fields of expertise and brought pride to the school.">Siswa SMK Negeri 1 Denpasar kembali menunjukkan kompetensinya dalam ajang Lomba Kompetensi Siswa (LKS) melalui berbagai bidang keahlian dan berhasil mengharumkan nama sekolah.</p>
                 </div>
             </div>
             <!-- blog 2 -->
             <div class="group">
                 <img src="image/pelepasan.jpg" alt="" class="blog-img">
                 <div class="blog-date">
-                    <h1 class="date">31 March 2025</h1>
-                    <h2 class="text-xs">Aula Skensa</h2>
+                    <h1 class="date dark:text-gray-400">31 March 2025</h1>
+                    <h2 class="text-xs dark:text-gray-300"data-lang-id="Aula Skensa"data-lang-en="Skensa Hall">Aula Skensa</h2>
                 </div>
                 <div class="mt-2.5">
-                    <h1 class="blog-title">Pelepasan Siswa Kelas XII Tahun Ajaran 2025/2026</h1>
-                    <p class="blog-desc">Momen penuh haru dan kebanggaan mewarnai acara pelepasan siswa kelas XII sebagai penutup perjalanan pendidikan dan awal langkah menuju masa depan yang lebih cerah.</p>
+                    <h1 class="blog-title dark:text-white"data-lang-id="Pelepasan Siswa Kelas XII Tahun Ajaran 2025/2026"data-lang-en="Graduation Ceremony for Grade XII Students Academic Year 2025/2026">Pelepasan Siswa Kelas XII Tahun Ajaran 2025/2026</h1>
+                    <p class="blog-desc dark:text-gray-300"data-lang-id="Momen penuh haru dan kebanggaan mewarnai acara pelepasan siswa kelas XII sebagai penutup perjalanan pendidikan dan awal langkah menuju masa depan yang lebih cerah."data-lang-en="A heartfelt and proud moment marked the graduation ceremony of Grade XII students as the end of their educational journey and the beginning of a brighter future.">Momen penuh haru dan kebanggaan mewarnai acara pelepasan siswa kelas XII sebagai penutup perjalanan pendidikan dan awal langkah menuju masa depan yang lebih cerah.</p>
                 </div>
             </div>
             <!-- blog 3 -->
             <div class="group">
                 <img src="image/edufair.jpg" alt="" class="blog-img">
                 <div class="blog-date">
-                    <h1 class="date">08 Mey 2025</h1>
-                    <h2 class="text-xs">Aula Skensa</h2>
+                    <h1 class="date dark:text-gray-400">08 Mey 2025</h1>
+                    <h2 class="text-xs dark:text-gray-300"data-lang-id="Aula Skensa"data-lang-en="Skensa Hall">Aula Skensa</h2>
                 </div>
                 <div class="mt-2.5">
-                    <h1 class="blog-title">Edufair SKENSA: Membuka Wawasan Pendidikan dan Karier</h1>
-                    <p class="blog-desc">Melalui kegiatan Edufair, siswa mendapatkan informasi mengenai berbagai perguruan tinggi, program studi, beasiswa, dan peluang karier untuk mempersiapkan masa depan mereka.</p>
+                    <h1 class="blog-title dark:text-white"data-lang-id="Edufair SKENSA: Membuka Wawasan Pendidikan dan Karier"data-lang-en="SKENSA Edufair: Expanding Educational and Career Opportunities">Edufair SKENSA: Membuka Wawasan Pendidikan dan Karier</h1>
+                    <p class="blog-desc dark:text-gray-300" data-lang-id="Melalui kegiatan Edufair, siswa mendapatkan informasi mengenai berbagai perguruan tinggi, program studi, beasiswa, dan peluang karier untuk mempersiapkan masa depan mereka."data-lang-en="Through Edufair, students gain information about universities, study programs, scholarships, and career opportunities to prepare for their future.">Melalui kegiatan Edufair, siswa mendapatkan informasi mengenai berbagai perguruan tinggi, program studi, beasiswa, dan peluang karier untuk mempersiapkan masa depan mereka.</p>
                 </div>
             </div>
             <!-- blog 4 -->
             <div class="group">
                 <img src="image/gelar karya.jpg" alt="" class="blog-img">
                 <div class="blog-date">
-                    <h1 class="date">19 Mey 2025</h1>
-                    <h2 class="text-xs">Aula Skensa</h2>
+                    <h1 class="date dark:text-gray-400">19 Mey 2025</h1>
+                    <h2 class="text-xs dark:text-gray-300"data-lang-id="Aula Skensa"data-lang-en="Skensa Hall">Aula Skensa</h2>
                 </div>
                 <div class="mt-2.5">
-                    <h1 class="blog-title">Gelar Karya Siswa: Menampilkan Kreativitas dan Inovasi</h1>
-                    <p class="blog-desc">Berbagai karya terbaik hasil pembelajaran siswa dipamerkan dalam acara Gelar Karya sebagai bentuk apresiasi terhadap kreativitas, inovasi, dan keterampilan yang telah dikembangkan.</p>
+                    <h1 class="blog-title dark:text-white"data-lang-id="Gelar Karya Siswa: Menampilkan Kreativitas dan Inovasi"data-lang-en="Student Showcase: Displaying Creativity and Innovation">Gelar Karya Siswa: Menampilkan Kreativitas dan Inovasi</h1>
+                    <p class="blog-desc dark:text-gray-300"data-lang-id="Berbagai karya terbaik hasil pembelajaran siswa dipamerkan dalam acara Gelar Karya sebagai bentuk apresiasi terhadap kreativitas, inovasi, dan keterampilan yang telah dikembangkan."data-lang-en="Various outstanding student projects were showcased as an appreciation of the creativity, innovation, and skills they have developed.">Berbagai karya terbaik hasil pembelajaran siswa dipamerkan dalam acara Gelar Karya sebagai bentuk apresiasi terhadap kreativitas, inovasi, dan keterampilan yang telah dikembangkan.</p>
                 </div>
             </div>
         </div>
@@ -125,46 +121,96 @@
 
 
     <!-- FOOTER -->
-    <footer data-aos="fade-up">
-        <div class="footer-wrapper" >
+    <footer data-aos="fade-up" class="dark:bg-gray-900 dark:border-t dark:border-gray-800 transition-colors duration-300">
+        <div class="footer-wrapper">
             <div class="footer-content-1">
-                <h3 class="footer-logo">SMK Negeri 1 Denpasar</h3>
-                <p class="footer-desc">Siap bantu kendaraan Anda tetap prima kapan pun dibutuhkan. Booking mudah, servis cepat, hasil memuaskan!</p>
+                <h3 class="footer-logo dark:text-white">SMK Negeri 1 Denpasar</h3>
+                <p class="footer-desc dark:text-gray-400"data-lang-id="SMK Negeri 1 Denpasar merupakan sekolah kejuruan unggulan yang berkomitmen mencetak lulusan kompeten, berkarakter, dan siap menghadapi dunia kerja maupun pendidikan tinggi."
+   data-lang-en="SMK Negeri 1 Denpasar is a leading vocational school committed to producing competent, character-driven graduates who are ready for the workforce and higher education.">
+   SMK Negeri 1 Denpasar merupakan sekolah kejuruan unggulan yang berkomitmen mencetak lulusan kompeten, berkarakter, dan siap menghadapi dunia kerja maupun pendidikan tinggi.</p>
             </div>
             <div class="footer-content-2">
                 <div class="footer-nav">
-                    <h3 class="footer-title">Navigasi</h3>
-                    <a href="#home" class="footer-nav-link">Beranda</a>
-                    <a href="#" class="footer-nav-link">Program</a>
-                    <a href="#" class="footer-nav-link">Blog</a>
+                    <h3 class="footer-title dark:text-white"data-lang-id="Navigasi"data-lang-en="Navigation">Navigasi</h3>
+                    <a href="index.html" class="footer-nav-link dark:text-gray-400 hover:text-primary"data-lang-id="Beranda"data-lang-en="Home">Beranda</a>
+                    <a href="program-keahlian.html" class="footer-nav-link dark:text-gray-400 hover:text-primary"data-lang-id="Program"data-lang-en="Program">Program</a>
+                    <a href="program-detail.html" class="footer-nav-link dark:text-gray-400 hover:text-primary"data-lang-id="Blog"data-lang-en="Blog">Blog</a>
                 </div>
                 <div class="footer-contact">
-                    <h3 class="footer-title">Contact</h3>
-                    <a href="tel:081236396662" class="contact-item">
-                        <iconify-icon icon="ic:baseline-phone" class="footer-icon"></iconify-icon>
-                        <p>081236396662</p>
+                    <h3 class="footer-title dark:text-white"data-lang-id="Kontak"data-lang-en="Contact">Contact</h3>
+                    <a href="tel:081236396662" class="contact-item dark:text-gray-400 hover:text-primary">
+                        <i class="fa-solid fa-phone footer-icon"></i> <p>081236396662</p>
                     </a>
-                    <a href="mailto:info@smkn1denpasar.sch.id" class="contact-item">
-                        <iconify-icon icon="ic:baseline-email" class="footer-icon"></iconify-icon>
-                        <p>info@smkn1denpasar.sch.id</p>
+                    <a href="mailto:info@smkn1denpasar.sch.id" class="contact-item dark:text-gray-400 hover:text-primary">
+                        <i class="fa-solid fa-envelope footer-icon"></i> <p>info@smkn1denpasar.sch.id</p>
                     </a>
-                    <a href="https://maps.google.com/?q=Jalan+HOS.+Cokroaminoto+No.+84" target="_blank" class="contact-item">
-                        <iconify-icon icon="mdi:location" class="footer-icon"></iconify-icon>
-                        <p>Jalan HOS. Cokroaminoto No. 84</p>
+                    <a href="https://maps.google.com/?q=Jalan+HOS.+Cokroaminoto+No.+84" target="_blank" class="contact-item dark:text-gray-400 hover:text-primary">
+                        <i class="fa-solid fa-location-dot footer-icon"></i> <p>Jalan HOS. Cokroaminoto No. 84</p>
                     </a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="footer-icon-contact">
-                <iconify-icon icon="mdi:instagram" class="footer-bottom-icon"></iconify-icon>
-                <iconify-icon icon="mdi:whatsapp" class="footer-bottom-icon"></iconify-icon>
-                <iconify-icon icon="mdi:facebook" class="footer-bottom-icon"></iconify-icon>
-                <iconify-icon icon="mdi:twitter" class="footer-bottom-icon"></iconify-icon>
+                <i class="fa-brands fa-instagram footer-bottom-icon dark:bg-gray-800 dark:text-white"></i>
+                <i class="fa-brands fa-whatsapp footer-bottom-icon dark:bg-gray-800 dark:text-white"></i>
+                <i class="fa-brands fa-facebook footer-bottom-icon dark:bg-gray-800 dark:text-white"></i>
+                <i class="fa-brands fa-twitter footer-bottom-icon dark:bg-gray-800 dark:text-white"></i>
             </div>
-            <p>&copy; 2024-2026 SMK Negeri 1 Denpasar.</p>
+            <p class="dark:text-gray-400">© 2024-2026 SMK Negeri 1 Denpasar.</p>
         </div>
     </footer>
+
+    <div class="fixed z-50 bottom-6 right-6 font-poppins">
+        
+        <div id="skensai-popup" class="absolute hidden w-[220px] p-3 text-xs text-gray-800 dark:text-gray-100 transition-all bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-xl rounded-2xl rounded-br-none border-r-4 border-r-primary right-[90px] bottom-[55px]">
+            <p data-lang-id="Halo! Saya SkensAI. Silakan tanya informasi seputar SMK Negeri 1 Denpasar menggunakan kata kunci seperti: jurusan, fasilitas, alamat, atau prestasi." 
+               data-lang-en="Hello! I am SkensAI. Please ask for information about SMK Negeri 1 Denpasar using keywords like: major, facilities, address, or achievement.">
+                Halo! Saya SkensAI ada yang bisa di bantu?. 
+            </p>
+        </div>
+
+        <button id="skensai-btn" class="fixed bottom-6 right-6 z-50 w-20 h-20 transition-transform duration-300 hover:scale-110 animate-pulse-slow drop-shadow-glow">
+            <img src="image/ai.png" alt="AI Assistant" class="w-full h-full object-contain">
+        </button>
+
+        <div id="skensai-window" class="absolute bottom-24 right-0 md:right-2 hidden flex-col w-[90vw] sm:w-[370px] h-[520px] md:w-[440px] md:h-[600px] max-w-[100vw] max-h-[85vh] bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-2xl rounded-2xl overflow-hidden">
+            
+            <div class="flex items-center justify-between p-4 text-white bg-primary shadow-md flex-shrink-0">
+                <div class="flex items-center gap-3">
+                    <div class="relative w-10 h-10 bg-white rounded-full p-0.5 shadow-sm flex items-center justify-center flex-shrink-0">
+                        <img src="image/ai.png" alt="SkensAI" class="w-full h-full object-contain rounded-full">
+                        <span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 border-2 border-white rounded-full animate-pulse"></span>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold leading-tight text-sm flex items-center gap-1">
+                            SkensAI
+                            <i class="fa-solid fa-circle-check text-[11px] text-blue-200" title="Verified Bot"></i>
+                        </h3>
+                        <p class="text-[11px] text-blue-100/90" data-lang-id="Online • Asisten SMK N 1 Denpasar" data-lang-en="Online • Assistant of SMK N 1 Denpasar">Online • Asisten SMK N 1 Denpasar</p>
+                    </div>
+                </div>
+                <button id="close-chat" class="text-white/80 transition-colors hover:text-white p-1 rounded-full hover:bg-white/10 flex items-center justify-center">
+                    <i class="fa-solid fa-xmark text-[20px]"></i>
+                </button>
+            </div>
+
+            <div id="skensai-messages" class="flex flex-col flex-grow p-4 gap-3 overflow-y-auto text-sm bg-slate-50 dark:bg-gray-900 pb-12">
+                <div class="flex items-start gap-2 max-w-[85%] self-start mb-1 flex-shrink-0">
+                    <div class="p-3 text-gray-800 dark:text-gray-100 bg-blue-50/80 dark:bg-gray-700 border border-blue-100 dark:border-gray-600 shadow-sm rounded-2xl rounded-tl-none leading-relaxed">
+                        Halo! Saya SkensAI. Silakan tanya informasi seputar SMK Negeri 1 Denpasar menggunakan kata kunci seperti: <b>jurusan, fasilitas, alamat, atau prestasi</b>.
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-2 p-3 bg-white dark:bg-gray-800 border-t border-gray-100 dark:border-gray-700 flex-shrink-0">
+                <input type="text" id="skensai-input" placeholder="Ketik pesan di sini..." class="flex-grow p-2.5 text-sm text-gray-800 dark:text-white bg-slate-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-full focus:outline-none focus:border-[#2c59fa] focus:ring-1 focus:ring-[#2c59fa] transition-all shadow-sm">
+                <button id="skensai-send" class="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white transition-colors bg-primary rounded-full shadow-md hover:bg-primary">
+                    <i class="fa-solid fa-paper-plane text-[15px]"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <script src="nav.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
