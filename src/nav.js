@@ -1,5 +1,5 @@
 /* =========================================
-   1. NAVBAR & SWIPER
+    1. NAVBAR & SWIPER
    ========================================= */
 const menuToggle = document.getElementById("menu-toggle");
 const mobileMenu = document.getElementById("mobile-menu");
@@ -7,23 +7,6 @@ const mobileMenu = document.getElementById("mobile-menu");
 if(menuToggle && mobileMenu) {
     menuToggle.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
-    });
-}
-
-// Service Swiper
-if(document.querySelector(".serviceSwiper")) {
-    const serviceSwiper = new Swiper(".serviceSwiper", {
-        slidesPerView: 4, 
-        spaceBetween: 16, 
-        pagination: {
-            el: ".swiper-pagination", 
-            clickable: true,
-        },
-        breakpoints: {
-            320: { slidesPerView: 1 }, 
-            640: { slidesPerView: 2 }, 
-            1024: { slidesPerView: 4 },
-        }
     });
 }
 
@@ -107,14 +90,29 @@ if (mobileThemeToggle) {
    3. FITUR MULTI-BAHASA (ID / EN)
    ========================================= */
 const langBtn = document.getElementById('lang-btn');
+const mobileLangBtn = document.getElementById('mobile-lang-btn'); // Tangkap tombol versi mobile
 
 function applyLanguage(lang) {
+
     document.querySelectorAll('[data-lang-id]').forEach(el => {
         const idText = el.getAttribute('data-lang-id');
         const enText = el.getAttribute('data-lang-en');
-        el.innerText = lang === 'EN' ? enText : idText;
+
+        el.innerText = lang === 'EN'
+            ? enText
+            : idText;
     });
 
+    // Ganti gambar hero
+    const heroImage = document.getElementById('hero-image');
+
+    if (heroImage) {
+        heroImage.src = lang === 'EN'
+            ? 'image/hero section eng.png'
+            : 'image/hero section.png';
+    }
+
+    // Update text tombol bahasa desktop
     if (langBtn) {
         const langText = langBtn.querySelector('div');
         if (langText) {
@@ -123,20 +121,23 @@ function applyLanguage(lang) {
     }
 }
 
-// Inisialisasi bahasa dari localStorage agar otomatis di semua halaman
+// Inisialisasi bahasa pertama kali
 let currentLang = localStorage.getItem('lang') || 'ID';
 applyLanguage(currentLang);
 
-if (langBtn) {
-    langBtn.addEventListener('click', () => {
-        currentLang = currentLang === 'ID' ? 'EN' : 'ID';
-        localStorage.setItem('lang', currentLang); // Simpan ke localStorage
-        applyLanguage(currentLang);
-    });
+// Fungsi untuk mengganti bahasa
+function toggleLanguage() {
+    currentLang = currentLang === 'ID' ? 'EN' : 'ID';
+    localStorage.setItem('lang', currentLang);
+    applyLanguage(currentLang);
 }
 
+// Event listener untuk tombol Desktop & Mobile
+if (langBtn) langBtn.addEventListener('click', toggleLanguage);
+if (mobileLangBtn) mobileLangBtn.addEventListener('click', toggleLanguage);
+
 /* =========================================
-   4. FITUR CHATBOT SKENSAI LOKAL
+    4. FITUR CHATBOT SKENSAI LOKAL (FIXED)
    ========================================= */
 const skensaiBtn = document.getElementById('skensai-btn');
 const skensaiWindow = document.getElementById('skensai-window');
@@ -148,19 +149,15 @@ const skensaiMessages = document.getElementById('skensai-messages');
 
 if (skensaiBtn && skensaiWindow) {
     
-    // --- FITUR POPUP OTOMATIS SETIAP 1 MENIT ---
+    // --- FITUR POPUP OTOMATIS ---
     let popupTimeout;
     const popupText = skensaiPopup ? skensaiPopup.querySelector('p') : null;
 
     const showAutoPopup = () => {
-        // Jangan munculkan popup jika chat window sedang terbuka
         if (!skensaiWindow.classList.contains('hidden')) return;
 
-        // Teks untuk fitur multi-bahasa
         const msgId = "Halo saya SkensaAI! Ada yang bisa dibantu?";
         const msgEn = "Hello i'm SkensAI! Is there anything I can help you with?";
-        
-        // Ambil indikator bahasa dari localStorage
         const langActive = localStorage.getItem('lang') || 'ID';
         
         if (popupText) {
@@ -169,28 +166,23 @@ if (skensaiBtn && skensaiWindow) {
             popupText.innerHTML = langActive === 'ID' ? msgId : msgEn;
         }
 
-        // Tampilkan popup
         skensaiPopup.classList.remove('hidden');
 
-        // Sembunyikan popup kembali setelah 3 detik agar terlihat rapi
         clearTimeout(popupTimeout);
         popupTimeout = setTimeout(() => {
             skensaiPopup.classList.add('hidden');
         }, 3000);
     };
 
-    // Panggil fungsi showAutoPopup setiap 5000 ms (5 detik) sesuai kode asal
-    setInterval(showAutoPopup, 5000);
-    // -------------------------------------------
+    setInterval(showAutoPopup, 8000);
 
-    // Event Buka/Tutup Chatbot Window
+    // --- EVENT BUKA/TUTUP CHATBOT WINDOW ---
     skensaiBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         skensaiWindow.classList.toggle('hidden');
         skensaiWindow.classList.toggle('flex');
         if (!skensaiWindow.classList.contains('hidden')) {
             skensaiWindow.classList.add('chat-popup-anim');
-            // Sembunyikan popup teks saat chat dibuka
             if (skensaiPopup) skensaiPopup.classList.add('hidden'); 
         }
     });
@@ -203,7 +195,6 @@ if (skensaiBtn && skensaiWindow) {
         });
     }
 
-    // Menutup window saat klik di luar area chatbot
     document.addEventListener('click', (e) => {
         if (!skensaiWindow.classList.contains('hidden')) {
             if (!skensaiWindow.contains(e.target) && !skensaiBtn.contains(e.target)) {
@@ -213,7 +204,6 @@ if (skensaiBtn && skensaiWindow) {
         }
     });
 
-    // Mencegah penutupan saat klik di dalam area window chatbot
     skensaiWindow.addEventListener('click', (e) => {
         e.stopPropagation();
     });
@@ -224,20 +214,42 @@ if (skensaiBtn && skensaiWindow) {
         const isDark = document.documentElement.classList.contains('dark');
         const msgDiv = document.createElement('div');
         
+        // Menggunakan class 'msg-anim' agar pesan muncul dengan transisi smooth
         if (isUser) {
             msgDiv.className = isDark 
-                ? "bg-[#008069] text-white p-3 rounded-2xl rounded-tr-none shadow-sm max-w-[85%] self-end leading-relaxed mb-1 break-words" 
-                : "bg-[#d9fdd3] text-gray-900 p-3 rounded-2xl rounded-tr-none shadow-sm max-w-[85%] self-end border border-[#c1e8ba] leading-relaxed mb-1 break-words";
+                ? "bg-[#008069] text-white p-3 rounded-2xl rounded-tr-none shadow-sm max-w-[85%] self-end leading-relaxed mb-1 break-words msg-anim" 
+                : "bg-[#d9fdd3] text-gray-900 p-3 rounded-2xl rounded-tr-none shadow-sm max-w-[85%] self-end border border-[#c1e8ba] leading-relaxed mb-1 break-words msg-anim";
             msgDiv.innerHTML = text;
             skensaiMessages.appendChild(msgDiv);
         } else {
-            msgDiv.className = "flex items-start gap-2 max-w-[85%] self-start mb-1";
+            msgDiv.className = "flex items-start gap-2 max-w-[85%] self-start mb-1 msg-anim";
             msgDiv.innerHTML = isDark
                 ? `<div class="p-3 text-gray-100 bg-gray-700 border border-gray-600 shadow-sm rounded-2xl rounded-tl-none leading-relaxed break-words">${text}</div>`
                 : `<div class="p-3 text-gray-800 bg-white border border-gray-100 shadow-sm rounded-2xl rounded-tl-none leading-relaxed break-words">${text}</div>`;
             skensaiMessages.appendChild(msgDiv);
         }
-        // Auto-scroll ke pesan terbaru
+        skensaiMessages.scrollTop = skensaiMessages.scrollHeight;
+    }
+
+    // Fungsi membuat efek melompat (Typing Indicator) sebelum AI menjawab
+    function showTypingIndicator() {
+        const isDark = document.documentElement.classList.contains('dark');
+        const indicatorDiv = document.createElement('div');
+        indicatorDiv.id = "typing-indicator";
+        indicatorDiv.className = "flex items-start gap-2 max-w-[85%] self-start mb-1 msg-anim";
+        
+        indicatorDiv.innerHTML = isDark
+            ? `<div class="p-3 bg-gray-700 border border-gray-600 shadow-sm rounded-2xl rounded-tl-none flex gap-1 items-center">
+                <span class="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></span>
+                <span class="w-2 h-2 bg-gray-400 rounded-full animate-bounce [animation-delay:0.2s]"></span>
+                <span class="w-2 h-2 bg-gray-400 rounded-full animate-bounce [animation-delay:0.4s]"></span>
+                </div>`
+            : `<div class="p-3 bg-white border border-gray-100 shadow-sm rounded-2xl rounded-tl-none flex gap-1 items-center">
+                <span class="w-2 h-2 bg-gray-500 rounded-full animate-bounce"></span>
+                <span class="w-2 h-2 bg-gray-500 rounded-full animate-bounce [animation-delay:0.2s]"></span>
+                <span class="w-2 h-2 bg-gray-500 rounded-full animate-bounce [animation-delay:0.4s]"></span>
+                </div>`;
+        skensaiMessages.appendChild(indicatorDiv);
         skensaiMessages.scrollTop = skensaiMessages.scrollHeight;
     }
 
@@ -256,17 +268,68 @@ if (skensaiBtn && skensaiWindow) {
         addMessage(text, 'user');
         skensaiInput.value = '';
         
-        // Jeda waktu agar terlihat seperti AI sedang mengetik
+        // Memunculkan animasi mengetik
+        showTypingIndicator();
+        
         setTimeout(() => {
+            // Menghapus animasi mengetik setelah jeda selesai
+            const indicator = document.getElementById('typing-indicator');
+            if (indicator) indicator.remove();
+            
+            // Mengirim respon asli AI
             const response = getSkensAIResponse(text);
             addMessage(response, 'ai');
-        }, 700);
+        }, 1200);
     }
 
-    if (skensaiSend) skensaiSend.addEventListener('click', handleSendMessage);
+    // --- FIX BUTTON INTERACTION ---
+    // Menggunakan e.target.closest agar klik pada ikon pesawat tetap memicu fungsi kirim
+    if (skensaiSend) {
+        skensaiSend.addEventListener('click', (e) => {
+            const button = e.target.closest('#skensai-send');
+            if (button) handleSendMessage();
+        });
+    }
+    
     if (skensaiInput) {
         skensaiInput.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') handleSendMessage();
         });
     }
 }
+
+/* =========================================
+    5. FITUR FILTER JURUSAN (TERBARU)
+   ========================================= */
+document.addEventListener("DOMContentLoaded", function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const programCards = document.querySelectorAll('.program-card');
+
+    if (filterButtons.length > 0 && programCards.length > 0) {
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const targetFilter = this.getAttribute('data-filter');
+
+                // 1. Reset class style semua tombol filter ke posisi default (tidak aktif)
+                filterButtons.forEach(btn => {
+                    btn.className = "filter-btn snap-start px-6 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm font-medium rounded-full hover:border-blue-500 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 shadow-sm";
+                });
+                
+                // 2. Set class tombol yang baru diklik menjadi aktif (warna biru)
+                this.className = "filter-btn snap-start px-6 py-2.5 bg-blue-600 text-white dark:bg-blue-500 text-sm font-bold rounded-full shadow-[0_4px_14px_rgba(37,99,235,0.3)] transition-all duration-300";
+
+                // 3. Logika menyembunyikan / menampilkan kartu berdasarkan kategori
+                programCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+
+                    if (targetFilter === 'all' || cardCategory === targetFilter) {
+                        card.style.display = 'flex'; // Tampilkan jika cocok / 'all'
+                    } else {
+                        card.style.display = 'none'; // Sembunyikan jika tidak cocok
+                    }
+                });
+            });
+        });
+    }
+});
+

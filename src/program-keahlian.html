@@ -15,11 +15,11 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 </head>
 <body class="bg-white-bg dark:bg-gray-900 text-black dark:text-gray-100 font-poppins transition-colors duration-300">
-    <header class="sticky top-0 z-50 h-28 bg-white dark:bg-gray-900 transition-colors duration-300">
-    <div class="sticky top-0 z-20 h-full mx-auto max-w-[90%] md:max-w-[85%] 2xl:max-w-350 mb-30 bg-white dark:bg-gray-900 transition-colors duration-300">
+<header class="sticky top-0 z-50 w-full h-28 bg-white-bg dark:bg-gray-900 transition-colors duration-300 md:shadow-none">
+    <div class="relative z-20 h-full mx-auto max-w-[90%] md:max-w-[85%] 2xl:max-w-350 bg-white-bg dark:bg-gray-900 transition-colors duration-300">
         <div class="relative flex items-center justify-between h-full">
             
-            <nav class="relative z-10 flex items-center justify-between w-full h-full md:z-0" id="navbar">
+            <nav class="flex items-center justify-between w-full h-full" id="navbar">
                 <div>
                     <a href="index.html">
                         <img src="image/logo.png" alt="logo" class="w-18 transition-all duration-300">
@@ -53,142 +53,328 @@
 
         </div>
     </div>
+
+    <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white-bg dark:bg-gray-900 shadow-lg hidden flex-col transition-all duration-300 z-40 pb-6 pt-4 rounded-b-2xl">
+        <ul class="flex flex-col items-center gap-6">
+            <li><a href="index.html" class="nav-all-hover dark:text-gray-200" data-lang-id="Beranda" data-lang-en="Home">Beranda</a></li>
+            <li><a href="program-keahlian.html" class="nav-all dark:text-gray-200" data-lang-id="Program" data-lang-en="Program">Program</a></li>
+            <li><a href="blog.html" class="nav-all dark:text-gray-200" data-lang-id="Blog" data-lang-en="Blog">Blog</a></li>
+            
+            <li class="flex items-center gap-6 mt-2">
+                <button id="mobile-lang-btn" class="cursor-pointer focus:outline-none">
+                    <div class="text-xs font-medium text-gray-500 dark:text-gray-400" data-lang-id="ID" data-lang-en="EN">ID</div>
+                </button>
+
+                <button id="mobile-theme-toggle" class="cursor-pointer focus:outline-none flex items-center justify-center p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+                    <i id="mobile-theme-icon" class="fa-solid fa-sun text-black dark:text-yellow-400 text-lg transition-colors duration-300"></i>
+                </button>
+                
+                <a href="login.html" class="button-primary" data-lang-id="Login" data-lang-en="Login">Login</a>
+            </li>
+        </ul>
+    </div>
 </header>
 
-    <section data-aos="fade-up">
-        <div class="main-wrapper">
-            <div class="main-content group">
-                <img src="image/rpl.png" alt="" class="program-img dark:brightness-90">
-                <a class="program-title" href="program-detail.html"  data-lang-id="Rekayasa Perangkat Lunak (RPL)"data-lang-en="Software Engineering (RPL)">Rekayasa Perangkat Lunak (RPL)</a>
-                <p class="program-desc" data-lang-id="Mempelajari pengembangan website, aplikasi, dan perangkat lunak melalui pemrograman, desain sistem, serta teknologi digital modern."data-lang-en="Learn website, application, and software development through programming, system design, and modern digital technologies.">Mempelajari pengembangan website, aplikasi, dan perangkat lunak melalui pemrograman, desain sistem, serta teknologi digital modern.</p>
-                <div class="next-arrow">
-                    <a href="program-detail.html" class="next-desc "data-lang-id="Selengkapnya"data-lang-en="Read More">Selengkapnya</a>
-                        <iconify-icon icon="mdi:arrow-right" class="next-icon"></iconify-icon>
-                </div>
-            </div>
-
-            <div class="main-content group">
-                <img src="image/tkj.png" alt="" class="program-img dark:brightness-90">
-                <a class="program-title" href="#"data-lang-id="Teknik Komputer dan Jaringan (TKJ)"data-lang-en="Computer and Network Engineering (TKJ)">Teknik Komputer dan Jaringan (TKJ) </a>
-                <p class="program-desc"data-lang-id="Mengembangkan keterampilan dalam instalasi, konfigurasi, dan pengelolaan jaringan komputer serta infrastruktur teknologi informasi."data-lang-en="Develop skills in installation, configuration, and management of computer networks and information technology infrastructure.">Mengembangkan keterampilan dalam instalasi, konfigurasi, dan pengelolaan jaringan komputer serta infrastruktur teknologi informasi.</p>
-                <div class="next-arrow">
-                    <a href="program-keahlian-2.html" class="next-desc"data-lang-id="Selengkapnya"data-lang-en="Read More">Selengkapnya</a>
-                        <iconify-icon icon="mdi:arrow-right" class="next-icon"></iconify-icon>
-                </div>
-            </div>
-
-            <div class="main-content group">
-                <img src="image/dkv.png" alt="" class="program-img dark:brightness-90">
-                <a class="program-title" href="#"data-lang-id="Desain Komunikasi Visual (DKV)"data-lang-en="Visual Communication Design (DKV)">Desain Komunikasi Visual (DKV) </a>
-                <p class="program-desc"data-lang-id="Mengasah kreativitas melalui desain grafis, branding, ilustrasi, fotografi, dan media visual untuk kebutuhan industri kreatif."data-lang-en="Develop creativity through graphic design, branding, illustration, photography, and visual media for the creative industry.">Mengasah kreativitas melalui desain grafis, branding, ilustrasi, fotografi, dan media visual untuk kebutuhan industri kreatif.</p>
-                <div class="next-arrow">
-                    <a href="program-keahlian-2.html" class="next-desc"data-lang-id="Selengkapnya"data-lang-en="Read More">Selengkapnya</a>
-                        <iconify-icon icon="mdi:arrow-right" class="next-icon"></iconify-icon>
-                </div>
-            </div>
-
-            <div class="main-content group">
-                <img src="image/prf.png" alt="" class="program-img dark:brightness-90">
-                <a class="program-title" href="#"data-lang-id="Produksi Film (PRF)"data-lang-en="Film Production (PRF)">Produksi Film (PRF) </a>
-                <p class="program-desc"data-lang-id="Mempelajari proses produksi film dan konten digital mulai dari perencanaan, pengambilan gambar, hingga proses penyuntingan."data-lang-en="Learn film and digital content production processes from planning and filming to editing.">Mempelajari proses produksi film dan konten digital mulai dari perencanaan, pengambilan gambar, hingga proses penyuntingan.</p>
-                <div class="next-arrow">
-                    <a href="program-keahlian-2.html" class="next-desc"data-lang-id="Selengkapnya"data-lang-en="Read More">Selengkapnya</a>
-                        <iconify-icon icon="mdi:arrow-right" class="next-icon"></iconify-icon>
-                </div>
-            </div>
-
-            <div class="main-content group hidden md:block">
-                <img src="image/tkr.png" alt="" class="program-img dark:brightness-90">
-                <a class="program-title" href="#"data-lang-id="Teknik Kendaraan Ringan (TKR)"data-lang-en="Light Vehicle Engineering (TKR)">Teknik Kendaraan Ringan (TKR) </a>
-                <p class="program-desc" data-lang-id="Membekali siswa dengan keterampilan perawatan, diagnosis, dan perbaikan kendaraan roda empat sesuai standar industri otomotif."data-lang-en="Equip students with maintenance, diagnostics, and repair skills for four-wheeled vehicles according to automotive industry standards.">Membekali siswa dengan keterampilan perawatan, diagnosis, dan perbaikan kendaraan roda empat sesuai standar industri otomotif.</p>
-                <div class="next-arrow">
-                    <a href="program-keahlian-2.html" class="next-desc"data-lang-id="Selengkapnya"data-lang-en="Read More">Selengkapnya</a>
-                        <iconify-icon icon="mdi:arrow-right" class="next-icon"></iconify-icon>
-                </div>
-            </div>
-
-            <div class="main-content group hidden md:block">
-                <img src="image/tsm.png" alt="" class="program-img dark:brightness-90">
-                <a class="program-title" href="#"data-lang-id="Teknik Sepeda Motor (TSM)"data-lang-en="Motorcycle Engineering (TSM)">Teknik Sepeda Motor (TSM) </a>
-                <p class="program-desc"data-lang-id="Mempelajari sistem kerja, perawatan, dan perbaikan sepeda motor dengan pendekatan praktik yang sesuai kebutuhan industri."data-lang-en="Learn motorcycle systems, maintenance, and repair through practical approaches aligned with industry needs.">Mempelajari sistem kerja, perawatan, dan perbaikan sepeda motor dengan pendekatan praktik yang sesuai kebutuhan industri.</p>
-                <div class="next-arrow">
-                    <a href="program-keahlian-2.html" class="next-desc"data-lang-id="Selengkapnya"data-lang-en="Read More">Selengkapnya</a>
-                        <iconify-icon icon="mdi:arrow-right" class="next-icon"></iconify-icon>
-                </div>
-            </div>
-
-            <div class="main-content group hidden md:block">
-                <img src="image/titl.png" alt="" class="program-img dark:brightness-90">
-                <a class="program-title" href="#"data-lang-id="Teknik Instalasi Tenaga Listrik (TITL)"data-lang-en="Electrical Power Installation Engineering (TITL)"> Teknik Instalasi Tenaga Listrik (TITL) </a>
-                <p class="program-desc"data-lang-id="Mengembangkan kompetensi dalam instalasi, pengoperasian, dan pemeliharaan sistem kelistrikan untuk berbagai kebutuhan."data-lang-en="Develop competencies in installation, operation, and maintenance of electrical systems for various needs.">Mengembangkan kompetensi dalam instalasi, pengoperasian, dan pemeliharaan sistem kelistrikan untuk berbagai kebutuhan.</p>
-                <div class="next-arrow">
-                    <a href="program-keahlian-2.html" class="next-desc"data-lang-id="Selengkapnya"data-lang-en="Read More">Selengkapnya</a>
-                        <iconify-icon icon="mdi:arrow-right" class="next-icon"></iconify-icon>
-                </div>
-            </div>
-
-            <div class="main-content group hidden md:block">
-                <img src="image/tav.png" alt="" class="program-img dark:brightness-90">
-                <a class="program-title" href="#"data-lang-id="Teknik Audio Video (TAV)"data-lang-en="Audio Video Engineering (TAV)">Teknik Audio Video (TAV) </a>
-                <p class="program-desc"data-lang-id="Mempelajari perangkat elektronika, sistem audio, video, dan teknologi multimedia yang digunakan dalam berbagai sektor industri."data-lang-en="Learn electronics, audio systems, video systems, and multimedia technologies used across various industries.">Mempelajari perangkat elektronika, sistem audio, video, dan teknologi multimedia yang digunakan dalam berbagai sektor industri.</p>
-                <div class="next-arrow">
-                    <a href="program-keahlian-2.html" class="next-desc"data-lang-id="Selengkapnya"data-lang-en="Read More">Selengkapnya</a>
-                        <iconify-icon icon="mdi:arrow-right" class="next-icon"></iconify-icon>
-                </div>
-            </div>
-
-            <div class="main-content group hidden md:block">
-                <img src="image/tpm.png" alt="" class="program-img dark:brightness-90">
-                <a class="program-title" href="#"data-lang-id="Teknik Pemesinan (TPM)"data-lang-en="Machining Engineering (TPM)">Teknik Pemesinan (TPM) </a>
-                <p class="program-desc" data-lang-id="Mengasah keterampilan manufaktur melalui pengoperasian mesin, proses produksi, dan pembuatan komponen teknik presisi."data-lang-en="Develop manufacturing skills through machine operation, production processes, and precision engineering components.">Mengasah keterampilan manufaktur melalui pengoperasian mesin, proses produksi, dan pembuatan komponen teknik presisi.</p>
-                <div class="next-arrow">
-                    <a href="program-keahlian-2.html" class="next-desc"data-lang-id="Selengkapnya"data-lang-en="Read More">Selengkapnya</a>
-                        <iconify-icon icon="mdi:arrow-right" class="next-icon"></iconify-icon>
-                </div>
-            </div>
-
-            <div class="main-content group hidden md:block">
-                <img src="image/dpib.png" alt="" class="program-img dark:brightness-90">
-                <a class="program-title" href="#"data-lang-id="Desain Pemodelan dan Informasi Bangunan (DPIB)"data-lang-en="Building Modeling and Information Design (DPIB)">Desain Pemodelan dan Informasi Bangunan (DPIB) </a>
-                <p class="program-desc"data-lang-id="Mempelajari perencanaan, desain, serta pemodelan bangunan menggunakan teknologi gambar teknik dan perangkat lunak konstruksi."data-lang-en="Learn planning, design, and building modeling using engineering drawing technologies and construction software.">Mempelajari perencanaan, desain, serta pemodelan bangunan menggunakan teknologi gambar teknik dan perangkat lunak konstruksi.</p>
-                <div class="next-arrow">
-                    <a href="program-keahlian-2.html" class="next-desc"data-lang-id="Selengkapnya"data-lang-en="Read More">Selengkapnya</a>
-                        <iconify-icon icon="mdi:arrow-right" class="next-icon"></iconify-icon>
-                </div>
-            </div>
-
-            <div class="main-content group hidden md:block">
-                <img src="image/tkp.png" alt="" class="program-img dark:brightness-90">
-                <a class="program-title" href="#"data-lang-id="Teknik Konstruksi dan Perumahan (TKP)"data-lang-en="Construction and Housing Engineering (TKP)">Teknik Konstruksi dan Perumahan (TKP) </a>
-                <p class="program-desc" data-lang-id="Membekali siswa dengan pengetahuan konstruksi bangunan, pelaksanaan proyek, dan pengelolaan pekerjaan konstruksi secara profesional."data-lang-en="Equip students with knowledge of building construction, project execution, and professional construction management.">Membekali siswa dengan pengetahuan konstruksi bangunan, pelaksanaan proyek, dan pengelolaan pekerjaan konstruksi secara profesional.</p>
-                <div class="next-arrow">
-                    <a href="program-keahlian-2.html" class="next-desc"data-lang-id="Selengkapnya"data-lang-en="Read More">Selengkapnya</a>
-                        <iconify-icon icon="mdi:arrow-right" class="next-icon"></iconify-icon>
-                </div>
-            </div>
-
-            <div class="main-content group hidden md:block">
-                <img src="image/tptup.png" alt="" class="program-img dark:brightness-90">
-                <a class="program-title" href="#" data-lang-id="Teknik Pendingin, Tata Udara, dan Pemanasan (TPTUP)"data-lang-en="Refrigeration, Air Conditioning, and Heating Engineering (TPTUP)">Teknik Pendingin, Tata Udara, dan Pemanasan (TPTUP) </a>
-                <p class="program-desc"data-lang-id="Mempelajari instalasi, perawatan, dan perbaikan sistem pendingin serta tata udara yang banyak digunakan di dunia industri."data-lang-en="Learn installation, maintenance, and repair of refrigeration and air-conditioning systems widely used in industry.">Mempelajari instalasi, perawatan, dan perbaikan sistem pendingin serta tata udara yang banyak digunakan di dunia industri.</p>
-                <div class="next-arrow">
-                    <a href="program-keahlian-2.html" class="next-desc"data-lang-id="Selengkapnya"data-lang-en="Read More">Selengkapnya</a>
-                        <iconify-icon icon="mdi:arrow-right" class="next-icon"></iconify-icon>
-                </div>
-            </div>
+ <section data-aos="fade-up" class="py-12 bg-white dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div id="filter-container" class="flex items-center gap-3 overflow-x-auto pb-4 mb-8 -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-none whitespace-nowrap snap-x">
+            <button class="filter-btn snap-start px-6 py-2.5 bg-blue-600 text-white dark:bg-blue-500 text-sm font-bold rounded-full shadow-[0_4px_14px_rgba(37,99,235,0.3)] transition-all duration-300" data-filter="all" data-lang-id="Semua" data-lang-en="All">
+                Semua
+            </button>
+            <button class="filter-btn snap-start px-6 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm font-medium rounded-full hover:border-blue-500 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 shadow-sm" data-filter="teknologi" data-lang-id="Teknologi" data-lang-en="Technology">
+                Teknologi
+            </button>
+            <button class="filter-btn snap-start px-6 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm font-medium rounded-full hover:border-blue-500 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 shadow-sm" data-filter="kreatif" data-lang-id="Kreatif" data-lang-en="Creative">
+                Kreatif
+            </button>
+            <button class="filter-btn snap-start px-6 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm font-medium rounded-full hover:border-blue-500 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 shadow-sm" data-filter="otomotif" data-lang-id="Otomotif" data-lang-en="Automotive">
+                Otomotif
+            </button>
+            <button class="filter-btn snap-start px-6 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm font-medium rounded-full hover:border-blue-500 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 shadow-sm" data-filter="kelistrikan" data-lang-id="Kelistrikan" data-lang-en="Electrical">
+                Kelistrikan
+            </button>
+            <button class="filter-btn snap-start px-6 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm font-medium rounded-full hover:border-blue-500 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 shadow-sm" data-filter="elektronika" data-lang-id="Elektronika" data-lang-en="Electronics">
+                Elektronika
+            </button>
+            <button class="filter-btn snap-start px-6 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm font-medium rounded-full hover:border-blue-500 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 shadow-sm" data-filter="manufaktur" data-lang-id="Manufaktur" data-lang-en="Manufacturing">
+                Manufaktur
+            </button>
+            <button class="filter-btn snap-start px-6 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm font-medium rounded-full hover:border-blue-500 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 shadow-sm" data-filter="bangunan" data-lang-id="Bangunan" data-lang-en="Building">
+                Bangunan
+            </button>
+            <button class="filter-btn snap-start px-6 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm font-medium rounded-full hover:border-blue-500 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 shadow-sm" data-filter="tata udara" data-lang-id="Tata Udara" data-lang-en="Air Conditioning">
+                Tata Udara
+            </button>
         </div>
-        <div class="flex justify-center mt-10 md:hidden">
-            <button id="btn-lihat-semua" class="button-primary cursor-pointer"data-lang-id="Lihat Semua Program"data-lang-en="View All Programs">Lihat Semua Program</button>
-        </div>
-    </section>
 
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+            <div data-category="teknologi" class="program-card bg-white dark:bg-gray-800 rounded-[24px] shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] border border-gray-100 dark:border-gray-700 flex flex-col group hover:-translate-y-1 hover:shadow-xl transition-all duration-300 overflow-hidden">
+                <div class="w-full h-48 overflow-hidden bg-gray-100 dark:brightness-90 relative">
+                    <img src="image/rpl.png" alt="RPL" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <div class="mb-3">
+                        <span class="bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300 text-[10px] font-bold px-3 py-1 rounded-md tracking-wider" data-lang-id="TEKNOLOGI" data-lang-en="TECHNOLOGY">TEKNOLOGI</span>
+                    </div>
+                    <h3 class="text-[18px] font-bold text-gray-900 dark:text-white mb-2 leading-snug" data-lang-id="Rekayasa Perangkat Lunak (RPL)" data-lang-en="Software Engineering (RPL)">
+                        Rekayasa Perangkat Lunak (RPL)
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow leading-relaxed" data-lang-id="Mempelajari pengembangan website, aplikasi, dan perangkat lunak melalui pemrograman, desain sistem, serta teknologi digital modern." data-lang-en="Learn website, application, and software development through programming, system design, and modern digital technologies.">
+                        Mempelajari pengembangan website, aplikasi, dan perangkat lunak melalui pemrograman, desain sistem, serta teknologi digital modern.
+                    </p>
+                    <a href="program-detail-login.html" class="w-full py-2.5 px-4 border border-gray-200 dark:border-gray-600 rounded-xl text-sm font-bold text-gray-700 dark:text-gray-200 text-center flex items-center justify-center gap-2 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 dark:group-hover:bg-blue-500 transition-colors duration-300 mt-auto">
+                        <span data-lang-id="Selengkapnya" data-lang-en="Read More">Selengkapnya</span>
+                        <iconify-icon icon="mdi:arrow-right" class="text-lg"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+
+            <div data-category="teknologi" class="program-card bg-white dark:bg-gray-800 rounded-[24px] shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] border border-gray-100 dark:border-gray-700 flex flex-col group hover:-translate-y-1 hover:shadow-xl transition-all duration-300 overflow-hidden">
+                <div class="w-full h-48 overflow-hidden bg-gray-100 dark:brightness-90 relative">
+                    <img src="image/tkj.png" alt="TKJ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <div class="mb-3">
+                        <span class="bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300 text-[10px] font-bold px-3 py-1 rounded-md tracking-wider" data-lang-id="TEKNOLOGI" data-lang-en="TECHNOLOGY">TEKNOLOGI</span>
+                    </div>
+                    <h3 class="text-[18px] font-bold text-gray-900 dark:text-white mb-2 leading-snug" data-lang-id="Teknik Komputer dan Jaringan (TKJ)" data-lang-en="Computer and Network Engineering (TKJ)">
+                        Teknik Komputer dan Jaringan (TKJ)
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow leading-relaxed" data-lang-id="Mengembangkan keterampilan dalam instalasi, konfigurasi, dan pengelolaan jaringan komputer serta infrastruktur teknologi informasi." data-lang-en="Develop skills in installation, configuration, and management of computer networks and information technology infrastructure.">
+                        Mengembangkan keterampilan dalam instalasi, konfigurasi, dan pengelolaan jaringan komputer serta infrastruktur teknologi informasi.
+                    </p>
+                    <a href="program-detail-login.html" class="w-full py-2.5 px-4 border border-gray-200 dark:border-gray-600 rounded-xl text-sm font-bold text-gray-700 dark:text-gray-200 text-center flex items-center justify-center gap-2 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 dark:group-hover:bg-blue-500 transition-colors duration-300 mt-auto">
+                        <span data-lang-id="Selengkapnya" data-lang-en="Read More">Selengkapnya</span>
+                        <iconify-icon icon="mdi:arrow-right" class="text-lg"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+
+            <div data-category="kreatif" class="program-card bg-white dark:bg-gray-800 rounded-[24px] shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] border border-gray-100 dark:border-gray-700 flex flex-col group hover:-translate-y-1 hover:shadow-xl transition-all duration-300 overflow-hidden">
+                <div class="w-full h-48 overflow-hidden bg-gray-100 dark:brightness-90 relative">
+                    <img src="image/dkv.png" alt="DKV" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <div class="mb-3">
+                        <span class="bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300 text-[10px] font-bold px-3 py-1 rounded-md tracking-wider" data-lang-id="KREATIF" data-lang-en="CREATIVE">KREATIF</span>
+                    </div>
+                    <h3 class="text-[18px] font-bold text-gray-900 dark:text-white mb-2 leading-snug" data-lang-id="Desain Komunikasi Visual (DKV)" data-lang-en="Visual Communication Design (DKV)">
+                        Desain Komunikasi Visual (DKV)
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow leading-relaxed" data-lang-id="Mengasah kreativitas melalui desain grafis, branding, ilustrasi, fotografi, dan media visual untuk kebutuhan industri kreatif." data-lang-en="Develop creativity through graphic design, branding, illustration, photography, and visual media for the creative industry.">
+                        Mengasah kreativitas melalui desain grafis, branding, ilustrasi, fotografi, dan media visual untuk kebutuhan industri kreatif.
+                    </p>
+                    <a href="program-detail-login.html" class="w-full py-2.5 px-4 border border-gray-200 dark:border-gray-600 rounded-xl text-sm font-bold text-gray-700 dark:text-gray-200 text-center flex items-center justify-center gap-2 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 dark:group-hover:bg-blue-500 transition-colors duration-300 mt-auto">
+                        <span data-lang-id="Selengkapnya" data-lang-en="Read More">Selengkapnya</span>
+                        <iconify-icon icon="mdi:arrow-right" class="text-lg"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+
+            <div data-category="kreatif" class="program-card bg-white dark:bg-gray-800 rounded-[24px] shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] border border-gray-100 dark:border-gray-700 flex flex-col group hover:-translate-y-1 hover:shadow-xl transition-all duration-300 overflow-hidden">
+                <div class="w-full h-48 overflow-hidden bg-gray-100 dark:brightness-90 relative">
+                    <img src="image/prf.png" alt="PRF" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <div class="mb-3">
+                        <span class="bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300 text-[10px] font-bold px-3 py-1 rounded-md tracking-wider" data-lang-id="KREATIF" data-lang-en="CREATIVE">KREATIF</span>
+                    </div>
+                    <h3 class="text-[18px] font-bold text-gray-900 dark:text-white mb-2 leading-snug" data-lang-id="Produksi Film (PRF)" data-lang-en="Film Production (PRF)">
+                        Produksi Film (PRF)
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow leading-relaxed" data-lang-id="Mempelajari proses produksi film dan konten digital mulai dari perencanaan, pengambilan gambar, hingga proses penyuntingan." data-lang-en="Learn film and digital content production processes from planning and filming to editing.">
+                        Mempelajari proses produksi film dan konten digital mulai dari perencanaan, pengambilan gambar, hingga proses penyuntingan.
+                    </p>
+                    <a href="program-detail-login.html" class="w-full py-2.5 px-4 border border-gray-200 dark:border-gray-600 rounded-xl text-sm font-bold text-gray-700 dark:text-gray-200 text-center flex items-center justify-center gap-2 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 dark:group-hover:bg-blue-500 transition-colors duration-300 mt-auto">
+                        <span data-lang-id="Selengkapnya" data-lang-en="Read More">Selengkapnya</span>
+                        <iconify-icon icon="mdi:arrow-right" class="text-lg"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+
+            <div data-category="otomotif" class="program-card bg-white dark:bg-gray-800 rounded-[24px] shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] border border-gray-100 dark:border-gray-700 flex flex-col group hover:-translate-y-1 hover:shadow-xl transition-all duration-300 overflow-hidden">
+                <div class="w-full h-48 overflow-hidden bg-gray-100 dark:brightness-90 relative">
+                    <img src="image/tkr.png" alt="TKR" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <div class="mb-3">
+                        <span class="bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300 text-[10px] font-bold px-3 py-1 rounded-md tracking-wider" data-lang-id="OTOMOTIF" data-lang-en="AUTOMOTIVE">OTOMOTIF</span>
+                    </div>
+                    <h3 class="text-[18px] font-bold text-gray-900 dark:text-white mb-2 leading-snug" data-lang-id="Teknik Kendaraan Ringan (TKR)" data-lang-en="Light Vehicle Engineering (TKR)">
+                        Teknik Kendaraan Ringan (TKR)
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow leading-relaxed" data-lang-id="Membekali siswa dengan keterampilan perawatan, diagnosis, dan perbaikan kendaraan roda empat sesuai standar industri otomotif." data-lang-en="Equip students with maintenance, diagnostics, and repair skills for four-wheeled vehicles according to automotive industry standards.">
+                        Membekali siswa dengan keterampilan perawatan, diagnosis, dan perbaikan kendaraan roda empat sesuai standar industri otomotif.
+                    </p>
+                    <a href="program-detail-login.html" class="w-full py-2.5 px-4 border border-gray-200 dark:border-gray-600 rounded-xl text-sm font-bold text-gray-700 dark:text-gray-200 text-center flex items-center justify-center gap-2 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 dark:group-hover:bg-blue-500 transition-colors duration-300 mt-auto">
+                        <span data-lang-id="Selengkapnya" data-lang-en="Read More">Selengkapnya</span>
+                        <iconify-icon icon="mdi:arrow-right" class="text-lg"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+
+            <div data-category="otomotif" class="program-card bg-white dark:bg-gray-800 rounded-[24px] shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] border border-gray-100 dark:border-gray-700 flex flex-col group hover:-translate-y-1 hover:shadow-xl transition-all duration-300 overflow-hidden">
+                <div class="w-full h-48 overflow-hidden bg-gray-100 dark:brightness-90 relative">
+                    <img src="image/tsm.png" alt="TSM" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <div class="mb-3">
+                        <span class="bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300 text-[10px] font-bold px-3 py-1 rounded-md tracking-wider" data-lang-id="OTOMOTIF" data-lang-en="AUTOMOTIVE">OTOMOTIF</span>
+                    </div>
+                    <h3 class="text-[18px] font-bold text-gray-900 dark:text-white mb-2 leading-snug" data-lang-id="Teknik Sepeda Motor (TSM)" data-lang-en="Motorcycle Engineering (TSM)">
+                        Teknik Sepeda Motor (TSM)
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow leading-relaxed" data-lang-id="Mempelajari sistem kerja, perawatan, dan perbaikan sepeda motor dengan pendekatan praktik yang sesuai kebutuhan industri." data-lang-en="Learn motorcycle systems, maintenance, and repair through practical approaches aligned with industry needs.">
+                        Mempelajari sistem kerja, perawatan, dan perbaikan sepeda motor dengan pendekatan praktik yang sesuai kebutuhan industri.
+                    </p>
+                    <a href="program-detail-login.html" class="w-full py-2.5 px-4 border border-gray-200 dark:border-gray-600 rounded-xl text-sm font-bold text-gray-700 dark:text-gray-200 text-center flex items-center justify-center gap-2 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 dark:group-hover:bg-blue-500 transition-colors duration-300 mt-auto">
+                        <span data-lang-id="Selengkapnya" data-lang-en="Read More">Selengkapnya</span>
+                        <iconify-icon icon="mdi:arrow-right" class="text-lg"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+
+            <div data-category="kelistrikan" class="program-card bg-white dark:bg-gray-800 rounded-[24px] shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] border border-gray-100 dark:border-gray-700 flex flex-col group hover:-translate-y-1 hover:shadow-xl transition-all duration-300 overflow-hidden">
+                <div class="w-full h-48 overflow-hidden bg-gray-100 dark:brightness-90 relative">
+                    <img src="image/titl.png" alt="TITL" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <div class="mb-3">
+                        <span class="bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300 text-[10px] font-bold px-3 py-1 rounded-md tracking-wider" data-lang-id="KELISTRIKAN" data-lang-en="ELECTRICAL">KELISTRIKAN</span>
+                    </div>
+                    <h3 class="text-[18px] font-bold text-gray-900 dark:text-white mb-2 leading-snug" data-lang-id="Teknik Instalasi Tenaga Listrik (TITL)" data-lang-en="Electrical Power Installation Engineering (TITL)">
+                        Teknik Instalasi Tenaga Listrik (TITL)
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow leading-relaxed" data-lang-id="Mengembangkan kompetensi dalam instalasi, pengoperasian, dan pemeliharaan sistem kelistrikan untuk berbagai kebutuhan." data-lang-en="Develop competencies in installation, operation, and maintenance of electrical systems for various needs.">
+                        Mengembangkan kompetensi dalam instalasi, pengoperasian, dan pemeliharaan sistem kelistrikan untuk berbagai kebutuhan.
+                    </p>
+                    <a href="program-detail-login.html" class="w-full py-2.5 px-4 border border-gray-200 dark:border-gray-600 rounded-xl text-sm font-bold text-gray-700 dark:text-gray-200 text-center flex items-center justify-center gap-2 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 dark:group-hover:bg-blue-500 transition-colors duration-300 mt-auto">
+                        <span data-lang-id="Selengkapnya" data-lang-en="Read More">Selengkapnya</span>
+                        <iconify-icon icon="mdi:arrow-right" class="text-lg"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+
+            <div data-category="elektronika" class="program-card bg-white dark:bg-gray-800 rounded-[24px] shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] border border-gray-100 dark:border-gray-700 flex flex-col group hover:-translate-y-1 hover:shadow-xl transition-all duration-300 overflow-hidden">
+                <div class="w-full h-48 overflow-hidden bg-gray-100 dark:brightness-90 relative">
+                    <img src="image/tav.png" alt="TAV" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <div class="mb-3">
+                        <span class="bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300 text-[10px] font-bold px-3 py-1 rounded-md tracking-wider" data-lang-id="ELEKTRONIKA" data-lang-en="ELECTRONICS">ELEKTRONIKA</span>
+                    </div>
+                    <h3 class="text-[18px] font-bold text-gray-900 dark:text-white mb-2 leading-snug" data-lang-id="Teknik Audio Video (TAV)" data-lang-en="Audio Video Engineering (TAV)">
+                        Teknik Audio Video (TAV)
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow leading-relaxed" data-lang-id="Mempelajari perangkat elektronika, sistem audio, video, dan teknologi multimedia yang digunakan dalam berbagai sektor industri." data-lang-en="Learn electronics, audio systems, video systems, and multimedia technologies used across various industries.">
+                        Mempelajari perangkat elektronika, sistem audio, video, dan teknologi multimedia yang digunakan dalam berbagai sektor industri.
+                    </p>
+                    <a href="program-detail-login.html" class="w-full py-2.5 px-4 border border-gray-200 dark:border-gray-600 rounded-xl text-sm font-bold text-gray-700 dark:text-gray-200 text-center flex items-center justify-center gap-2 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 dark:group-hover:bg-blue-500 transition-colors duration-300 mt-auto">
+                        <span data-lang-id="Selengkapnya" data-lang-en="Read More">Selengkapnya</span>
+                        <iconify-icon icon="mdi:arrow-right" class="text-lg"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+
+            <div data-category="manufaktur" class="program-card bg-white dark:bg-gray-800 rounded-[24px] shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] border border-gray-100 dark:border-gray-700 flex flex-col group hover:-translate-y-1 hover:shadow-xl transition-all duration-300 overflow-hidden">
+                <div class="w-full h-48 overflow-hidden bg-gray-100 dark:brightness-90 relative">
+                    <img src="image/tpm.png" alt="TPM" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <div class="mb-3">
+                        <span class="bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300 text-[10px] font-bold px-3 py-1 rounded-md tracking-wider" data-lang-id="MANUFAKTUR" data-lang-en="MANUFACTURING">MANUFAKTUR</span>
+                    </div>
+                    <h3 class="text-[18px] font-bold text-gray-900 dark:text-white mb-2 leading-snug" data-lang-id="Teknik Pemesinan (TPM)" data-lang-en="Machining Engineering (TPM)">
+                        Teknik Pemesinan (TPM)
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow leading-relaxed" data-lang-id="Mengasah keterampilan manufaktur melalui pengoperasian mesin, proses produksi, dan pembuatan komponen teknik presisi." data-lang-en="Develop manufacturing skills through machine operation, production processes, and precision engineering components.">
+                        Mengasah keterampilan manufaktur melalui pengoperasian mesin, proses produksi, dan pembuatan komponen teknik presisi.
+                    </p>
+                    <a href="program-detail-login.html" class="w-full py-2.5 px-4 border border-gray-200 dark:border-gray-600 rounded-xl text-sm font-bold text-gray-700 dark:text-gray-200 text-center flex items-center justify-center gap-2 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 dark:group-hover:bg-blue-500 transition-colors duration-300 mt-auto">
+                        <span data-lang-id="Selengkapnya" data-lang-en="Read More">Selengkapnya</span>
+                        <iconify-icon icon="mdi:arrow-right" class="text-lg"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+
+            <div data-category="bangunan" class="program-card bg-white dark:bg-gray-800 rounded-[24px] shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] border border-gray-100 dark:border-gray-700 flex flex-col group hover:-translate-y-1 hover:shadow-xl transition-all duration-300 overflow-hidden">
+                <div class="w-full h-48 overflow-hidden bg-gray-100 dark:brightness-90 relative">
+                    <img src="image/dpib.png" alt="DPIB" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <div class="mb-3">
+                        <span class="bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300 text-[10px] font-bold px-3 py-1 rounded-md tracking-wider" data-lang-id="BANGUNAN" data-lang-en="BUILDING">BANGUNAN</span>
+                    </div>
+                    <h3 class="text-[18px] font-bold text-gray-900 dark:text-white mb-2 leading-snug" data-lang-id="Desain Pemodelan dan Informasi Bangunan (DPIB)" data-lang-en="Building Modeling and Information Design (DPIB)">
+                        Desain Pemodelan dan Informasi Bangunan (DPIB)
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow leading-relaxed" data-lang-id="Mempelajari perencanaan, desain, serta pemodelan bangunan menggunakan teknologi gambar teknik dan perangkat lunak konstruksi." data-lang-en="Learn planning, design, and building modeling using engineering drawing technologies and construction software.">
+                        Mempelajari perencanaan, desain, serta pemodelan bangunan menggunakan teknologi gambar teknik dan perangkat lunak konstruksi.
+                    </p>
+                    <a href="program-detail-login.html" class="w-full py-2.5 px-4 border border-gray-200 dark:border-gray-600 rounded-xl text-sm font-bold text-gray-700 dark:text-gray-200 text-center flex items-center justify-center gap-2 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 dark:group-hover:bg-blue-500 transition-colors duration-300 mt-auto">
+                        <span data-lang-id="Selengkapnya" data-lang-en="Read More">Selengkapnya</span>
+                        <iconify-icon icon="mdi:arrow-right" class="text-lg"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+
+            <div data-category="bangunan" class="program-card bg-white dark:bg-gray-800 rounded-[24px] shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] border border-gray-100 dark:border-gray-700 flex flex-col group hover:-translate-y-1 hover:shadow-xl transition-all duration-300 overflow-hidden">
+                <div class="w-full h-48 overflow-hidden bg-gray-100 dark:brightness-90 relative">
+                    <img src="image/tkp.png" alt="TKP" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <div class="mb-3">
+                        <span class="bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300 text-[10px] font-bold px-3 py-1 rounded-md tracking-wider" data-lang-id="BANGUNAN" data-lang-en="BUILDING">BANGUNAN</span>
+                    </div>
+                    <h3 class="text-[18px] font-bold text-gray-900 dark:text-white mb-2 leading-snug" data-lang-id="Teknik Konstruksi dan Perumahan (TKP)" data-lang-en="Construction and Housing Engineering (TKP)">
+                        Teknik Konstruksi dan Perumahan (TKP)
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow leading-relaxed" data-lang-id="Membekali siswa dengan pengetahuan konstruksi bangunan, pelaksanaan proyek, dan pengelolaan pekerjaan konstruksi secara profesional." data-lang-en="Equip students with knowledge of building construction, project execution, and professional construction management.">
+                        Membekali siswa dengan pengetahuan konstruksi bangunan, pelaksanaan proyek, dan pengelolaan pekerjaan konstruksi secara profesional.
+                    </p>
+                    <a href="program-detail-login.html" class="w-full py-2.5 px-4 border border-gray-200 dark:border-gray-600 rounded-xl text-sm font-bold text-gray-700 dark:text-gray-200 text-center flex items-center justify-center gap-2 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 dark:group-hover:bg-blue-500 transition-colors duration-300 mt-auto">
+                        <span data-lang-id="Selengkapnya" data-lang-en="Read More">Selengkapnya</span>
+                        <iconify-icon icon="mdi:arrow-right" class="text-lg"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+
+            <div data-category="tata udara" class="program-card bg-white dark:bg-gray-800 rounded-[24px] shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] border border-gray-100 dark:border-gray-700 flex flex-col group hover:-translate-y-1 hover:shadow-xl transition-all duration-300 overflow-hidden">
+                <div class="w-full h-48 overflow-hidden bg-gray-100 dark:brightness-90 relative">
+                    <img src="image/tptup.png" alt="TPTUP" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <div class="mb-3">
+                        <span class="bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300 text-[10px] font-bold px-3 py-1 rounded-md tracking-wider" data-lang-id="TATA UDARA" data-lang-en="AIR CONDITIONING">TATA UDARA</span>
+                    </div>
+                    <h3 class="text-[18px] font-bold text-gray-900 dark:text-white mb-2 leading-snug" data-lang-id="Teknik Pendingin, Tata Udara, dan Pemanasan (TPTUP)" data-lang-en="Refrigeration, Air Conditioning, and Heating Engineering (TPTUP)">
+                        Teknik Pendingin, Tata Udara, dan Pemanasan (TPTUP)
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow leading-relaxed" data-lang-id="Mempelajari instalasi, perawatan, dan perbaikan sistem pendingin serta tata udara yang banyak digunakan di dunia industri." data-lang-en="Learn installation, maintenance, and repair of refrigeration and air-conditioning systems widely used in industry.">
+                        Mempelajari instalasi, perawatan, dan perbaikan sistem pendingin serta tata udara yang banyak digunakan di dunia industri.
+                    </p>
+                    <a href="program-detail-login.html" class="w-full py-2.5 px-4 border border-gray-200 dark:border-gray-600 rounded-xl text-sm font-bold text-gray-700 dark:text-gray-200 text-center flex items-center justify-center gap-2 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 dark:group-hover:bg-blue-500 transition-colors duration-300 mt-auto">
+                        <span data-lang-id="Selengkapnya" data-lang-en="Read More">Selengkapnya</span>
+                        <iconify-icon icon="mdi:arrow-right" class="text-lg"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section> 
+
+    <!-- footer -->
     <footer data-aos="fade-up" class="dark:bg-gray-900 dark:border-t dark:border-gray-800 transition-colors duration-300">
         <div class="footer-wrapper">
             <div class="footer-content-1">
                 <h3 class="footer-logo dark:text-white">SMK Negeri 1 Denpasar</h3>
                 <p class="footer-desc dark:text-gray-400"data-lang-id="SMK Negeri 1 Denpasar merupakan sekolah kejuruan unggulan yang berkomitmen mencetak lulusan kompeten, berkarakter, dan siap menghadapi dunia kerja maupun pendidikan tinggi."
-   data-lang-en="SMK Negeri 1 Denpasar is a leading vocational school committed to producing competent, character-driven graduates who are ready for the workforce and higher education.">
-   SMK Negeri 1 Denpasar merupakan sekolah kejuruan unggulan yang berkomitmen mencetak lulusan kompeten, berkarakter, dan siap menghadapi dunia kerja maupun pendidikan tinggi.</p>
+                    data-lang-en="SMK Negeri 1 Denpasar is a leading vocational school committed to producing competent, character-driven graduates who are ready for the workforce and higher education.">
+                    SMK Negeri 1 Denpasar merupakan sekolah kejuruan unggulan yang berkomitmen mencetak lulusan kompeten, berkarakter, dan siap menghadapi dunia kerja maupun pendidikan tinggi.
+                </p>
             </div>
             <div class="footer-content-2">
                 <div class="footer-nav">
@@ -198,17 +384,46 @@
                     <a href="program-detail.html" class="footer-nav-link dark:text-gray-400 hover:text-primary"data-lang-id="Blog"data-lang-en="Blog">Blog</a>
                 </div>
                 <div class="footer-contact">
-                    <h3 class="footer-title dark:text-white"data-lang-id="Kontak"data-lang-en="Contact">Contact</h3>
+                    <h3 class="footer-title dark:text-white"
+                        data-lang-id="Lokasi & Kontak"
+                        data-lang-en="Location & Contact">
+                        Lokasi & Kontak
+                    </h3>
+
                     <a href="tel:081236396662" class="contact-item dark:text-gray-400 hover:text-primary">
-                        <i class="fa-solid fa-phone footer-icon"></i> <p>081236396662</p>
+                        <i class="fa-solid fa-phone footer-icon"></i>
+                        <p>081236396662</p>
                     </a>
+
                     <a href="mailto:info@smkn1denpasar.sch.id" class="contact-item dark:text-gray-400 hover:text-primary">
-                        <i class="fa-solid fa-envelope footer-icon"></i> <p>info@smkn1denpasar.sch.id</p>
+                        <i class="fa-solid fa-envelope footer-icon"></i>
+                        <p>info@smkn1denpasar.sch.id</p>
                     </a>
-                    <a href="https://maps.google.com/?q=Jalan+HOS.+Cokroaminoto+No.+84" target="_blank" class="contact-item dark:text-gray-400 hover:text-primary">
-                        <i class="fa-solid fa-location-dot footer-icon"></i> <p>Jalan HOS. Cokroaminoto No. 84</p>
+
+                    <!-- MAP -->
+                    <div class="mt-4 overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-700">
+                        <iframe
+                            src="https://www.google.com/maps?q=SMK+Negeri+1+Denpasar&output=embed"
+                            width="100%"
+                            height="220"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy">
+                        </iframe>
+                    </div>
+
+                    <a href="https://maps.app.goo.gl/KctysHWis61CMHU16"
+                    target="_blank"
+                    class="mt-3 inline-flex items-center gap-2 text-primary font-medium hover:underline">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span
+                            data-lang-id="Buka di Google Maps"
+                            data-lang-en="Open in Google Maps">
+                            Buka di Google Maps
+                        </span>
                     </a>
                 </div>
+                
             </div>
         </div>
         <div class="footer-bottom">
@@ -223,22 +438,23 @@
     </footer>
 
 
-    <div class="fixed z-50 bottom-6 right-6 font-poppins">
+<div class="fixed z-50 bottom-6 right-6 font-poppins">
         
-        <div id="skensai-popup" class="absolute hidden w-[220px] p-3 text-xs text-gray-800 dark:text-gray-100 transition-all bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-xl rounded-2xl rounded-br-none border-r-4 border-r-primary right-[90px] bottom-[55px]">
+        <div id="skensai-popup" class="absolute hidden w-55 p-3 text-xs text-gray-800 dark:text-gray-100 transition-all bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-xl rounded-2xl rounded-br-none border-r-4 border-r-primary right-[75px] bottom-[55px]">
             <p data-lang-id="Halo! Saya SkensAI. Silakan tanya informasi seputar SMK Negeri 1 Denpasar menggunakan kata kunci seperti: jurusan, fasilitas, alamat, atau prestasi." 
-               data-lang-en="Hello! I am SkensAI. Please ask for information about SMK Negeri 1 Denpasar using keywords like: major, facilities, address, or achievement.">
+                data-lang-en="Hello! I am SkensAI. Please ask for information about SMK Negeri 1 Denpasar using keywords like: major, facilities, address, or achievement.">
                 Halo! Saya SkensAI ada yang bisa di bantu?. 
             </p>
         </div>
 
-        <button id="skensai-btn" class="fixed bottom-6 right-6 z-50 w-20 h-20 transition-transform duration-300 hover:scale-110 animate-pulse-slow drop-shadow-glow">
-            <img src="image/ai.png" alt="AI Assistant" class="w-full h-full object-contain">
-        </button>
+<button id="skensai-btn" class="fixed bottom-6 right-6 z-50 w-20 h-20 transition-all duration-300 hover:scale-110 active:scale-95 skensai-animation rounded-full bg-white dark:bg-gray-800 border-2 border-primary overflow-hidden">
+    <img src="image/ai.png" alt="AI Assistant" class="w-full h-full object-contain p-2">
+</button>
 
-        <div id="skensai-window" class="absolute bottom-24 right-0 md:right-2 hidden flex-col w-[90vw] sm:w-[370px] h-[520px] md:w-[440px] md:h-[600px] max-w-[100vw] max-h-[85vh] bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-2xl rounded-2xl overflow-hidden">
+
+        <div id="skensai-window" class="absolute bottom-20 right-0 md:right-20 hidden flex-col w-[90vw] sm:w-[370px] h-[520px] md:w-[440px] md:h-[500px] max-w-[100vw] max-h-[85vh] bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-2xl rounded-2xl overflow-hidden">
             
-            <div class="flex items-center justify-between p-4 text-white bg-primary shadow-md flex-shrink-0">
+            <div class="flex items-center justify-between p-4 text-white bg-primary shadow-md shrink-0">
                 <div class="flex items-center gap-3">
                     <div class="relative w-10 h-10 bg-white rounded-full p-0.5 shadow-sm flex items-center justify-center flex-shrink-0">
                         <img src="image/ai.png" alt="SkensAI" class="w-full h-full object-contain rounded-full">
@@ -257,7 +473,7 @@
                 </button>
             </div>
 
-            <div id="skensai-messages" class="flex flex-col flex-grow p-4 gap-3 overflow-y-auto text-sm bg-slate-50 dark:bg-gray-900 pb-12">
+            <div id="skensai-messages" class="flex flex-col flex-grow p-4 gap-3 overflow-y-auto text-sm bg-slate-50 dark:bg-gray-900 pb-2">
                 <div class="flex items-start gap-2 max-w-[85%] self-start mb-1 flex-shrink-0">
                     <div class="p-3 text-gray-800 dark:text-gray-100 bg-blue-50/80 dark:bg-gray-700 border border-blue-100 dark:border-gray-600 shadow-sm rounded-2xl rounded-tl-none leading-relaxed">
                         Halo! Saya SkensAI. Silakan tanya informasi seputar SMK Negeri 1 Denpasar menggunakan kata kunci seperti: <b>jurusan, fasilitas, alamat, atau prestasi</b>.
@@ -268,7 +484,7 @@
             <div class="flex items-center gap-2 p-3 bg-white dark:bg-gray-800 border-t border-gray-100 dark:border-gray-700 flex-shrink-0">
                 <input type="text" id="skensai-input" placeholder="Ketik pesan di sini..." class="flex-grow p-2.5 text-sm text-gray-800 dark:text-white bg-slate-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-full focus:outline-none focus:border-[#2c59fa] focus:ring-1 focus:ring-[#2c59fa] transition-all shadow-sm">
                 <button id="skensai-send" class="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white transition-colors bg-primary rounded-full shadow-md hover:bg-primary">
-                    <i class="fa-solid fa-paper-plane text-[15px]"></i>
+                    <i class="fa-solid fa-paper-plane text-[15px] pointer-events-none"></i>
                 </button>
             </div>
         </div>

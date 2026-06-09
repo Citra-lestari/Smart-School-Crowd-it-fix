@@ -16,78 +16,97 @@
         <i class="fa-solid fa-bars"></i>
     </button>
 
-    <aside class="sidebar w-[290px] flex-shrink-0 bg-[var(--color-surface)] border-r border-[var(--color-border)] flex flex-col justify-between h-full fixed md:static inset-y-0 left-0 -translate-x-full md:translate-x-0 transition-transform duration-300 z-40 shadow-[var(--shadow-sm)]" id="sidebar">
+ <aside
+        class="sidebar w-[290px] flex-shrink-0 bg-[var(--color-surface)] border-r border-[var(--color-border)] flex flex-col justify-between h-full fixed md:static inset-y-0 left-0 -translate-x-full md:translate-x-0 transition-transform duration-300 z-40 shadow-[var(--shadow-sm)]"
+        id="sidebar">
+        
         <div class="flex-1 overflow-y-auto py-6 px-5">
-            <div class="flex items-center gap-4 bg-gradient-to-br from-[rgba(0,98,158,0.05)] to-[rgba(59,168,209,0.05)] px-5 py-4 rounded-2xl border border-[var(--color-border)] mb-8 hover:-translate-y-0.5 transition-all duration-300" style="cursor:default">
-                <div class="w-12 h-12 rounded-xl relative flex-shrink-0" style="background:none">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=256&auto=format&fit=crop" alt="Citra Lestari" class="w-full h-full object-cover rounded-xl">
-                    <span class="pulse-dot absolute -bottom-[3px] -right-[3px] w-3 h-3 bg-emerald-500 rounded-full border-2 border-[var(--color-surface)]"></span>
+
+            <div class="flex items-center gap-4 bg-gradient-to-br from-[rgba(0,98,158,0.05)] to-[rgba(59,168,209,0.05)] px-5 py-4 rounded-2xl border border-[var(--color-border)] mb-8 transition-all duration-300 hover:-translate-y-0.5 group"
+                style="cursor:default">
+                <div class="w-12 h-12 rounded-full relative flex-shrink-0" style="background:none">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=256&auto=format&fit=crop"
+                        alt="Citra Lestari" class="w-full h-full object-cover rounded-full">
+                    <span
+                        class="pulse-dot absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 rounded-full border-2 border-[var(--color-surface)]"></span>
                 </div>
                 <div>
                     <div class="text-[15px] font-semibold text-[var(--color-text)] tracking-tight">Citra Lestari</div>
-                    <div class="text-xs font-medium text-[var(--color-text-muted)]" data-lang-id="Siswa Aktif" data-lang-en="Active Student">Siswa Aktif</div>
+                    <div class="text-xs font-medium text-[var(--color-text-muted)]" data-lang-id="Siswa Aktif"
+                        data-lang-en="Active Student">Siswa Aktif</div>
                 </div>
             </div>
+
             <div>
-                <span class="text-[11px] uppercase font-bold text-[var(--color-text-muted)] block px-3 mb-3 tracking-[0.08em]" data-lang-id="Siswa Menu" data-lang-en="Student Menu">Siswa Menu</span>
-                <a href="profile.html" class="flex items-center gap-[0.85rem] px-4 py-3 text-sm font-medium rounded-[10px] no-underline border border-transparent mb-1.5 transition-all duration-200 text-[var(--color-text-muted)] hover:bg-[var(--color-surface-alt)] hover:text-[var(--color-text)]">
+                <span
+                    class="text-[11px] uppercase font-bold text-[var(--color-text-muted)] block px-3 mb-3 tracking-[0.08em]"
+                    data-lang-id="Siswa Menu" data-lang-en="Student Menu">Siswa Menu</span>
+                <a href="profile.html"
+                    class="flex items-center gap-[0.85rem] px-4 py-3 text-sm font-medium rounded-[10px] no-underline border border-transparent mb-1.5 transition-all duration-200 text-[var(--color-text-muted)] hover:bg-[var(--color-surface-alt)] hover:text-[var(--color-text)]">
                     <i class="fa-solid fa-chart-pie text-base w-5 text-center flex-shrink-0"></i>
-                    <span data-lang-id="Ringkasan Utama" data-lang-en="Main Summary">Ringkasan Utama</span>
+                    <span data-lang-id="Profil" data-lang-en="Profile">Profile</span>
                 </a>
-                <a href="profile-akademis.html" class="flex items-center gap-[0.85rem] px-4 py-3 text-sm font-semibold rounded-[10px] no-underline border border-transparent mb-1.5 transition-all duration-200 bg-[var(--color-primary)] text-white shadow-[0_4px_12px_rgba(0,98,158,0.15)]">
+                <a href="profile-akademis.html"
+                    class="flex items-center gap-[0.85rem] px-4 py-3 text-sm font-semibold rounded-[10px] no-underline border border-transparent mb-1.5 transition-all duration-200 bg-[var(--color-primary)] text-white shadow-[0_4px_12px_rgba(0,98,158,0.15)]">
                     <i class="fa-solid fa-graduation-cap text-base w-5 text-center flex-shrink-0"></i>
-                    <span data-lang-id="Hub Akademis & Ekstra" data-lang-en="Academic Hub & Extra">Hub Akademis & Ekstra</span>
+                    <span data-lang-id="Hub Akademis & Ekstra" data-lang-en="Academic Hub & Extra">Hub Akademis &
+                        Ekstra</span>
                 </a>
-                <a href="profile-dokumen.html" class="flex items-center gap-[0.85rem] px-4 py-3 text-sm font-medium rounded-[10px] no-underline border border-transparent mb-1.5 transition-all duration-200 text-[var(--color-text-muted)] hover:bg-[var(--color-surface-alt)] hover:text-[var(--color-text)]">
+                <a href="profile-dokumen.html"
+                    class="flex items-center gap-[0.85rem] px-4 py-3 text-sm font-medium rounded-[10px] no-underline border border-transparent mb-1.5 transition-all duration-200 text-[var(--color-text-muted)] hover:bg-[var(--color-surface-alt)] hover:text-[var(--color-text)]">
                     <i class="fa-solid fa-folder-open text-base w-5 text-center flex-shrink-0"></i>
                     <span data-lang-id="Layanan Dokumen" data-lang-en="Document Services">Layanan Dokumen</span>
                 </a>
-                <a href="media-belajar.html" class="flex items-center gap-[0.85rem] px-4 py-3 text-sm font-medium rounded-[10px] no-underline border border-transparent mb-1.5 transition-all duration-200 text-[var(--color-text-muted)] hover:bg-[var(--color-surface-alt)] hover:text-[var(--color-text)]">
+                <a href="media-belajar.html"
+                    class="flex items-center gap-[0.85rem] px-4 py-3 text-sm font-medium rounded-[10px] no-underline border border-transparent mb-1.5 transition-all duration-200 text-[var(--color-text-muted)] hover:bg-[var(--color-surface-alt)] hover:text-[var(--color-text)]">
                     <i class="fa-solid fa-play-circle text-base w-5 text-center flex-shrink-0"></i>
                     <span data-lang-id="Media Belajar" data-lang-en="Learning Media">Media Belajar</span>
                 </a>
-                <a href="index.html" class="flex items-center gap-[0.85rem] px-4 py-3 text-sm font-medium rounded-[10px] no-underline border border-t border-dashed border-[var(--color-border)] mt-6 pt-4 transition-all duration-200 text-[var(--color-text-muted)] hover:bg-[var(--color-surface-alt)] hover:text-[var(--color-text)]">
-                    <i class="fa-solid fa-arrow-left text-base w-5 text-center flex-shrink-0"></i>
-                    <span data-lang-id="Kembali ke Beranda" data-lang-en="Back to Home">Kembali ke Beranda</span>
-                </a>
             </div>
         </div>
-        <div class="py-5 px-6 border-t border-[var(--color-border)] bg-[var(--color-surface)] flex gap-4 items-center transition-[background-color,border-color] duration-300">
-            <div class="relative flex-1" id="lang-dropdown-wrapper">
-                <button id="lang-btn" class="w-full flex items-center justify-between bg-[var(--color-surface-alt)] border border-[var(--color-border)] rounded-[10px] text-sm font-semibold px-3 py-2 cursor-pointer text-[var(--color-text)] outline-none hover:border-[var(--color-primary)] transition-all" style="font-family:'Poppins',sans-serif">
+
+        <div class="py-5 px-5 border-t border-[var(--color-border)] bg-[var(--color-surface)] flex gap-3 items-center transition-[background-color,border-color] duration-300">
+            <a href="index-login.html" class="flex-1 flex items-center justify-center gap-2 h-10 px-3 text-sm font-semibold rounded-[10px] no-underline bg-[var(--color-surface-alt)] border border-[var(--color-border)] text-[var(--color-text-muted)] hover:bg-[var(--color-border)] hover:text-[var(--color-text)] hover:scale-[1.02] transition-all duration-200">
+                <i class="fa-solid fa-arrow-left text-sm flex-shrink-0"></i>
+                <span data-lang-id="Kembali" data-lang-en="Back">Kembali</span>
+            </a>
+            <div class="relative flex-shrink-0" id="lang-dropdown-wrapper">
+                <button id="lang-btn" class="w-10 h-10 flex items-center justify-center bg-[var(--color-surface-alt)] border border-[var(--color-border)] rounded-[10px] cursor-pointer text-xs font-bold text-[var(--color-text)] hover:bg-[var(--color-border)] hover:scale-[1.02] transition-all duration-200 outline-none">
                     <span id="lang-active-text">ID</span>
-                    <i class="fa-solid fa-chevron-up text-[10px] transition-transform duration-200" id="lang-chevron"></i>
+                    <i class="fa-solid fa-chevron-up hidden" id="lang-chevron"></i>
                 </button>
-                <div id="lang-menu" class="absolute bottom-full left-0 mb-2 w-full bg-[var(--color-surface)] border border-[var(--color-border)] rounded-[10px] shadow-[var(--shadow-card)] overflow-hidden hidden z-50 transition-all opacity-0 translate-y-2">
-                    <div class="lang-option px-3 py-2.5 text-sm font-semibold text-[var(--color-text)] hover:bg-[var(--color-surface-alt)] hover:text-[var(--color-primary)] cursor-pointer transition-colors" data-value="id">ID</div>
-                    <div class="lang-option px-3 py-2.5 text-sm font-semibold text-[var(--color-text)] hover:bg-[var(--color-surface-alt)] hover:text-[var(--color-primary)] cursor-pointer transition-colors" data-value="en">EN</div>
+                <div id="lang-menu" class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-16 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-[10px] shadow-[var(--shadow-card)] overflow-hidden hidden z-50 transition-all opacity-0 translate-y-2">
+                    <div class="lang-option px-3 py-2 text-xs font-semibold text-center text-[var(--color-text)] hover:bg-[var(--color-surface-alt)] hover:text-[var(--color-primary)] cursor-pointer transition-colors" data-value="id">ID</div>
+                    <div class="lang-option px-3 py-2 text-xs font-semibold text-center text-[var(--color-text)] hover:bg-[var(--color-surface-alt)] hover:text-[var(--color-primary)] cursor-pointer transition-colors" data-value="en">EN</div>
                 </div>
             </div>
-            <button id="toggle-theme" class="w-10 h-10 flex items-center justify-center bg-[var(--color-surface-alt)] border border-[var(--color-border)] rounded-[10px] cursor-pointer text-[15px] text-[var(--color-text)] hover:bg-[var(--color-border)] hover:scale-[1.02] transition-all duration-200 flex-shrink-0">
+            <button id="toggle-theme"
+                class="w-10 h-10 flex items-center justify-center bg-[var(--color-surface-alt)] border border-[var(--color-border)] rounded-[10px] cursor-pointer text-[15px] text-[var(--color-text)] hover:bg-[var(--color-border)] hover:scale-[1.02] transition-all duration-200 flex-shrink-0">
                 <i id="theme-icon" class="fa-solid fa-moon"></i>
             </button>
         </div>
     </aside>
 
-    <main class="flex-1 w-full overflow-y-auto relative p-4 pt-16 md:p-10">
-        <div style="max-width:1100px; margin:0 auto; padding-bottom:2.5rem;">
+    <main class="flex-1 w-full overflow-y-auto relative p-4 pt-16 md:p-10" style="margin-bottom:30px;">
+        <div style="max-width:1100px; margin:0 auto; padding-bottom:2.5rem; height: 100%;">
 
             <div class="border-b border-[var(--color-border)] pb-6 mb-8" data-aos="fade-down">
                 <h1 class="text-[30px] font-bold text-[var(--color-text)] -tracking-[0.5px]" data-lang-id="Hub Akademis & Ekstrakurikuler" data-lang-en="Academic Hub & Extracurriculars">Hub Akademis & Ekstrakurikuler</h1>
                 <p class="text-sm text-[var(--color-text-muted)] mt-1" data-lang-id="Pantau performa akademik dan kegiatan non-akademik Anda." data-lang-en="Monitor your academic performance and non-academic activities.">Pantau performa akademik dan kegiatan non-akademik Anda.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-[1.75rem]">
+            <div class="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-[1.75rem] items-stretch min-h-[550px]">
 
-                <section data-aos="fade-right" data-aos-delay="150">
-                    <div class="bg-[var(--color-surface)] rounded-2xl p-6 border border-[var(--color-border)] shadow-[var(--shadow-card)]">
+                <section data-aos="fade-right" data-aos-delay="150" class="h-full">
+                    <div class="bg-[var(--color-surface)] rounded-2xl p-6 border border-[var(--color-border)] shadow-[var(--shadow-card)] flex flex-col h-full">
                         <div class="border-b border-[var(--color-border-inner)] pb-4 mb-5">
                             <h2 class="text-lg font-bold text-[var(--color-text)] flex items-center gap-3">
                                 <i class="fa-solid fa-star text-[var(--color-secondary)]"></i>
                                 <span data-lang-id="Nilai Terbaru" data-lang-en="Latest Scores">Nilai Terbaru</span>
                             </h2>
                         </div>
-                        <div class="custom-scroll overflow-y-auto pr-[6px]" style="max-height:490px;">
+                        
+                        <div class="custom-scroll overflow-y-auto pr-[6px] flex-1">
 
                             <div class="score-card score-excellent relative flex items-center justify-between px-5 py-4 bg-[var(--color-surface-alt)] rounded-xl mb-3 border border-transparent transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.01] hover:bg-[var(--color-surface)] hover:border-[var(--color-border)] hover:shadow-[var(--shadow-sm)]">
                                 <div class="flex-1 pr-4">
@@ -95,7 +114,7 @@
                                     <div class="text-xs text-[var(--color-text-muted)] mt-[1px]" data-lang-id="Ulangan Harian 2 - Frontend" data-lang-en="Daily Test 2 - Frontend">Ulangan Harian 2 - Frontend</div>
                                     <div class="w-[140px] h-1 bg-[rgba(0,0,0,0.05)] rounded-full mt-[6px] overflow-hidden"><div class="h-full rounded-full bg-emerald-500" style="width:98%"></div></div>
                                 </div>
-                                <div class="score-badge w-11 h-11 rounded-full flex items-center justify-center font-bold text-[15px] text-white transition-transform duration-300" style="background:linear-gradient(135deg,#10b981,#059669)">98</div>
+                                <div class=" flex-shrink-0 w-11 h-11 rounded-full flex items-center justify-center font-bold text-[15px] text-white transition-transform duration-300" style="background:linear-gradient(135deg,#10b981,#059669) ">98</div>
                             </div>
 
                             <div class="score-card score-excellent relative flex items-center justify-between px-5 py-4 bg-[var(--color-surface-alt)] rounded-xl mb-3 border border-transparent transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.01] hover:bg-[var(--color-surface)] hover:border-[var(--color-border)] hover:shadow-[var(--shadow-sm)]">
@@ -104,7 +123,7 @@
                                     <div class="text-xs text-[var(--color-text-muted)] mt-[1px]" data-lang-id="Ulangan Harian 1" data-lang-en="Daily Test 1">Ulangan Harian 1</div>
                                     <div class="w-[140px] h-1 bg-[rgba(0,0,0,0.05)] rounded-full mt-[6px] overflow-hidden"><div class="h-full rounded-full bg-emerald-500" style="width:92%"></div></div>
                                 </div>
-                                <div class="score-badge w-11 h-11 rounded-full flex items-center justify-center font-bold text-[15px] text-white transition-transform duration-300" style="background:linear-gradient(135deg,#10b981,#059669)">92</div>
+                                <div class=" flex-shrink-0 w-11 h-11 rounded-full flex items-center justify-center font-bold text-[15px] text-white transition-transform duration-300" style="background:linear-gradient(135deg,#10b981,#059669)">92</div>
                             </div>
 
                             <div class="score-card score-good relative flex items-center justify-between px-5 py-4 bg-[var(--color-surface-alt)] rounded-xl mb-3 border border-transparent transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.01] hover:bg-[var(--color-surface)] hover:border-[var(--color-border)] hover:shadow-[var(--shadow-sm)]">
@@ -113,7 +132,7 @@
                                     <div class="text-xs text-[var(--color-text-muted)] mt-[1px]" data-lang-id="Listening Test" data-lang-en="Listening Test">Listening Test</div>
                                     <div class="w-[140px] h-1 bg-[rgba(0,0,0,0.05)] rounded-full mt-[6px] overflow-hidden"><div class="h-full rounded-full bg-[var(--color-secondary)]" style="width:90%"></div></div>
                                 </div>
-                                <div class="score-badge w-11 h-11 rounded-full flex items-center justify-center font-bold text-[15px] text-white transition-transform duration-300" style="background:linear-gradient(135deg,var(--color-primary),var(--color-secondary))">90</div>
+                                <div class=" flex-shrink-0 w-11 h-11 rounded-full flex items-center justify-center font-bold text-[15px] text-white transition-transform duration-300" style="background:linear-gradient(135deg,var(--color-primary),var(--color-secondary))">90</div>
                             </div>
 
                             <div class="score-card score-good relative flex items-center justify-between px-5 py-4 bg-[var(--color-surface-alt)] rounded-xl mb-3 border border-transparent transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.01] hover:bg-[var(--color-surface)] hover:border-[var(--color-border)] hover:shadow-[var(--shadow-sm)]">
@@ -122,7 +141,7 @@
                                     <div class="text-xs text-[var(--color-text-muted)] mt-[1px]" data-lang-id="Ulangan Harian 1" data-lang-en="Daily Test 1">Ulangan Harian 1</div>
                                     <div class="w-[140px] h-1 bg-[rgba(0,0,0,0.05)] rounded-full mt-[6px] overflow-hidden"><div class="h-full rounded-full bg-[var(--color-secondary)]" style="width:90%"></div></div>
                                 </div>
-                                <div class="score-badge w-11 h-11 rounded-full flex items-center justify-center font-bold text-[15px] text-white transition-transform duration-300" style="background:linear-gradient(135deg,var(--color-primary),var(--color-secondary))">90</div>
+                                <div class=" flex-shrink-0 w-11 h-11 rounded-full flex items-center justify-center font-bold text-[15px] text-white transition-transform duration-300" style="background:linear-gradient(135deg,var(--color-primary),var(--color-secondary))">90</div>
                             </div>
 
                             <div class="score-card score-good relative flex items-center justify-between px-5 py-4 bg-[var(--color-surface-alt)] rounded-xl mb-3 border border-transparent transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.01] hover:bg-[var(--color-surface)] hover:border-[var(--color-border)] hover:shadow-[var(--shadow-sm)]">
@@ -131,7 +150,7 @@
                                     <div class="text-xs text-[var(--color-text-muted)] mt-[1px]" data-lang-id="Kalkulus Dasar" data-lang-en="Basic Calculus">Kalkulus Dasar</div>
                                     <div class="w-[140px] h-1 bg-[rgba(0,0,0,0.05)] rounded-full mt-[6px] overflow-hidden"><div class="h-full rounded-full bg-[var(--color-secondary)]" style="width:85%"></div></div>
                                 </div>
-                                <div class="score-badge w-11 h-11 rounded-full flex items-center justify-center font-bold text-[15px] text-white transition-transform duration-300" style="background:linear-gradient(135deg,var(--color-primary),var(--color-secondary))">85</div>
+                                <div class=" flex-shrink-0 w-11 h-11 rounded-full flex items-center justify-center font-bold text-[15px] text-white transition-transform duration-300" style="background:linear-gradient(135deg,var(--color-primary),var(--color-secondary))">85</div>
                             </div>
 
                             <div class="score-card score-good relative flex items-center justify-between px-5 py-4 bg-[var(--color-surface-alt)] rounded-xl mb-3 border border-transparent transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.01] hover:bg-[var(--color-surface)] hover:border-[var(--color-border)] hover:shadow-[var(--shadow-sm)]">
@@ -140,16 +159,7 @@
                                     <div class="text-xs text-[var(--color-text-muted)] mt-[1px]" data-lang-id="Ulangan Harian 1" data-lang-en="Daily Test 1">Ulangan Harian 1</div>
                                     <div class="w-[140px] h-1 bg-[rgba(0,0,0,0.05)] rounded-full mt-[6px] overflow-hidden"><div class="h-full rounded-full bg-[var(--color-secondary)]" style="width:82%"></div></div>
                                 </div>
-                                <div class="score-badge w-11 h-11 rounded-full flex items-center justify-center font-bold text-[15px] text-white transition-transform duration-300" style="background:linear-gradient(135deg,var(--color-primary),var(--color-secondary))">82</div>
-                            </div>
-
-                            <div class="score-card score-good relative flex items-center justify-between px-5 py-4 bg-[var(--color-surface-alt)] rounded-xl mb-3 border border-transparent transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.01] hover:bg-[var(--color-surface)] hover:border-[var(--color-border)] hover:shadow-[var(--shadow-sm)]">
-                                <div class="flex-1 pr-4">
-                                    <div class="text-[15px] font-semibold text-[var(--color-text)]">PKN</div>
-                                    <div class="text-xs text-[var(--color-text-muted)] mt-[1px]" data-lang-id="Ulangan Harian 1" data-lang-en="Daily Test 1">Ulangan Harian 1</div>
-                                    <div class="w-[140px] h-1 bg-[rgba(0,0,0,0.05)] rounded-full mt-[6px] overflow-hidden"><div class="h-full rounded-full bg-[var(--color-secondary)]" style="width:88%"></div></div>
-                                </div>
-                                <div class="score-badge w-11 h-11 rounded-full flex items-center justify-center font-bold text-[15px] text-white transition-transform duration-300" style="background:linear-gradient(135deg,var(--color-primary),var(--color-secondary))">88</div>
+                                <div class=" flex-shrink-0 w-11 h-11 rounded-full flex items-center justify-center font-bold text-[15px] text-white transition-transform duration-300" style="background:linear-gradient(135deg,var(--color-primary),var(--color-secondary))">82</div>
                             </div>
 
                             <div class="score-card score-warning relative flex items-center justify-between px-5 py-4 bg-[var(--color-surface-alt)] rounded-xl mb-3 border border-transparent transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.01] hover:bg-[var(--color-surface)] hover:border-[var(--color-border)] hover:shadow-[var(--shadow-sm)]">
@@ -158,43 +168,99 @@
                                     <div class="text-xs text-[var(--color-text-muted)] mt-[1px]" data-lang-id="Termodinamika" data-lang-en="Thermodynamics">Termodinamika</div>
                                     <div class="w-[140px] h-1 bg-[rgba(0,0,0,0.05)] rounded-full mt-[6px] overflow-hidden"><div class="h-full rounded-full bg-amber-400" style="width:72%"></div></div>
                                 </div>
-                                <div class="score-badge w-11 h-11 rounded-full flex items-center justify-center font-bold text-[15px] text-white transition-transform duration-300" style="background:linear-gradient(135deg,#f59e0b,#d97706)">72</div>
+                                <div class=" flex-shrink-0 w-11 h-11 rounded-full flex items-center justify-center font-bold text-[15px] text-white transition-transform duration-300" style="background:linear-gradient(135deg,#f59e0b,#d97706)">72</div>
                             </div>
 
                         </div>
                     </div>
                 </section>
 
-                <section data-aos="fade-left" data-aos-delay="300">
-                    <h2 class="text-[11px] uppercase font-bold text-[var(--color-text-muted)] block px-3 mb-4 tracking-[0.08em]" data-lang-id="Kegiatan Aktif" data-lang-en="Active Activities">Kegiatan Aktif</h2>
+                <section data-aos="fade-left" data-aos-delay="300" class="flex flex-col gap-[1.75rem] h-full">
+                    
+                    <div class="bg-[var(--color-surface)] rounded-2xl p-6 border border-[var(--color-border)] shadow-[var(--shadow-card)] flex-1 flex flex-col">
+                        <div class="border-b border-[var(--color-border-inner)] pb-4 mb-5 flex-shrink-0">
+                            <h2 class="text-lg font-bold text-[var(--color-text)] flex items-center gap-3">
+                                <i class="fa-solid fa-person-running text-[var(--color-primary)]"></i>
+                                <span data-lang-id="Kegiatan Aktif" data-lang-en="Active Activities">Kegiatan Aktif</span>
+                            </h2>
+                        </div>
+                        
+                        <div class="flex-1 overflow-y-auto pr-[2px] custom-scroll">
+                            <div class="bg-[var(--color-surface-alt)] px-5 py-4 rounded-xl mb-3 flex items-center gap-4 border border-transparent hover:-translate-y-[2px] hover:shadow-[var(--shadow-sm)] hover:border-[var(--color-border)] hover:bg-[var(--color-surface)] transition-all duration-[250ms]">
+                                <div class="w-11 h-11 rounded-[10px] flex-shrink-0 flex items-center justify-center text-lg bg-[rgba(0,98,158,0.06)] text-[var(--color-primary)]"><i class="fa-solid fa-code"></i></div>
+                                <div>
+                                    <div class="text-[15px] font-semibold text-[var(--color-text)]" data-lang-id="Klub Pemrograman" data-lang-en="Programming Club">Klub Pemrograman</div>
+                                    <div class="text-xs text-[var(--color-text-muted)] mt-[2px]" data-lang-id="Jumat Terakhir, 13:00–15:00" data-lang-en="Last Friday, 13:00–15:00">Jumat Terakhir, 13:00–15:00</div>
+                                </div>
+                            </div>
 
-                    <div class="bg-[var(--color-surface)] px-5 py-4 rounded-[14px] mb-3 flex items-center gap-4 border border-[var(--color-border)] hover:-translate-y-[3px] hover:shadow-[var(--shadow-sm)] hover:border-[var(--color-secondary)] transition-all duration-[250ms]">
-                        <div class="w-11 h-11 rounded-[10px] flex items-center justify-center text-lg bg-[rgba(0,98,158,0.06)] text-[var(--color-primary)]"><i class="fa-solid fa-code"></i></div>
-                        <div>
-                            <div class="text-[15px] font-semibold text-[var(--color-text)]" data-lang-id="Klub Pemrograman" data-lang-en="Programming Club">Klub Pemrograman</div>
-                            <div class="text-xs text-[var(--color-text-muted)]" data-lang-id="Jumat Terakhir, 13:00–15:00" data-lang-en="Last Friday, 13:00–15:00">Jumat Terakhir, 13:00–15:00</div>
+                            <div class="bg-[var(--color-surface-alt)] px-5 py-4 rounded-xl mb-3 flex items-center gap-4 border border-transparent hover:-translate-y-[2px] hover:shadow-[var(--shadow-sm)] hover:border-[var(--color-border)] hover:bg-[var(--color-surface)] transition-all duration-[250ms]">
+                                <div class="w-11 h-11 rounded-[10px] flex-shrink-0 flex items-center justify-center text-lg" style="color:#f59e0b;background:rgba(245,158,11,0.06)"><i class="fa-solid fa-basketball"></i></div>
+                                <div>
+                                    <div class="text-[15px] font-semibold text-[var(--color-text)]" data-lang-id="Klub Bola Basket" data-lang-en="Basketball Club">Klub Bola Basket</div>
+                                    <div class="text-xs text-[var(--color-text-muted)] mt-[2px]" data-lang-id="Selasa & Kamis, 15:00–17:00" data-lang-en="Tue & Thu, 15:00–17:00">Selasa & Kamis, 15:00–17:00</div>
+                                </div>
+                            </div>
+
+                            <div class="bg-[var(--color-surface-alt)] px-5 py-4 rounded-xl mb-3 flex items-center gap-4 border border-transparent hover:-translate-y-[2px] hover:shadow-[var(--shadow-sm)] hover:border-[var(--color-border)] hover:bg-[var(--color-surface)] transition-all duration-[250ms]">
+                                <div class="w-11 h-11 rounded-[10px] flex-shrink-0 flex items-center justify-center text-lg" style="color:#ec4899;background:rgba(236,72,153,0.06)"><i class="fa-solid fa-paint-brush"></i></div>
+                                <div>
+                                    <div class="text-[15px] font-semibold text-[var(--color-text)]" data-lang-id="Desain Grafis" data-lang-en="Graphic Design">Desain Grafis</div>
+                                    <div class="text-xs text-[var(--color-text-muted)] mt-[2px]" data-lang-id="Sabtu, 08:00–10:00" data-lang-en="Saturday, 08:00–10:00">Sabtu, 08:00–10:00</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="bg-[var(--color-surface)] px-5 py-4 rounded-[14px] mb-3 flex items-center gap-4 border border-[var(--color-border)] hover:-translate-y-[3px] hover:shadow-[var(--shadow-sm)] hover:border-[var(--color-secondary)] transition-all duration-[250ms]">
-                        <div class="w-11 h-11 rounded-[10px] flex items-center justify-center text-lg" style="color:#f59e0b;background:rgba(245,158,11,0.06)"><i class="fa-solid fa-basketball"></i></div>
-                        <div>
-                            <div class="text-[15px] font-semibold text-[var(--color-text)]" data-lang-id="Klub Bola Basket" data-lang-en="Basketball Club">Klub Bola Basket</div>
-                            <div class="text-xs text-[var(--color-text-muted)]" data-lang-id="Selasa & Kamis, 15:00–17:00" data-lang-en="Tue & Thu, 15:00–17:00">Selasa & Kamis, 15:00–17:00</div>
+                    <div class="bg-[var(--color-surface)] rounded-2xl p-6 border border-[var(--color-border)] shadow-[var(--shadow-card)] flex-1 flex flex-col">
+                        <div class="border-b border-[var(--color-border-inner)] pb-4 mb-5 flex-shrink-0">
+                            <h2 class="text-lg font-bold text-[var(--color-text)] flex items-center gap-3">
+                                <i class="fa-solid fa-award text-[var(--color-orange)]"></i>
+                                <span data-lang-id="Poin Kedisiplinan & Prestasi" data-lang-en="Discipline & Achievement Points">Poin Kedisiplinan & Prestasi</span>
+                            </h2>
+                        </div>
+                        
+                        <div class="flex-1 overflow-y-auto pr-[2px] custom-scroll">
+                            
+                            <div class="flex items-center justify-between p-4 bg-[var(--color-surface-alt)] rounded-xl border border-transparent mb-3 transition-all duration-300 hover:border-emerald-500/30 hover:bg-[rgba(16,185,129,0.03)]">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-sm flex-shrink-0">
+                                        <i class="fa-solid fa-trophy"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-[15px] font-semibold text-[var(--color-text)]" data-lang-id="Juara 1 Lomba Web Design" data-lang-en="1st Place Web Design">Juara 1 Lomba Web Design</div>
+                                        <div class="text-xs text-[var(--color-text-muted)] mt-[2px]">12 Mei 2024</div>
+                                    </div>
+                                </div>
+                                <div class="font-bold text-emerald-500 text-[15px] flex-shrink-0 bg-emerald-500/10 px-2 py-1 rounded-md">+50</div>
+                            </div>
+                            
+                            <div class="flex items-center justify-between p-4 bg-[var(--color-surface-alt)] rounded-xl border border-transparent mb-3 transition-all duration-300 hover:border-red-500/30 hover:bg-[rgba(239,68,68,0.03)]">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-red-500/10 text-red-500 flex items-center justify-center text-sm flex-shrink-0">
+                                        <i class="fa-solid fa-clock-rotate-left"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-[15px] font-semibold text-[var(--color-text)]" data-lang-id="Terlambat Masuk Sekolah" data-lang-en="Late for School">Terlambat Masuk Sekolah</div>
+                                        <div class="text-xs text-[var(--color-text-muted)] mt-[2px]">05 Apr 2024</div>
+                                    </div>
+                                </div>
+                                <div class="font-bold text-red-500 text-[15px] flex-shrink-0 bg-red-500/10 px-2 py-1 rounded-md">-10</div>
+                            </div>
+
+                        </div>
+                        
+                        <div class="mt-2 pt-4 border-t border-[var(--color-border)] flex justify-between items-center flex-shrink-0">
+                            <span class="text-sm font-semibold text-[var(--color-text-muted)]" data-lang-id="Total Poin Anda" data-lang-en="Your Total Points">Total Poin Anda</span>
+                            <span class="text-lg font-bold text-[var(--color-primary)] bg-[rgba(59,168,209,0.1)] px-3 py-1 rounded-lg">140 Poin</span>
                         </div>
                     </div>
 
-                    <div class="bg-[var(--color-surface)] px-5 py-4 rounded-[14px] mb-3 flex items-center gap-4 border border-[var(--color-border)] hover:-translate-y-[3px] hover:shadow-[var(--shadow-sm)] hover:border-[var(--color-secondary)] transition-all duration-[250ms]">
-                        <div class="w-11 h-11 rounded-[10px] flex items-center justify-center text-lg" style="color:#ec4899;background:rgba(236,72,153,0.06)"><i class="fa-solid fa-paint-brush"></i></div>
-                        <div>
-                            <div class="text-[15px] font-semibold text-[var(--color-text)]" data-lang-id="Desain Grafis" data-lang-en="Graphic Design">Desain Grafis</div>
-                            <div class="text-xs text-[var(--color-text-muted)]" data-lang-id="Sabtu, 08:00–10:00" data-lang-en="Saturday, 08:00–10:00">Sabtu, 08:00–10:00</div>
-                        </div>
-                    </div>
                 </section>
-
+                
             </div>
         </div>
+        <br><br><br>
     </main>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

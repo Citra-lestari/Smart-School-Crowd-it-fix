@@ -1,6 +1,8 @@
 @import "tailwindcss"; 
 
 @theme {
+    /* 🔥 KODE WAJIB: Mengunci dark mode agar mengikuti tombol website, BUKAN bawaan sistem laptop */
+    
     --color-primary: #3BA8D1;
     --color-secondary: #00629E;
     --color-black: #222222;
@@ -8,9 +10,10 @@
     --color-white-bg: #F2F4F6;
     --color-grey-border: #E2E8F0;
     --color-orange: #FF9553;
-
+    
     --font-poppins: 'Poppins', sans-serif;
 }
+@variant dark (&:where(.dark, .dark *));
 
 body{
     @apply font-poppins bg-white text-black;
@@ -19,6 +22,25 @@ section{
     @apply mx-auto max-w-[90%] md:max-w-[85%] 2xl:max-w-350 mb-30 md:mb-20 lg:mb-32.5;
 }
 
+.bento-card {
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+        }
+        .bento-card:hover {
+            transform: translateY(-6px);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #EAF8FD;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #222222;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3BA8D1;
+            border-radius: 4px;
+        }
 /* navbar */
 .nav-all{
     @apply text-black lg:text-base md:text-sm text-[18px] hover:transition-all hover:text-primary hover:duration-500;
@@ -56,7 +78,11 @@ section{
 
 /* HERO SECTION */
 .hero-section{
-    @apply flex flex-col md:flex-row items-center gap-2.5 md:gap-20 lg:gap-32 mt-15 md:mt-20 lg:mt-30;
+    @apply grid lg:grid-cols-2 items-center justify-between;
+}
+
+.hero-section > div:first-child{
+    @apply max-w-xl;
 }
 
 .hero-title{
@@ -67,69 +93,139 @@ section{
     @apply text-base 2xl:text-lg text-black/80
 }
 
+.hero-image-wrapper{
+    @apply w-full;
+}
+
 .hero-img{
-    @apply hidden lg:block md:w-[50%] lg:w-[40%];
+    @apply w-full;
 }
 
-/* VISI MISI */
-.visi-container{
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5;
+.hero-detail-img{
+    @apply hidden lg:block w-[500px] xl:w-[650px];
 }
 
-.visi-content-1{
-    @apply col-span-1 px-5 py-7 bg-white-bg rounded-lg row-span-2 border-0;
+.visimisi-section{
+    @apply py-24;
 }
 
-.visi-title{
-    @apply text-orange font-semibold text-base mb-2 mt-36;
+.visimisi-container{
+    @apply grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12;
 }
 
-.visi-desc{
-    @apply font-medium text-xl text-black;
+/* VISION */
+
+.vision-card{
+    @apply lg:col-span-5 bg-white border border-sky-100 rounded-3xl p-8 lg:p-10 flex flex-col;
 }
 
-.visi-content-2{
-    @apply grid grid-rows-2 gap-5 ;
+.vision-label{
+    @apply text-primary uppercase tracking-[0.2em] font-bold text-sm mb-3;
 }
 
-.visi-content-3{
-    @apply row-span-2 col-span-2 grid grid-cols-1 gap-5;
+.vision-title{
+    @apply text-3xl lg:text-5xl font-bold text-slate-900 leading-tight;
 }
 
-.visi-subcontent{
-    @apply row-span-1 col-span-1 px-5 py-6 bg-white-bg rounded-lg border-0;
+.vision-quote{
+    @apply border-l-4 border-primary pl-6 my-8;
 }
 
-.visi-title-2{
-    @apply mt-3 mb-2 font-medium text-base text-black;
+.vision-text{
+    @apply text-xl lg:text-2xl italic text-slate-600 leading-relaxed;
 }
 
-.visi-desc-2{
-    @apply text-sm text-black/80
+.vision-video{
+    @apply overflow-hidden rounded-2xl mb-6;
 }
 
+.vision-video iframe{
+    @apply w-full aspect-video;
+}
+
+.vision-footer{
+    @apply text-sm text-slate-400 mt-auto;
+}
 
 
 
 /* FASILITAS */
 .fasilitas-container{
-    @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 ;
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5;
 }
 
-.fasilitas-img, .program-img{
-    @apply w-full h-30 md:h-55 object-cover rounded-lg mb-2;
+.fasilitas-content{
+    @apply bg-slate-800 border border-slate-700 rounded-2xl overflow-hidden transition-all duration-300 hover:border-primary hover:-translate-y-1 hover:shadow-xl;
+}
+
+.fasilitas-content{
+    @apply p-4;
+}
+
+.fasilitas-img{
+    @apply w-full h-52 object-cover;
+}
+
+.fasilitas-content{
+    @apply p-4;
+}
+
+.fasilitas-badge{
+    @apply inline-flex items-center px-4 py-2 rounded-xl bg-primary/15 text-primary text-sm font-medium;
 }
 
 .fasilitas-title{
-    @apply font-semibold text-base 2xl:text-lg mb-1 group-hover:text-primary group-hover:underline transition-colors;
+    @apply text-white text-2xl font-bold mt-4 mb-3;
 }
 
 .fasilitas-desc{
-    @apply text-sm 2xl:text-base text-black/80 line-clamp-3;
+    @apply text-black/70 text-sm mb-4 line-clamp-2;
 }
 
 
-/* EKSTRAKULIKULER */
+/* EKSTRA */
+.ekstra-container{
+    @apply grid grid-cols-1 md:grid-cols-3 gap-5;
+}
+
+.ekstra-content{
+    @apply col-span-1 rounded-lg border border-grey-border;
+}
+
+.ekstra-img{
+    @apply w-full h-40 object-cover rounded-lg;
+}
+
+.ekstra-badges{
+    @apply flex justify-between items-center;
+}
+
+.ekstra-content-text{
+    @apply px-3 py-6;
+}
+.badges-left{
+    @apply text-sm text-primary py-1 px-3 bg-primary/15 rounded-lg w-fit;
+}
+
+.badges-right{
+    @apply text-sm text-black/70;
+}
+
+.ekstra-title{
+    @apply font-semibold text-black text-2xl my-3;
+}
+
+.ekstra-desc{
+    @apply text-black/70 text-sm mb-8 line-clamp-2;
+}
+
+.ekstra-line{
+    @apply w-full h-px text-black/15 mb-5;
+}
+
+.pembina, .jadwal{
+    @apply text-sm text-black/70
+}
 
 /* CTA */
 .cta{
@@ -181,7 +277,6 @@ section{
 .gallery-container2{
     @apply grid md:col-span-6 grid-rows-2 gap-2 md:gap-4;
 }
-
 
 /* FOOTER */
 footer{
@@ -235,10 +330,6 @@ footer{
 .footer-bottom-icon{
     @apply text-4xl p-1 rounded-xs;
 }
-
-
-
-
 
 /* PROGRAM KEAHLIAN */
 .main-wrapper{
@@ -294,7 +385,6 @@ footer{
     @apply text-base text-black/80;
 }
 
-
 .about-content-2{
     @apply flex flex-col gap-5
 }
@@ -331,7 +421,6 @@ footer{
     @apply text-sm text-black/80;
 }
 
-
 .pelajaran-title{
     @apply font-semibold text-xl md:text-2xl text-black;
 }
@@ -351,7 +440,6 @@ footer{
     @apply text-4xl text-primary;
 }
 
-
 .pelajaran-content-title{
     @apply font-semibold text-lg mt-6 mb-2 text-black;
 }
@@ -359,7 +447,6 @@ footer{
 .pelajaran-content-desc{
     @apply text-sm text-black/80 line-clamp-4;
 }
-
 
 /* BLOG */
 .blog-img{
@@ -446,6 +533,22 @@ footer{
     @apply block w-full bg-primary hover:bg-secondary text-white font-semibold py-3.5 px-6 rounded-xl transition-all duration-300 mt-2 text-center;
 }
 
+/* =========================================
+   PERBAIKAN NAVBAR & MENU MOBILE (LIGHT MODE)
+   ========================================= */
+header, 
+header > div,
+#mobile-menu {
+    background-color: #ffffff !important; 
+}
+
+/* Memastikan Hamburger Icon & Teks selalu Hitam di Light Mode */
+#menu-toggle i,
+#mobile-menu a,
+#mobile-menu div {
+    color: #222222 !important;
+}
+
 
 /* =========================================
    DARK MODE
@@ -456,14 +559,21 @@ html.dark body{
     color:#f3f4f6;
 }
 
-/* Header */
-html.dark header{
-    background:#111827;
+/* Header & Mobile Menu (Dark Mode) */
+html.dark header, 
+html.dark header > div,
+html.dark #mobile-menu {
+    background-color:#111827 !important;
 }
 
-/* Mobile Menu */
+/* Memastikan Hamburger Icon & Teks selalu Putih di Dark Mode */
+html.dark #menu-toggle i,
+html.dark #mobile-menu a,
+html.dark #mobile-menu div {
+    color: #f3f4f6 !important;
+}
+
 html.dark #mobile-menu{
-    background:#111827;
     border-color:#374151;
 }
 
@@ -637,4 +747,149 @@ html.dark .group:hover .blog-button{
 
 html.dark .group:hover .arrow-button-blog{
     color:var(--color-primary);
+}
+
+/* EKSTRA - DARK MODE */
+html.dark .ekstra-content{
+    background:#1f2937;
+    border:1px solid #374151;
+}
+
+html.dark .ekstra-title {
+    color:white;
+}
+
+html.dark .ekstra-desc{
+    color:#d1d5db;
+}
+
+html.dark .ekstra-line{
+    background:#374151;
+}
+
+html.dark .pembina,
+html.dark .jadwal{
+    color:#d1d5db;
+}
+
+/* Badge */
+html.dark .badges-left{
+    background:#374151;
+    color:#93c5fd;
+}
+
+html.dark .badges-right{
+    color:#9ca3af;
+}
+
+/* Image sedikit lebih soft di dark mode */
+html.dark .ekstra-img{
+    filter:brightness(.9) contrast(.95);
+}
+
+/* =========================
+   FASILITAS - DARK MODE
+   ========================= */
+
+html.dark .ekstra-content{
+    background:#1f2937;
+    border:1px solid #374151;
+}
+
+html.dark .fasilitas-title{
+    color:white;
+}
+
+html.dark .fasilitas-desc{
+    color:#d1d5db;
+}
+
+/* gambar biar lebih soft di dark mode */
+html.dark .ekstra-img{
+    filter:brightness(.9) contrast(.95);
+}
+
+/* hover effect biar lebih hidup */
+html.dark .ekstra-content:hover{
+    border-color:#3ba8d1;
+    transition:0.3s;
+}
+
+/* =========================
+   VISI MISI - DARK MODE
+   ========================= */
+
+/* Card Visi */
+html.dark .vision-card,
+html.dark .visi-content-1{
+    background:#1f2937;
+    border-color:#374151;
+}
+
+/* Judul */
+html.dark .vision-title,
+html.dark .visi-title,
+html.dark .visi-title-2{
+    color:white;
+}
+
+/* Quote */
+html.dark .vision-text,
+html.dark .visi-desc,
+html.dark .visi-desc-2{
+    color:#d1d5db;
+}
+
+/* Footer kecil */
+html.dark .vision-footer{
+    color:#9ca3af;
+}
+
+/* Border quote */
+html.dark .vision-quote{
+    border-color:var(--color-primary);
+}
+
+/* Video */
+html.dark .vision-video,
+html.dark iframe{
+    border-color:#374151;
+}
+
+/* Efek video agar menyatu dengan dark mode */
+html.dark iframe{
+    filter:brightness(.9) contrast(.95);
+}
+
+/* Card Misi */
+html.dark .mission-card,
+html.dark .mission-item{
+    background:#1f2937;
+    border-color:#374151;
+}
+
+/* Judul Misi */
+html.dark .mission-title,
+html.dark .mission-item h4{
+    color:white;
+}
+
+/* Deskripsi Misi */
+html.dark .mission-item p{
+    color:#d1d5db;
+}
+
+/* Nomor Misi */
+html.dark .mission-number{
+    background:var(--color-primary);
+    color:white;
+}
+
+/* VISI MISI */
+html.dark section .bg-white{
+    background:#1f2937;
+}
+
+html.dark section .border-grey-border{
+    border-color:#374151;
 }
