@@ -1,0 +1,102 @@
+/* ============================================
+   MINIMAL CSS — Hanya CSS Variables, Keyframes,
+   dan pseudo-element yang tidak bisa pakai Tailwind
+   ============================================ */
+
+/* ── Theme Variables ── */
+:root {
+  --color-primary: #00629E;
+  --color-secondary: #3BA8D1;
+  --color-bg: #f9fafb;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f3f4f6;
+  --color-border: #e5e7eb;
+  --color-border-inner: #f3f4f6;
+  --color-text: #0d1117;
+  --color-text-muted: #6b7280;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-card: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+}
+
+html.dark {
+  --color-bg: #0b0f17;
+  --color-surface: #161b22;
+  --color-surface-alt: rgba(255,255,255,0.03);
+  --color-border: rgba(255,255,255,0.08);
+  --color-border-inner: rgba(255,255,255,0.05);
+  --color-text: #c9d1d9;
+  --color-text-muted: #8b949e;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+  --shadow-card: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* Memaksa elemen dropdown/select tertentu merujuk ke atas (untuk browser mobile tertentu yang mendukung control direction) */
+.direction-up {
+  content-visibility: auto;
+}
+
+/* ── Custom Global Scrollbar Style ── */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* ── Score Card Status Badges ── */
+.score-badge::before {
+  content: '';
+  display: inline-block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.score-excellent::before  { background: #10b981; }
+.score-good::before       { background: var(--color-secondary); }
+.score-warning::before    { background: #f59e0b; }
+
+/* ── SPP Card Decorative Circle (::before) ── */
+.spp-card::before {
+  content: '';
+  position: absolute;
+  top: -50px; right: -50px;
+  width: 150px; height: 150px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+}
+
+/* ── Subject Button Active (JS toggled) ── */
+.subject-btn.active {
+  background: rgba(0,98,158,0.08);
+  color: var(--color-primary);
+  font-weight: 600;
+  border-left: 3px solid var(--color-primary);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+html.dark .subject-btn.active {
+  background: rgba(59,168,209,0.12);
+  color: var(--color-secondary);
+  border-left-color: var(--color-secondary);
+}
+
+/* ── Hover Child Selectors ── */
+.score-card:hover .score-badge { transform: scale(1.08); }
+.day-card:hover .subject-item {
+  border-left-color: var(--color-secondary);
+  background-color: var(--color-surface);
+  padding-left: 1.25rem;
+}
+
+/* ── Custom Scrollbar ── */
+.custom-scroll::-webkit-scrollbar       { width: 5px; }
+.custom-scroll::-webkit-scrollbar-track { background: transparent; }
+.custom-scroll::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 10px; }
+
+/* ── Sidebar Mobile Style & Transitions ── */
+@media (max-width: 767px) {
+  #sidebar {
+    height: 100vh !important;
+    position: fixed !important;
+  }
+}
