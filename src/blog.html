@@ -20,11 +20,11 @@
 </head>
 <body class="bg-white-bg dark:bg-gray-900 text-black dark:text-gray-100 font-poppins transition-colors duration-300">
     <!-- HEADER -->
- <header class="sticky top-0 z-50 h-28 bg-white dark:bg-gray-900 transition-colors duration-300">
-    <div class="sticky top-0 z-20 h-full mx-auto max-w-[90%] md:max-w-[85%] 2xl:max-w-350 mb-30 bg-white dark:bg-gray-900 transition-colors duration-300">
+<header class="sticky top-0 z-50 w-full h-28 bg-white-bg dark:bg-gray-900 transition-colors duration-300 md:shadow-none">
+    <div class="relative z-20 h-full mx-auto max-w-[90%] md:max-w-[85%] 2xl:max-w-350 bg-white-bg dark:bg-gray-900 transition-colors duration-300">
         <div class="relative flex items-center justify-between h-full">
             
-            <nav class="relative z-10 flex items-center justify-between w-full h-full md:z-0" id="navbar">
+            <nav class="flex items-center justify-between w-full h-full" id="navbar">
                 <div>
                     <a href="index.html">
                         <img src="image/logo.png" alt="logo" class="w-18 transition-all duration-300">
@@ -58,74 +58,119 @@
 
         </div>
     </div>
+
+    <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white-bg dark:bg-gray-900 shadow-lg hidden flex-col transition-all duration-300 z-40 pb-6 pt-4 rounded-b-2xl">
+        <ul class="flex flex-col items-center gap-6">
+            <li><a href="index.html" class="nav-all-hover dark:text-gray-200" data-lang-id="Beranda" data-lang-en="Home">Beranda</a></li>
+            <li><a href="program-keahlian.html" class="nav-all dark:text-gray-200" data-lang-id="Program" data-lang-en="Program">Program</a></li>
+            <li><a href="blog.html" class="nav-all dark:text-gray-200" data-lang-id="Blog" data-lang-en="Blog">Blog</a></li>
+            
+            <li class="flex items-center gap-6 mt-2">
+                <button id="mobile-lang-btn" class="cursor-pointer focus:outline-none">
+                    <div class="text-xs font-medium text-gray-500 dark:text-gray-400" data-lang-id="ID" data-lang-en="EN">ID</div>
+                </button>
+
+                <button id="mobile-theme-toggle" class="cursor-pointer focus:outline-none flex items-center justify-center p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+                    <i id="mobile-theme-icon" class="fa-solid fa-sun text-black dark:text-yellow-400 text-lg transition-colors duration-300"></i>
+                </button>
+                
+                <a href="login.html" class="button-primary" data-lang-id="Login" data-lang-en="Login">Login</a>
+            </li>
+        </ul>
+    </div>
 </header>
-    <!-- Blog -->
-    <section class="" data-aos="fade-up">
-        <div class="title-desc">
-            <h1 class="title dark:text-white"data-lang-id="Kabar Terbaru dari SKENSA"data-lang-en="Latest News from SKENSA">Kabar Terbaru dari SKENSA</h1>
-            <p class="desc dark:text-gray-300"data-lang-id="Temukan berbagai cerita, pencapaian, dan kegiatan inspiratif yang mencerminkan semangat belajar, berkarya, dan berprestasi di SKENSA."data-lang-en="Discover inspiring stories, achievements, and activities that reflect the spirit of learning, creativity, and excellence at SKENSA.">Temukan berbagai cerita, pencapaian, dan kegiatan inspiratif yang mencerminkan semangat belajar, berkarya, dan berprestasi di SKENSA.</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <!-- blog 1 -->
-            <div class="group">
-                <img src="image/lks.jpg" alt="" class="blog-img">
-                <div class="blog-date">
-                    <h1 class="date dark:text-gray-400">23 March 2025</h1>
-                    <h2 class="blog-name dark:text-gray-300"data-lang-id="Lingkungan Skensa"data-lang-en="Skensa Environment">Lingkungan Skensa</h2>
-                </div>
-                <div class="mt-2.5">
-                    <h1 class="blog-title dark:text-white"data-lang-id="Siswa SKENSA Raih Prestasi dalam Lomba Kompetensi Siswa (LKS)"data-lang-en="SKENSA Students Achieve Success in the Student Skills Competition (LKS)">Siswa SKENSA Raih Prestasi dalam Lomba Kompetensi Siswa (LKS)</h1>
-                    <p class="blog-desc dark:text-gray-300"data-lang-id="Siswa SMK Negeri 1 Denpasar kembali menunjukkan kompetensinya dalam ajang Lomba Kompetensi Siswa (LKS) melalui berbagai bidang keahlian dan berhasil mengharumkan nama sekolah."data-lang-en="Students of SMK Negeri 1 Denpasar once again demonstrated their competence in the Student Skills Competition (LKS) across various fields of expertise and brought pride to the school.">Siswa SMK Negeri 1 Denpasar kembali menunjukkan kompetensinya dalam ajang Lomba Kompetensi Siswa (LKS) melalui berbagai bidang keahlian dan berhasil mengharumkan nama sekolah.</p>
-                </div>
+<section class="" data-aos="fade-up">
+    <div class="title-desc">
+        <h1 class="title dark:text-white" data-lang-id="Kabar Terbaru dari SKENSA" data-lang-en="Latest News from SKENSA">Kabar Terbaru dari SKENSA</h1>
+        <p class="desc dark:text-gray-300" data-lang-id="Temukan berbagai cerita, pencapaian, dan kegiatan inspiratif yang mencerminkan semangat belajar, berkarya, dan berprestasi di SKENSA." data-lang-en="Discover inspiring stories, achievements, and activities that reflect the spirit of learning, creativity, and excellence at SKENSA.">Temukan berbagai cerita, pencapaian, dan kegiatan inspiratif yang mencerminkan semangat belajar, berkarya, dan berprestasi di SKENSA.</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-2 w-full">
+        
+        <div class="group flex flex-col bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 p-4 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer" style="border-radius: 10px;">
+            <div class="overflow-hidden aspect-[4/3] w-full relative rounded-2xl mb-4">
+                <span class="absolute top-3 right-3 z-20 inline-flex items-center justify-center px-3 py-1 bg-blue-600/90 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-wider rounded-full shadow-sm">
+                    <span data-lang-id="Lab" data-lang-en="Lab">Lab</span>
+                </span>
+                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300 z-10"></div>
+                <img src="image/lks.jpg" alt="LKS" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
             </div>
-            <!-- blog 2 -->
-            <div class="group">
-                <img src="image/pelepasan.jpg" alt="" class="blog-img">
-                <div class="blog-date">
-                    <h1 class="date dark:text-gray-400">31 March 2025</h1>
-                    <h2 class="text-xs dark:text-gray-300"data-lang-id="Aula Skensa"data-lang-en="Skensa Hall">Aula Skensa</h2>
-                </div>
-                <div class="mt-2.5">
-                    <h1 class="blog-title dark:text-white"data-lang-id="Pelepasan Siswa Kelas XII Tahun Ajaran 2025/2026"data-lang-en="Graduation Ceremony for Grade XII Students Academic Year 2025/2026">Pelepasan Siswa Kelas XII Tahun Ajaran 2025/2026</h1>
-                    <p class="blog-desc dark:text-gray-300"data-lang-id="Momen penuh haru dan kebanggaan mewarnai acara pelepasan siswa kelas XII sebagai penutup perjalanan pendidikan dan awal langkah menuju masa depan yang lebih cerah."data-lang-en="A heartfelt and proud moment marked the graduation ceremony of Grade XII students as the end of their educational journey and the beginning of a brighter future.">Momen penuh haru dan kebanggaan mewarnai acara pelepasan siswa kelas XII sebagai penutup perjalanan pendidikan dan awal langkah menuju masa depan yang lebih cerah.</p>
-                </div>
-            </div>
-            <!-- blog 3 -->
-            <div class="group">
-                <img src="image/edufair.jpg" alt="" class="blog-img">
-                <div class="blog-date">
-                    <h1 class="date dark:text-gray-400">08 Mey 2025</h1>
-                    <h2 class="text-xs dark:text-gray-300"data-lang-id="Aula Skensa"data-lang-en="Skensa Hall">Aula Skensa</h2>
-                </div>
-                <div class="mt-2.5">
-                    <h1 class="blog-title dark:text-white"data-lang-id="Edufair SKENSA: Membuka Wawasan Pendidikan dan Karier"data-lang-en="SKENSA Edufair: Expanding Educational and Career Opportunities">Edufair SKENSA: Membuka Wawasan Pendidikan dan Karier</h1>
-                    <p class="blog-desc dark:text-gray-300" data-lang-id="Melalui kegiatan Edufair, siswa mendapatkan informasi mengenai berbagai perguruan tinggi, program studi, beasiswa, dan peluang karier untuk mempersiapkan masa depan mereka."data-lang-en="Through Edufair, students gain information about universities, study programs, scholarships, and career opportunities to prepare for their future.">Melalui kegiatan Edufair, siswa mendapatkan informasi mengenai berbagai perguruan tinggi, program studi, beasiswa, dan peluang karier untuk mempersiapkan masa depan mereka.</p>
-                </div>
-            </div>
-            <!-- blog 4 -->
-            <div class="group">
-                <img src="image/gelar karya.jpg" alt="" class="blog-img">
-                <div class="blog-date">
-                    <h1 class="date dark:text-gray-400">19 Mey 2025</h1>
-                    <h2 class="text-xs dark:text-gray-300"data-lang-id="Aula Skensa"data-lang-en="Skensa Hall">Aula Skensa</h2>
-                </div>
-                <div class="mt-2.5">
-                    <h1 class="blog-title dark:text-white"data-lang-id="Gelar Karya Siswa: Menampilkan Kreativitas dan Inovasi"data-lang-en="Student Showcase: Displaying Creativity and Innovation">Gelar Karya Siswa: Menampilkan Kreativitas dan Inovasi</h1>
-                    <p class="blog-desc dark:text-gray-300"data-lang-id="Berbagai karya terbaik hasil pembelajaran siswa dipamerkan dalam acara Gelar Karya sebagai bentuk apresiasi terhadap kreativitas, inovasi, dan keterampilan yang telah dikembangkan."data-lang-en="Various outstanding student projects were showcased as an appreciation of the creativity, innovation, and skills they have developed.">Berbagai karya terbaik hasil pembelajaran siswa dipamerkan dalam acara Gelar Karya sebagai bentuk apresiasi terhadap kreativitas, inovasi, dan keterampilan yang telah dikembangkan.</p>
+            <div class="px-1 flex flex-col flex-grow">
+                <h1 class="text-base font-extrabold text-gray-800 dark:text-gray-100 line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300 mb-2 leading-snug" data-lang-id="Siswa SKENSA Raih Prestasi dalam Lomba Kompetensi Siswa (LKS)" data-lang-en="SKENSA Students Achieve Success in the Student Skills Competition (LKS)">Siswa SKENSA Raih Prestasi dalam Lomba Kompetensi Siswa (LKS)</h1>
+                <p class="text-sm leading-relaxed text-gray-500 dark:text-gray-400 line-clamp-3 mb-5" data-lang-id="Siswa SMK Negeri 1 Denpasar kembali menunjukkan kompetensinya dalam ajang Lomba Kompetensi Siswa (LKS) melalui berbagai bidang keahlian dan berhasil mengharumkan nama sekolah." data-lang-en="Students of SMK Negeri 1 Denpasar once again demonstrated their competence in the Student Skills Competition (LKS) across various fields of expertise and brought pride to the school.">Siswa SMK Negeri 1 Denpasar kembali menunjukkan kompetensinya dalam ajang Lomba Kompetensi Siswa (LKS) melalui berbagai bidang keahlian dan berhasil mengharumkan nama sekolah.</p>
+                <div class="mt-auto flex items-center gap-2 text-sm font-medium text-gray-500 dark:text-gray-400 whitespace-nowrap">
+                    <svg class="w-4 h-4 text-gray-400 dark:text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <span>23 Mar 2025</span>
                 </div>
             </div>
         </div>
-    </section>
 
+        <div class="group flex flex-col bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 p-4 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer" style="border-radius: 10px;">
+            <div class="overflow-hidden aspect-[4/3] w-full relative rounded-2xl mb-4">
+                <span class="absolute top-3 right-3 z-20 inline-flex items-center justify-center px-3 py-1 bg-blue-600/90 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-wider rounded-full shadow-sm">
+                    <span data-lang-id="Aula Skensa" data-lang-en="Skensa Hall">Aula Skensa</span>
+                </span>
+                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300 z-10"></div>
+                <img src="image/pelepasan.jpg" alt="Pelepasan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+            </div>
+            <div class="px-1 flex flex-col flex-grow">
+                <h1 class="text-base font-extrabold text-gray-800 dark:text-gray-100 line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300 mb-2 leading-snug" data-lang-id="Pelepasan Siswa Kelas XII Tahun Ajaran 2025/2026" data-lang-en="Graduation Ceremony for Grade XII Students Academic Year 2025/2026">Pelepasan Siswa Kelas XII Tahun Ajaran 2025/2026</h1>
+                <p class="text-sm leading-relaxed text-gray-500 dark:text-gray-400 line-clamp-3 mb-5" data-lang-id="Momen penuh haru dan kebanggaan mewarnai acara pelepasan siswa kelas XII sebagai penutup perjalanan pendidikan dan awal langkah menuju masa depan yang lebih cerah." data-lang-en="A heartfelt and proud moment marked the graduation ceremony of Grade XII students as the end of their educational journey and the beginning of a brighter future.">Momen penuh haru dan kebanggaan mewarnai acara pelepasan siswa kelas XII sebagai penutup perjalanan pendidikan dan awal langkah menuju masa depan yang lebih cerah.</p>
+                <div class="mt-auto flex items-center gap-2 text-sm font-medium text-gray-500 dark:text-gray-400 whitespace-nowrap">
+                    <svg class="w-4 h-4 text-gray-400 dark:text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <span>31 Mar 2025</span>
+                </div>
+            </div>
+        </div>
 
-    <!-- FOOTER -->
+        <div class="group flex flex-col bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 p-4 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer" style="border-radius: 10px;">
+            <div class="overflow-hidden aspect-[4/3] w-full relative rounded-2xl mb-4">
+                <span class="absolute top-3 right-3 z-20 inline-flex items-center justify-center px-3 py-1 bg-blue-600/90 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-wider rounded-full shadow-sm">
+                    <span data-lang-id="Aula Skensa" data-lang-en="Skensa Hall">Aula Skensa</span>
+                </span>
+                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300 z-10"></div>
+                <img src="image/edufair.jpg" alt="Edufair" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+            </div>
+            <div class="px-1 flex flex-col flex-grow">
+                <h1 class="text-base font-extrabold text-gray-800 dark:text-gray-100 line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300 mb-2 leading-snug" data-lang-id="Edufair SKENSA: Membuka Wawasan Pendidikan dan Karier" data-lang-en="SKENSA Edufair: Expanding Educational and Career Opportunities">Edufair SKENSA: Membuka Wawasan Pendidikan dan Karier</h1>
+                <p class="text-sm leading-relaxed text-gray-500 dark:text-gray-400 line-clamp-3 mb-5" data-lang-id="Melalui kegiatan Edufair, siswa mendapatkan informasi mengenai berbagai perguruan tinggi, program studi, beasiswa, dan peluang karier untuk mempersiapkan masa depan mereka." data-lang-en="Through Edufair, students gain information about universities, study programs, scholarships, and career opportunities to prepare for their future.">Melalui kegiatan Edufair, siswa mendapatkan informasi mengenai berbagai perguruan tinggi, program studi, beasiswa, dan peluang karier untuk mempersiapkan masa depan mereka.</p>
+                <div class="mt-auto flex items-center gap-2 text-sm font-medium text-gray-500 dark:text-gray-400 whitespace-nowrap">
+                    <svg class="w-4 h-4 text-gray-400 dark:text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <span>08 Mei 2025</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="group flex flex-col bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 p-4 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer" style="border-radius:10px;">
+            <div class="overflow-hidden aspect-[4/3] w-full relative rounded-2xl mb-4">
+                <span class="absolute top-3 right-3 z-20 inline-flex items-center justify-center px-3 py-1 bg-blue-600/90 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-wider rounded-full shadow-sm">
+                    <span data-lang-id="Aula Skensa" data-lang-en="Skensa Hall">Aula Skensa</span>
+                </span>
+                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300 z-10"></div>
+                <img src="image/gelar karya.jpg" alt="Gelar Karya" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+            </div>
+            <div class="px-1 flex flex-col flex-grow">
+                <h1 class="text-base font-extrabold text-gray-800 dark:text-gray-100 line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300 mb-2 leading-snug" data-lang-id="Gelar Karya Siswa: Menampilkan Kreativitas dan Inovasi" data-lang-en="Student Showcase: Displaying Creativity and Innovation">Gelar Karya Siswa: Menampilkan Kreativitas dan Inovasi</h1>
+                <p class="text-sm leading-relaxed text-gray-500 dark:text-gray-400 line-clamp-3 mb-5" data-lang-id="Berbagai karya terbaik hasil pembelajaran siswa dipamerkan dalam acara Gelar Karya sebagai bentuk apresiasi terhadap kreativitas, dan inovasi." data-lang-en="Various outstanding student projects were showcased as an appreciation of the creativity, and innovation.">Berbagai karya terbaik hasil pembelajaran siswa dipamerkan dalam acara Gelar Karya sebagai bentuk apresiasi terhadap kreativitas, inovasi, dan keterampilan yang telah dikembangkan.</p>
+                <div class="mt-auto flex items-center gap-2 text-sm font-medium text-gray-500 dark:text-gray-400 whitespace-nowrap">
+                    <svg class="w-4 h-4 text-gray-400 dark:text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <span>19 Mei 2025</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- footer -->
     <footer data-aos="fade-up" class="dark:bg-gray-900 dark:border-t dark:border-gray-800 transition-colors duration-300">
         <div class="footer-wrapper">
             <div class="footer-content-1">
                 <h3 class="footer-logo dark:text-white">SMK Negeri 1 Denpasar</h3>
                 <p class="footer-desc dark:text-gray-400"data-lang-id="SMK Negeri 1 Denpasar merupakan sekolah kejuruan unggulan yang berkomitmen mencetak lulusan kompeten, berkarakter, dan siap menghadapi dunia kerja maupun pendidikan tinggi."
-   data-lang-en="SMK Negeri 1 Denpasar is a leading vocational school committed to producing competent, character-driven graduates who are ready for the workforce and higher education.">
-   SMK Negeri 1 Denpasar merupakan sekolah kejuruan unggulan yang berkomitmen mencetak lulusan kompeten, berkarakter, dan siap menghadapi dunia kerja maupun pendidikan tinggi.</p>
+                    data-lang-en="SMK Negeri 1 Denpasar is a leading vocational school committed to producing competent, character-driven graduates who are ready for the workforce and higher education.">
+                    SMK Negeri 1 Denpasar merupakan sekolah kejuruan unggulan yang berkomitmen mencetak lulusan kompeten, berkarakter, dan siap menghadapi dunia kerja maupun pendidikan tinggi.
+                </p>
             </div>
             <div class="footer-content-2">
                 <div class="footer-nav">
@@ -135,17 +180,46 @@
                     <a href="program-detail.html" class="footer-nav-link dark:text-gray-400 hover:text-primary"data-lang-id="Blog"data-lang-en="Blog">Blog</a>
                 </div>
                 <div class="footer-contact">
-                    <h3 class="footer-title dark:text-white"data-lang-id="Kontak"data-lang-en="Contact">Contact</h3>
+                    <h3 class="footer-title dark:text-white"
+                        data-lang-id="Lokasi & Kontak"
+                        data-lang-en="Location & Contact">
+                        Lokasi & Kontak
+                    </h3>
+
                     <a href="tel:081236396662" class="contact-item dark:text-gray-400 hover:text-primary">
-                        <i class="fa-solid fa-phone footer-icon"></i> <p>081236396662</p>
+                        <i class="fa-solid fa-phone footer-icon"></i>
+                        <p>081236396662</p>
                     </a>
+
                     <a href="mailto:info@smkn1denpasar.sch.id" class="contact-item dark:text-gray-400 hover:text-primary">
-                        <i class="fa-solid fa-envelope footer-icon"></i> <p>info@smkn1denpasar.sch.id</p>
+                        <i class="fa-solid fa-envelope footer-icon"></i>
+                        <p>info@smkn1denpasar.sch.id</p>
                     </a>
-                    <a href="https://maps.google.com/?q=Jalan+HOS.+Cokroaminoto+No.+84" target="_blank" class="contact-item dark:text-gray-400 hover:text-primary">
-                        <i class="fa-solid fa-location-dot footer-icon"></i> <p>Jalan HOS. Cokroaminoto No. 84</p>
+
+                    <!-- MAP -->
+                    <div class="mt-4 overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-700">
+                        <iframe
+                            src="https://www.google.com/maps?q=SMK+Negeri+1+Denpasar&output=embed"
+                            width="100%"
+                            height="220"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy">
+                        </iframe>
+                    </div>
+
+                    <a href="https://maps.app.goo.gl/KctysHWis61CMHU16"
+                    target="_blank"
+                    class="mt-3 inline-flex items-center gap-2 text-primary font-medium hover:underline">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span
+                            data-lang-id="Buka di Google Maps"
+                            data-lang-en="Open in Google Maps">
+                            Buka di Google Maps
+                        </span>
                     </a>
                 </div>
+                
             </div>
         </div>
         <div class="footer-bottom">
@@ -159,22 +233,23 @@
         </div>
     </footer>
 
-    <div class="fixed z-50 bottom-6 right-6 font-poppins">
+<div class="fixed z-50 bottom-6 right-6 font-poppins">
         
-        <div id="skensai-popup" class="absolute hidden w-[220px] p-3 text-xs text-gray-800 dark:text-gray-100 transition-all bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-xl rounded-2xl rounded-br-none border-r-4 border-r-primary right-[90px] bottom-[55px]">
+        <div id="skensai-popup" class="absolute hidden w-55 p-3 text-xs text-gray-800 dark:text-gray-100 transition-all bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-xl rounded-2xl rounded-br-none border-r-4 border-r-primary right-[75px] bottom-[55px]">
             <p data-lang-id="Halo! Saya SkensAI. Silakan tanya informasi seputar SMK Negeri 1 Denpasar menggunakan kata kunci seperti: jurusan, fasilitas, alamat, atau prestasi." 
-               data-lang-en="Hello! I am SkensAI. Please ask for information about SMK Negeri 1 Denpasar using keywords like: major, facilities, address, or achievement.">
+                data-lang-en="Hello! I am SkensAI. Please ask for information about SMK Negeri 1 Denpasar using keywords like: major, facilities, address, or achievement.">
                 Halo! Saya SkensAI ada yang bisa di bantu?. 
             </p>
         </div>
 
-        <button id="skensai-btn" class="fixed bottom-6 right-6 z-50 w-20 h-20 transition-transform duration-300 hover:scale-110 animate-pulse-slow drop-shadow-glow">
-            <img src="image/ai.png" alt="AI Assistant" class="w-full h-full object-contain">
-        </button>
+<button id="skensai-btn" class="fixed bottom-6 right-6 z-50 w-20 h-20 transition-all duration-300 hover:scale-110 active:scale-95 skensai-animation rounded-full bg-white dark:bg-gray-800 border-2 border-primary overflow-hidden">
+    <img src="image/ai.png" alt="AI Assistant" class="w-full h-full object-contain p-2">
+</button>
 
-        <div id="skensai-window" class="absolute bottom-24 right-0 md:right-2 hidden flex-col w-[90vw] sm:w-[370px] h-[520px] md:w-[440px] md:h-[600px] max-w-[100vw] max-h-[85vh] bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-2xl rounded-2xl overflow-hidden">
+
+        <div id="skensai-window" class="absolute bottom-20 right-0 md:right-20 hidden flex-col w-[90vw] sm:w-[370px] h-[520px] md:w-[440px] md:h-[500px] max-w-[100vw] max-h-[85vh] bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-2xl rounded-2xl overflow-hidden">
             
-            <div class="flex items-center justify-between p-4 text-white bg-primary shadow-md flex-shrink-0">
+            <div class="flex items-center justify-between p-4 text-white bg-primary shadow-md shrink-0">
                 <div class="flex items-center gap-3">
                     <div class="relative w-10 h-10 bg-white rounded-full p-0.5 shadow-sm flex items-center justify-center flex-shrink-0">
                         <img src="image/ai.png" alt="SkensAI" class="w-full h-full object-contain rounded-full">
@@ -193,7 +268,7 @@
                 </button>
             </div>
 
-            <div id="skensai-messages" class="flex flex-col flex-grow p-4 gap-3 overflow-y-auto text-sm bg-slate-50 dark:bg-gray-900 pb-12">
+            <div id="skensai-messages" class="flex flex-col flex-grow p-4 gap-3 overflow-y-auto text-sm bg-slate-50 dark:bg-gray-900 pb-2">
                 <div class="flex items-start gap-2 max-w-[85%] self-start mb-1 flex-shrink-0">
                     <div class="p-3 text-gray-800 dark:text-gray-100 bg-blue-50/80 dark:bg-gray-700 border border-blue-100 dark:border-gray-600 shadow-sm rounded-2xl rounded-tl-none leading-relaxed">
                         Halo! Saya SkensAI. Silakan tanya informasi seputar SMK Negeri 1 Denpasar menggunakan kata kunci seperti: <b>jurusan, fasilitas, alamat, atau prestasi</b>.
@@ -204,7 +279,7 @@
             <div class="flex items-center gap-2 p-3 bg-white dark:bg-gray-800 border-t border-gray-100 dark:border-gray-700 flex-shrink-0">
                 <input type="text" id="skensai-input" placeholder="Ketik pesan di sini..." class="flex-grow p-2.5 text-sm text-gray-800 dark:text-white bg-slate-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-full focus:outline-none focus:border-[#2c59fa] focus:ring-1 focus:ring-[#2c59fa] transition-all shadow-sm">
                 <button id="skensai-send" class="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white transition-colors bg-primary rounded-full shadow-md hover:bg-primary">
-                    <i class="fa-solid fa-paper-plane text-[15px]"></i>
+                    <i class="fa-solid fa-paper-plane text-[15px] pointer-events-none"></i>
                 </button>
             </div>
         </div>
